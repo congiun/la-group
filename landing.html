@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>LA GROUP — Haute Couture Media & Omnichannel Growth Hub</title>
+  <meta name="description" content="LA GROUP — Đơn vị tiên phong cung cấp giải pháp Media Production 4K, Mạng lưới KOC/Talent Độc Quyền, Digital Marketing & Học viện Đào tạo Livestream Thực chiến.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/la_logo.png">
+
+  <!-- Google Fonts with Full Vietnamese Support -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js" defer></script>
+
+  <!-- Luxury Obsidian & Liquid Gold Styling -->
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body class="luxury-obsidian-gold">
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge">HAUTE COUTURE CAMPAIGNS Q3/Q4</span></span>
+      <span class="announcement-text" data-i18n="ann_text">Tặng gói tư vấn chiến lược Omnichannel trị giá 25.000.000đ cho 5 thương hiệu cao cấp đầu tiên trong tháng.</span>
+      <button onclick="openQuoteChatbox()" class="announcement-link"><span data-i18n="ann_cta">Nhận ưu đãi</span> <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       FLOATING NAVBAR (EXACT 7 MAIN PILLARS + LANG & CTA)
+       ======================================================== -->
+  <header class="navbar-wrapper" id="mainNavbar">
+    <div class="container">
+      <div class="navbar-glass">
+        
+        <!-- Brand Identity -->
+        <a href="#hero" class="nav-brand">
+          <img src="assets/la_logo.png" alt="LA Group Logo" class="brand-logo-img">
+          <div class="brand-info">
+            <span class="brand-name">LA GROUP</span>
+            <span class="brand-tagline">MEDIA & GROWTH HUB</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation: Exactly 7 Main Items with Dropdowns -->
+        <nav class="nav-links">
+          
+          <!-- 1. Trang chủ -->
+          <a href="#hero" class="nav-link active">
+            <span data-i18n="menu_home">Trang chủ</span>
+          </a>
+
+          <!-- 2. Về LA Group (Dropdown: Giới thiệu, Đội ngũ) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#gioi-thieu" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_about">Về LA Group</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="#gioi-thieu" class="dropdown-item">
+                <i class="fa-solid fa-gem"></i>
+                <div>
+                  <strong data-i18n="menu_about_intro">Giới thiệu</strong>
+                  <small data-i18n="menu_about_intro_sub">Tầm nhìn, sứ mệnh & triết lý</small>
+                </div>
+              </a>
+              <a href="#doi-ngu" class="dropdown-item">
+                <i class="fa-solid fa-user-tie"></i>
+                <div>
+                  <strong data-i18n="menu_about_team">Đội ngũ</strong>
+                  <small data-i18n="menu_about_team_sub">Ban lãnh đạo & chuyên gia sáng tạo</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Dịch vụ (Dropdown: 5 mục con) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#dich-vu" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_services">Dịch vụ</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu dropdown-wide">
+              <a href="#san-xuat-noi-dung" class="dropdown-item">
+                <i class="fa-solid fa-video"></i>
+                <div>
+                  <strong data-i18n="menu_srv_production">Production — Sản xuất nội dung</strong>
+                  <small data-i18n="menu_srv_production_sub">TVC 4K Cinema, Viral Video, Lookbook</small>
+                </div>
+              </a>
+              <a href="#van-hanh-va-quang-cao" class="dropdown-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>
+                  <strong data-i18n="menu_srv_ads">Service & Ads — Vận hành & Ads</strong>
+                  <small data-i18n="menu_srv_ads_sub">Tối ưu CPA & cam kết ROAS đa kênh</small>
+                </div>
+              </a>
+              <a href="#media-network" class="dropdown-item">
+                <i class="fa-solid fa-tower-broadcast"></i>
+                <div>
+                  <strong data-i18n="menu_srv_network">Media Network</strong>
+                  <small data-i18n="menu_srv_network_sub">Hệ thống kênh Social đa nền tảng</small>
+                </div>
+              </a>
+              <a href="#e-commerce" class="dropdown-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div>
+                  <strong data-i18n="menu_srv_ecom">E-Com — Social Commerce</strong>
+                  <small data-i18n="menu_srv_ecom_sub">Trường quay Mega Live & TikTok Shop</small>
+                </div>
+              </a>
+              <a href="#academy" class="dropdown-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong data-i18n="menu_srv_academy">Academy — Đào tạo</strong>
+                  <small data-i18n="menu_srv_academy_sub">Đào tạo Host Live & đội ngũ in-house</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Đối tác (Dropdown: Khách hàng & KOC Network) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#doi-tac" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_partners">Đối tác</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="#khach-hang" class="dropdown-item">
+                <i class="fa-solid fa-handshake"></i>
+                <div>
+                  <strong data-i18n="menu_part_clients">Khách hàng / Thương hiệu</strong>
+                  <small data-i18n="menu_part_clients_sub">150+ Nhãn hàng đồng hành</small>
+                </div>
+              </a>
+              <a href="#koc-creator" class="dropdown-item">
+                <i class="fa-solid fa-crown"></i>
+                <div>
+                  <strong data-i18n="menu_part_koc">KOC / Creator Network</strong>
+                  <small data-i18n="menu_part_koc_sub">Mạng lưới 50+ Creator độc quyền</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Dự án (Dropdown: Case Study & Blog) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#du-an" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_projects">Dự án</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="#du-an" class="dropdown-item">
+                <i class="fa-solid fa-trophy"></i>
+                <div>
+                  <strong data-i18n="menu_proj_cases">Case Study / Dự án tiêu biểu</strong>
+                  <small data-i18n="menu_proj_cases_sub">Thước phim & chiến dịch 4K thực chiến</small>
+                </div>
+              </a>
+              <a href="#blog" class="dropdown-item">
+                <i class="fa-solid fa-newspaper"></i>
+                <div>
+                  <strong data-i18n="menu_proj_blog">Blog / Tin tức & Kiến thức</strong>
+                  <small data-i18n="menu_proj_blog_sub">Xu hướng truyền thông & Social Commerce</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Tuyển dụng -->
+          <a href="#tuyen-dung" class="nav-link">
+            <span data-i18n="menu_careers">Tuyển dụng</span>
+          </a>
+
+          <!-- 7. Liên hệ (Dropdown: Form liên hệ & FAQ) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#lien-he" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_contact">Liên hệ</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="#contact" class="dropdown-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <strong data-i18n="menu_cont_form">Form liên hệ</strong>
+                  <small data-i18n="menu_cont_form_sub">Gửi yêu cầu hợp tác & tư vấn</small>
+                </div>
+              </a>
+              <a href="#faq" class="dropdown-item">
+                <i class="fa-solid fa-circle-question"></i>
+                <div>
+                  <strong data-i18n="menu_cont_faq">FAQ</strong>
+                  <small data-i18n="menu_cont_faq_sub">Giải đáp câu hỏi thường gặp</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </nav>
+
+        <!-- Extra Elements: Language Selector & CTA Chatbox Button -->
+        <div class="nav-actions">
+          
+          <!-- Element 1: Multi-language Selector (VI / EN / ZH) -->
+          <div class="lang-selector-wrapper">
+            <button class="lang-btn" id="langSelectorBtn" aria-label="Select Language">
+              <i class="fa-solid fa-globe"></i>
+              <span id="currentLangLabel">VI</span>
+              <i class="fa-solid fa-chevron-down caret-mini"></i>
+            </button>
+            <div class="lang-dropdown-menu" id="langMenu">
+              <button class="lang-option active" data-lang="vi">🇻🇳 Tiếng Việt</button>
+              <button class="lang-option" data-lang="en">🇬🇧 English</button>
+              <button class="lang-option" data-lang="zh">🇨🇳 中文 (Trung)</button>
+            </div>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button class="icon-btn" id="themeToggleBtn" title="Chuyển chế độ Sáng / Tối" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+
+          <!-- Element 2: "Nhận Báo Giá" CTA Button (Opens Quick Quote Chatbox) -->
+          <button onclick="openQuoteChatbox()" class="btn-liquid-gold" id="btnQuoteHeader">
+            <i class="fa-solid fa-comment-dollar"></i> <span data-i18n="btn_quote">Nhận Báo Giá</span>
+          </button>
+
+          <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Open Mobile Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu (7 Items + Submenus + Language + CTA) -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <div class="mob-lang-bar">
+        <span class="mob-lbl">Ngôn ngữ:</span>
+        <button class="mob-lang-opt active" data-lang="vi">VI</button>
+        <button class="mob-lang-opt" data-lang="en">EN</button>
+        <button class="mob-lang-opt" data-lang="zh">ZH</button>
+      </div>
+
+      <a href="#hero" class="mob-link"><i class="fa-solid fa-house"></i> <span data-i18n="menu_home">Trang chủ</span></a>
+      <a href="#gioi-thieu" class="mob-link"><i class="fa-solid fa-gem"></i> <span data-i18n="menu_about">Về LA Group</span> (Giới thiệu & Đội ngũ)</a>
+      <a href="#dich-vu" class="mob-link"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="menu_services">Dịch vụ</span> (Production, Ads, Social, Live)</a>
+      <a href="#doi-tac" class="mob-link"><i class="fa-solid fa-handshake"></i> <span data-i18n="menu_partners">Đối tác</span> (Khách hàng & KOC Network)</a>
+      <a href="#du-an" class="mob-link"><i class="fa-solid fa-trophy"></i> <span data-i18n="menu_projects">Dự án</span> (Case Study & Blog)</a>
+      <a href="#tuyen-dung" class="mob-link"><i class="fa-solid fa-briefcase"></i> <span data-i18n="menu_careers">Tuyển dụng</span></a>
+      <a href="#lien-he" class="mob-link"><i class="fa-solid fa-envelope"></i> <span data-i18n="menu_contact">Liên hệ</span> (Form & FAQ)</a>
+      
+      <div class="mob-actions">
+        <button onclick="openQuoteChatbox(); document.getElementById('mobileDrawer').classList.remove('open');" class="mob-btn-primary">
+          <i class="fa-solid fa-comment-dollar"></i> <span data-i18n="btn_quote">Nhận Báo Giá (Mở Chat)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       1. HERO SECTION — 3D LIQUID GOLD & VALUE STATEMENT
+       ======================================================== -->
+  <section class="hero-3d-section" id="hero">
+    
+    <!-- 3D WebGL Canvas Layer -->
+    <div class="canvas-3d-container" id="canvas3dContainer">
+      <canvas id="webglCanvas"></canvas>
+    </div>
+
+    <!-- Hero Content Overlay -->
+    <div class="container hero-content-overlay">
+      <div class="hero-grid">
+        
+        <div class="hero-left-content">
+          <div class="hero-haute-badge">
+            <span class="gold-sparkle">✦</span> <span data-i18n="hero_badge">THE NEXT-GEN MEDIA & GROWTH ECOSYSTEM</span>
+          </div>
+
+          <h1 class="hero-main-title">
+            <span data-i18n="hero_title_1">ĐỊNH HÌNH</span> <br>
+            <span class="liquid-gold-text" data-i18n="hero_title_2">CHUẨN MỰC MEDIA</span><br>
+            <span class="text-gold-outline" data-i18n="hero_title_3">THẾ HỆ MỚI</span>
+          </h1>
+
+          <p class="hero-lead-desc" data-i18n="hero_desc">
+            LA Group hợp nhất năng lực <strong>Sản Xuất Điện Ảnh 4K</strong>, <strong>Mạng Lưới Creator Độc Quyền</strong> và <strong>Tối Ưu Doanh Số Livestream Đa Kênh</strong> — Kiến tạo dấu ấn độc bản và tăng trưởng vượt bậc cho thương hiệu cao cấp.
+          </p>
+
+          <div class="hero-cta-group">
+            <button onclick="openQuoteChatbox()" class="btn-liquid-gold btn-large">
+              <span data-i18n="hero_btn_quote">Nhận Báo Giá Nhanh</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <button class="btn-video-hero" data-youtube-id="79402X3bTyc" data-video-title="LA Group Master Showreel 4K Cinema">
+              <span class="play-gold-circle"><i class="fa-solid fa-play"></i></span>
+              <span class="play-btn-text">
+                <strong data-i18n="hero_btn_showreel">Xem Showreel 4K</strong>
+                <small>2 Phút 30 Giây • 4K HDR</small>
+              </span>
+            </button>
+          </div>
+
+          <!-- Social Proof -->
+          <div class="hero-proof-box">
+            <div class="proof-avatars">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Creator Linh">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80" alt="Creator Huong">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="Creator Hieu">
+              <span class="proof-count">+50</span>
+            </div>
+            <div class="proof-info">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <strong>5.0 / 5.0</strong>
+              </div>
+              <p data-i18n="hero_proof_text">Hơn 150+ Nhãn hàng & Tập đoàn hàng đầu bảo chứng</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Featured Media Card -->
+        <div class="hero-right-card">
+          <div class="showreel-hero-card" data-youtube-id="ysz5S6PUM-U" data-video-title="LA Group Showreel 4K Cinema">
+            <img src="assets/showreel_thumbnail.jpg" alt="LA Group Showreel 4K" class="showreel-cover-img">
+            <div class="showreel-overlay">
+              <div class="showreel-top-tag">
+                <span class="badge-tag">SHOWREEL 2026</span>
+                <span class="status-cinema"><span class="dot-gold"></span> CINEMATIC 4K</span>
+              </div>
+              <div class="play-pulse-icon">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="showreel-card-info">
+                <span class="p-brand-tag">HAUTE COUTURE PRODUCTION</span>
+                <h3>Visual Storytelling & Commercials</h3>
+                <p data-i18n="showreel_hint">Nhấp để phát video độ phân giải cao 4K trên YouTube</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Real-time Stats Ribbon -->
+      <div class="stats-ribbon">
+        <div class="stat-item">
+          <div class="stat-num counter" data-target="500">500M+</div>
+          <div class="stat-label" data-i18n="stat_views">Tổng Lượt View Đa Nền Tảng</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <div class="stat-num counter" data-target="150">150+</div>
+          <div class="stat-label" data-i18n="stat_brands">Nhãn Hàng Cao Cấp Đồng Hành</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <div class="stat-num counter" data-target="50">50+</div>
+          <div class="stat-label" data-i18n="stat_creators">KOC & Creator Độc Quyền</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <div class="stat-num counter" data-target="6.8">6.8x</div>
+          <div class="stat-label" data-i18n="stat_roas">ROAS Trung Bình Chiến Dịch</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       2. VỀ LA GROUP (/gioi-thieu & /gioi-thieu/doi-ngu)
+       ======================================================== -->
+  <section class="section-wrapper" id="gioi-thieu">
+    <div class="container">
+      
+      <div class="section-title-box text-center">
+        <span class="gold-badge-pill" data-i18n="about_badge">VỀ LA GROUP</span>
+        <h2 class="main-title" data-i18n="about_title">Triết Lý Nghệ Thuật & <span class="liquid-gold-text">Tăng Trưởng Thực Chiến</span></h2>
+        <p class="section-desc" data-i18n="about_desc">Không chỉ là đơn vị sản xuất media thông thường, LA Group định vị là đối tác chiến lược toàn diện đưa thương hiệu bứt phá.</p>
+      </div>
+
+      <div class="statement-body-grid">
+        <div class="statement-lead">
+          <h3 data-i18n="about_lead">Kết hợp chuẩn xác giữa tính thẩm mỹ điện ảnh đỉnh cao và khoa học dữ liệu chuyển đổi.</h3>
+        </div>
+        <div class="statement-desc">
+          <p data-i18n="about_body">
+            Mỗi thước phim, mỗi phiên livestream và mỗi chiến dịch KOC do LA Group thực thi đều hướng tới mục tiêu tối thượng: <strong>Nâng tầm nhận diện thương hiệu</strong> và <strong>tối đa hóa tỷ lệ chuyển đổi doanh thu</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Đội ngũ (/gioi-thieu/doi-ngu) -->
+      <div class="team-leadership-block" id="doi-ngu" style="margin-top: 60px;">
+        <div class="section-header-row">
+          <div>
+            <span class="gold-badge-pill" data-i18n="team_badge">BAN LÃNH ĐẠO & CHUYÊN GIA</span>
+            <h3 class="main-title" style="font-size: 1.8rem;" data-i18n="team_title">Đội Ngũ Sáng Tạo Tiên Phong</h3>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop&q=80" alt="Founder & CEO Alex Nguyễn">
+            </div>
+            <div class="team-info">
+              <h4>Alex Nguyễn</h4>
+              <span class="team-role">Founder & Chief Executive Officer</span>
+              <p>10+ năm kinh nghiệm cố vấn chiến lược truyền thông & tăng trưởng thương hiệu đa kênh.</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&auto=format&fit=crop&q=80" alt="Creative Director Elena Bùi">
+            </div>
+            <div class="team-info">
+              <h4>Elena Bùi</h4>
+              <span class="team-role">Head of Creative & 4K Production</span>
+              <p>Đạo diễn hình ảnh đứng sau hàng loạt TVC triệu view và chiến dịch thời trang Haute Couture.</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&auto=format&fit=crop&q=80" alt="Director of Performance Minh Hiếu">
+            </div>
+            <div class="team-info">
+              <h4>Minh Hiếu</h4>
+              <span class="team-role">Head of Digital Ads & E-Commerce</span>
+              <p>Chuyên gia vận hành Media Spending 50B+ VNĐ với cam kết ROAS tối ưu hàng đầu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. DỊCH VỤ (/dich-vu: 5 MỤC CON)
+       ======================================================== -->
+  <section class="section-wrapper bg-darker" id="dich-vu">
+    <div class="container">
+      
+      <div class="section-title-box text-center">
+        <span class="gold-badge-pill" data-i18n="srv_badge">DỊCH VỤ TOÀN DIỆN</span>
+        <h2 class="main-title"><span data-i18n="srv_title_1">Hệ Thống Giải Pháp</span> <span class="liquid-gold-text" data-i18n="srv_title_2">5 Trụ Cột Tăng Trưởng</span></h2>
+        <p class="section-desc" data-i18n="srv_desc">Chuỗi dịch vụ khép kín từ sản xuất nội dung, vận hành quảng cáo, media network, social commerce tới đào tạo in-house.</p>
+      </div>
+
+      <div class="clean-bento-grid">
+        
+        <!-- 1. Production — Sản xuất nội dung -->
+        <div class="bento-item bento-span-7" id="san-xuat-noi-dung">
+          <div class="bento-badge"><i class="fa-solid fa-video"></i> 01. PRODUCTION</div>
+          <h3>Sản Xuất Nội Dung 4K Cinema</h3>
+          <p>Sở hữu dàn máy quay RED/Sony Cinema, hệ thống gimbal, đèn studio ARRI và đội ngũ đạo diễn hình ảnh danh tiếng.</p>
+          <ul class="bento-checklist">
+            <li><i class="fa-solid fa-check"></i> TVC thương mại điện ảnh & Concept quảng cáo sang trọng</li>
+            <li><i class="fa-solid fa-check"></i> Sản xuất hàng loạt Short-form Video chuẩn thuật toán TikTok/Reels</li>
+            <li><i class="fa-solid fa-check"></i> Chụp ảnh Lookbook, Product 3D Render & Key Visual độc bản</li>
+          </ul>
+          <div class="bento-img-banner">
+            <img src="assets/media_production.png" alt="Media Production">
+          </div>
+        </div>
+
+        <!-- 2. Service & Ads — Vận hành & Quảng cáo -->
+        <div class="bento-item bento-span-5" id="van-hanh-va-quang-cao">
+          <div class="bento-badge"><i class="fa-solid fa-chart-line"></i> 02. SERVICE & ADS</div>
+          <h3>Vận Hành Nền Tảng & Quảng Cáo</h3>
+          <p>Đội ngũ chuyên gia Digital Ads với chứng chỉ chính thức từ TikTok for Business, Meta & Google Partner.</p>
+          <ul class="bento-checklist">
+            <li><i class="fa-solid fa-check"></i> Tối ưu chi phí CPA, cam kết ROAS tối thiểu 4.5x - 7.0x</li>
+            <li><i class="fa-solid fa-check"></i> Phân phối ngân sách đa kênh thông minh theo dữ liệu thời gian thực</li>
+            <li><i class="fa-solid fa-check"></i> Báo cáo minh bạch realtime qua Google Data Studio</li>
+          </ul>
+          <div class="bento-img-banner" style="height: 140px;">
+            <img src="assets/digital_marketing.png" alt="Digital Marketing & Ads">
+          </div>
+        </div>
+
+        <!-- 3. Media Network -->
+        <div class="bento-item bento-span-5" id="media-network">
+          <div class="bento-badge"><i class="fa-solid fa-tower-broadcast"></i> 03. MEDIA NETWORK</div>
+          <h3>Mạng Lưới Kênh Social Media Network</h3>
+          <p>Sở hữu hệ thống Fanpage, TikTok Channels và Group cộng đồng đạt hơn 15M+ người theo dõi tích lũy.</p>
+          <ul class="bento-checklist">
+            <li><i class="fa-solid fa-check"></i> Phủ sóng truyền thông diện rộng (Mass Coverage) trong 24h</li>
+            <li><i class="fa-solid fa-check"></i> Định hướng dư luận và tạo sóng thảo luận thương hiệu (Buzz Seeding)</li>
+            <li><i class="fa-solid fa-check"></i> Độc quyền vị trí ghim bài và booking tài trợ trên hệ sinh thái</li>
+          </ul>
+          <div class="bento-img-banner" style="height: 140px;">
+            <img src="assets/social_talent.png" alt="Social Talent & Media Network">
+          </div>
+        </div>
+
+        <!-- 4. E-Com — Social Commerce -->
+        <div class="bento-item bento-span-7" id="e-commerce">
+          <div class="bento-badge"><i class="fa-solid fa-cart-shopping"></i> 04. SOCIAL COMMERCE</div>
+          <h3>E-Commerce & Mega Livestream Studio</h3>
+          <p>Trường quay 4K đa góc máy, kịch bản chốt đơn tâm lý học và hệ thống điều khiển âm thanh ánh sáng trực tiếp.</p>
+          <ul class="bento-checklist">
+            <li><i class="fa-solid fa-check"></i> Vận hành gian hàng TikTok Shop & Shopee Mall trọn gói</li>
+            <li><i class="fa-solid fa-check"></i> Tổ chức các phiên Mega Live doanh số hàng tỷ đồng</li>
+            <li><i class="fa-solid fa-check"></i> Cung cấp Host livestream chuyên nghiệp, duy trì mắt xem kỷ lục</li>
+          </ul>
+          <div class="bento-img-banner">
+            <img src="assets/livestream_studio.jpg" alt="Livestream Studio">
+          </div>
+        </div>
+
+        <!-- 5. Academy — Đào tạo -->
+        <div class="bento-item bento-span-12" id="academy" style="grid-column: span 12;">
+          <div class="bento-badge"><i class="fa-solid fa-graduation-cap"></i> 05. LA ACADEMY</div>
+          <h3>Học Viện Đào Tạo Livestream & Truyền Thông In-House</h3>
+          <p>Chương trình huấn luyện thực chiến 80% thời lượng trên trường quay thực tế dành cho doanh nghiệp muốn tự chủ đội ngũ.</p>
+          <div class="bento-img-banner" style="height: 140px;">
+            <img src="assets/academy_training.png" alt="LA Academy Training">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. ĐỐI TÁC (/doi-tac: KHÁCH HÀNG & KOC NETWORK)
+       ======================================================== -->
+  <section class="section-wrapper" id="doi-tac">
+    <div class="container">
+      
+      <!-- Khách hàng / Thương hiệu -->
+      <div id="khach-hang" style="margin-bottom: 60px;">
+        <div class="section-title-box text-center">
+          <span class="gold-badge-pill" data-i18n="clients_badge">ĐỐI TÁC THƯƠNG HIỆU</span>
+          <h2 class="main-title" data-i18n="clients_title">150+ Nhãn Hàng & <span class="liquid-gold-text">Tập Đoàn Đồng Hành</span></h2>
+          <p class="section-desc" data-i18n="clients_desc">Tự hào là đối tác chiến lược của các thương hiệu hàng đầu trong ngành Dược mỹ phẩm, Thời trang cao cấp, Công nghệ và F&B.</p>
+        </div>
+      </div>
+
+      <!-- KOC / Creator Network (/doi-tac/koc-creator) -->
+      <div id="koc-creator">
+        <div class="section-header-row">
+          <div>
+            <span class="gold-badge-pill" data-i18n="koc_badge">MẠNG LƯỚI ĐỘC QUYỀN</span>
+            <h3 class="main-title" style="font-size: 2rem;" data-i18n="koc_title">Mạng Lưới KOC & <span class="liquid-gold-text">Creator Độc Quyền</span></h3>
+          </div>
+          <div class="talent-filters">
+            <button class="filter-btn active" data-filter="all">Tất Cả</button>
+            <button class="filter-btn" data-filter="beauty">Làm Đẹp & Mỹ Phẩm</button>
+            <button class="filter-btn" data-filter="fashion">Thời Trang & Lifestyle</button>
+            <button class="filter-btn" data-filter="tech">Công Nghệ & Gia Dụng</button>
+          </div>
+        </div>
+
+        <div class="talent-grid">
+          
+          <div class="talent-card" data-category="beauty">
+            <div class="talent-thumb">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80" alt="KOC Linh Bùi">
+              <span class="t-badge">Top Beauty Creator</span>
+            </div>
+            <div class="talent-body">
+              <div class="talent-head">
+                <h4>Linh Bùi</h4>
+                <span class="t-tag">1.4M Follower</span>
+              </div>
+              <p class="t-desc">Chuyên gia review Skincare khoa học, phong cách chỉn chu, tệp fan trung thành 85% nữ.</p>
+              <div class="t-stats">
+                <div><strong>1.4M</strong><span>TikTok</span></div>
+                <div><strong>8.8%</strong><span>Engagement</span></div>
+                <div><strong>120M</strong><span>GMV Tháng</span></div>
+              </div>
+              <button onclick="openQuoteChatbox('Booking KOC Linh Bùi')" class="btn-book-talent">Booking Linh Bùi</button>
+            </div>
+          </div>
+
+          <div class="talent-card" data-category="fashion">
+            <div class="talent-thumb">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80" alt="Creator Hương Nguyễn">
+              <span class="t-badge">Fashion Icon</span>
+            </div>
+            <div class="talent-body">
+              <div class="talent-head">
+                <h4>Hương Nguyễn</h4>
+                <span class="t-tag">850K Follower</span>
+              </div>
+              <p class="t-desc">Phối đồ phong cách Haute Couture hiện đại, gu thẩm mỹ cao, phù hợp nhãn hàng cao cấp.</p>
+              <div class="t-stats">
+                <div><strong>850K</strong><span>TikTok</span></div>
+                <div><strong>7.4%</strong><span>Engagement</span></div>
+                <div><strong>95M</strong><span>GMV Tháng</span></div>
+              </div>
+              <button onclick="openQuoteChatbox('Booking KOC Hương Nguyễn')" class="btn-book-talent">Booking Hương Nguyễn</button>
+            </div>
+          </div>
+
+          <div class="talent-card" data-category="tech">
+            <div class="talent-thumb">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80" alt="Creator Hiếu Trần">
+              <span class="t-badge">Tech & Living</span>
+            </div>
+            <div class="talent-body">
+              <div class="talent-head">
+                <h4>Hiếu Trần</h4>
+                <span class="t-tag">620K Follower</span>
+              </div>
+              <p class="t-desc">Review thiết bị thông minh và đồ gia dụng công nghệ cao với góc nhìn chi tiết, chân thật.</p>
+              <div class="t-stats">
+                <div><strong>620K</strong><span>TikTok</span></div>
+                <div><strong>9.2%</strong><span>Engagement</span></div>
+                <div><strong>140M</strong><span>GMV Tháng</span></div>
+              </div>
+              <button onclick="openQuoteChatbox('Booking KOC Hiếu Trần')" class="btn-book-talent">Booking Hiếu Trần</button>
+            </div>
+          </div>
+
+          <div class="talent-card" data-category="beauty">
+            <div class="talent-thumb">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80" alt="Creator Mai Anh">
+              <span class="t-badge">Rising Live Star</span>
+            </div>
+            <div class="talent-body">
+              <div class="talent-head">
+                <h4>Mai Anh</h4>
+                <span class="t-tag">450K Follower</span>
+              </div>
+              <p class="t-desc">Nữ host livestream năng lượng đỉnh cao, giữ mắt xem kỷ lục và khả năng chốt đơn thần tốc.</p>
+              <div class="t-stats">
+                <div><strong>450K</strong><span>TikTok</span></div>
+                <div><strong>11.5%</strong><span>Engagement</span></div>
+                <div><strong>210M</strong><span>GMV Tháng</span></div>
+              </div>
+              <button onclick="openQuoteChatbox('Booking KOC Mai Anh')" class="btn-book-talent">Booking Mai Anh</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. DỰ ÁN (/du-an: CASE STUDY & BLOG)
+       ======================================================== -->
+  <section class="section-wrapper bg-darker" id="du-an">
+    <div class="container">
+      
+      <!-- Case Studies Tiêu Biểu -->
+      <div class="section-title-box text-center">
+        <span class="gold-badge-pill" data-i18n="proj_badge">DỰ ÁN TIÊU BIỂU</span>
+        <h2 class="main-title"><span data-i18n="proj_title_1">Case Studies &</span> <span class="liquid-gold-text" data-i18n="proj_title_2">Showreel Thực Tế</span></h2>
+        <p class="section-desc" data-i18n="proj_desc">Khám phá các tác phẩm media 4K và chiến dịch bùng nổ doanh số được thực thi bởi đội ngũ LA Group.</p>
+      </div>
+
+      <div class="parallax-grid">
+        
+        <div class="project-card" data-youtube-id="L_LUpnjgPso" data-video-title="TVC Dược Mỹ Phẩm Cao Cấp — 4K Commercial">
+          <div class="project-media-wrap">
+            <img src="assets/showreel_thumbnail.jpg" alt="TVC Dược Mỹ Phẩm" class="project-img">
+            <div class="project-overlay">
+              <span class="p-category">COMMERCIAL TVC</span>
+              <span class="p-duration">4K Cinema • 0:45</span>
+              <div class="p-play-btn"><i class="fa-solid fa-play"></i></div>
+            </div>
+          </div>
+          <div class="project-details">
+            <h4>TVC Quảng Cáo Dòng Dược Mỹ Phẩm Cao Cấp</h4>
+            <p>Sản xuất chuẩn điện ảnh 4K RAW, kỹ xảo VFX ánh sáng lỏng và đạt hơn 8.5M lượt xem viral.</p>
+            <div class="project-meta">
+              <span>Chiến dịch Q2/2026</span>
+              <span class="p-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-youtube-id="3JZ_D3ELwOQ" data-video-title="Mega Live Đại Tiệc Thương Hiệu 2.4 Tỷ">
+          <div class="project-media-wrap">
+            <img src="assets/livestream_studio.jpg" alt="Mega Live Show" class="project-img">
+            <div class="project-overlay">
+              <span class="p-category">LIVESTREAM MEGA EVENT</span>
+              <span class="p-duration">Multi-cam HD • 4 Giờ</span>
+              <div class="p-play-btn"><i class="fa-solid fa-play"></i></div>
+            </div>
+          </div>
+          <div class="project-details">
+            <h4>Mega Livestream Đại Tiệc Thương Hiệu Doanh Số 2.4 Tỷ</h4>
+            <p>Vận hành trường quay chuyên nghiệp 4 máy quay 4K, hệ thống điều khiển âm thanh ánh sáng trực tiếp.</p>
+            <div class="project-meta">
+              <span>Doanh số GMV 2.4B VNĐ</span>
+              <span class="p-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Blog / Tin tức & Kiến thức (/du-an/blog) -->
+      <div id="blog" style="margin-top: 70px;">
+        <div class="section-header-row">
+          <div>
+            <span class="gold-badge-pill" data-i18n="blog_badge">BLOG & KIẾN THỨC</span>
+            <h3 class="main-title" style="font-size: 1.8rem;" data-i18n="blog_title">Tin Tức & Xu Hướng Media 2026</h3>
+          </div>
+        </div>
+
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-tag">XU HƯỚNG 2026</div>
+            <h4>Bí quyết đạt doanh số bạc tỷ từ Mega Live TikTok Shop cho thương hiệu</h4>
+            <p>Phân tích chiến thuật chọn Host, cấu trúc ưu đãi flash sale và kỹ thuật giữ mắt xem trực tiếp.</p>
+            <span class="blog-date"><i class="fa-solid fa-calendar"></i> 15/08/2026</span>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-tag">MEDIA PRODUCTION</div>
+            <h4>Vì sao video chuẩn 4K Cinema giúp tăng 300% tỷ lệ chuyển đổi đơn hàng?</h4>
+            <p>Tầm quan trọng của ánh sáng, góc máy nghệ thuật và âm thanh trong định hình vị thế thương hiệu cao cấp.</p>
+            <span class="blog-date"><i class="fa-solid fa-calendar"></i> 10/08/2026</span>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-tag">KOC STRATEGY</div>
+            <h4>Chiến lược phân bổ ngân sách KOC Booking đa tầng: Mega vs Micro Creators</h4>
+            <p>Công thức đo lường ROAS chính xác và giảm thiểu rủi ro lãng phí ngân sách quảng cáo.</p>
+            <span class="blog-date"><i class="fa-solid fa-calendar"></i> 05/08/2026</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6. TUYỂN DỤNG (/tuyen-dung)
+       ======================================================== -->
+  <section class="section-wrapper" id="tuyen-dung">
+    <div class="container">
+      
+      <div class="section-title-box text-center">
+        <span class="gold-badge-pill" data-i18n="careers_badge">CAREERS AT LA GROUP</span>
+        <h2 class="main-title"><span data-i18n="careers_title_1">Gia Nhập Đội Ngũ</span> <span class="liquid-gold-text" data-i18n="careers_title_2">Sáng Tạo Tiên Phong</span></h2>
+        <p class="section-desc" data-i18n="careers_desc">Môi trường làm việc năng động, sáng tạo không giới hạn với chế độ đãi ngộ vượt trội cho nhân tài media.</p>
+      </div>
+
+      <div class="careers-grid">
+        <div class="career-card">
+          <div class="career-head">
+            <h4>Senior Video Editor & Colorist 4K</h4>
+            <span class="career-type">Full-time • Hà Nội</span>
+          </div>
+          <p>Chịu trách nhiệm dựng TVC, Commercials và chỉnh màu DaVinci Resolve cho các dự án thương hiệu lớn.</p>
+          <button onclick="openQuoteChatbox('Ứng tuyển Senior Video Editor')" class="btn-apply-career">Ứng Tuyển Ngay <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="career-card">
+          <div class="career-head">
+            <h4>Account Executive / Talent Manager</h4>
+            <span class="career-type">Full-time • TP.HCM</span>
+          </div>
+          <p>Kết nối và quản lý lịch trình, chiến dịch booking cho mạng lưới hơn 50+ KOC độc quyền của công ty.</p>
+          <button onclick="openQuoteChatbox('Ứng tuyển Talent Manager')" class="btn-apply-career">Ứng Tuyển Ngay <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="career-card">
+          <div class="career-head">
+            <h4>Livestream Technical Specialist</h4>
+            <span class="career-type">Full-time • Hà Nội</span>
+          </div>
+          <p>Vận hành thiết bị trường quay, switcher Blackmagic, hệ thống âm thanh ánh sáng cho các phiên Mega Live.</p>
+          <button onclick="openQuoteChatbox('Ứng tuyển Livestream Technical')" class="btn-apply-career">Ứng Tuyển Ngay <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       7. LIÊN HỆ & FAQ (/lien-he & /lien-he/faq)
+       ======================================================== -->
+  <section class="section-wrapper bg-darker" id="lien-he">
+    <div class="container">
+      
+      <!-- FAQ (/lien-he/faq) -->
+      <div id="faq" style="margin-bottom: 70px;">
+        <div class="section-title-box text-center">
+          <span class="gold-badge-pill" data-i18n="faq_badge">HỎI ĐÁP THƯỜNG GẶP</span>
+          <h2 class="main-title" data-i18n="faq_title">Giải Đáp Thắc Mắc & <span class="liquid-gold-text">Chính Sách Hợp Tác</span></h2>
+        </div>
+
+        <div class="faq-accordion-box">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Quy trình sản xuất 1 video TVC 4K tại LA Group mất bao lâu?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Thời gian thông thường từ 7 - 14 ngày làm việc từ khi chốt kịch bản phân cảnh đến khi bàn giao bản Master 4K hoàn chỉnh. Đối với các gói khẩn cấp, chúng tôi có quy trình Fast-Track 72 giờ.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>LA Group có cam kết KPI doanh số hoặc lượt xem không?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Có. Mọi hợp đồng dịch vụ Digital Performance Ads và KOC Booking tại LA Group đều có điều khoản cam kết rõ ràng về lượt xem tối thiểu, tỷ lệ tương tác và mục tiêu ROAS theo từng ngành hàng.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Chi phí tối thiểu để bắt đầu một chiến dịch là bao nhiêu?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Chúng tôi cung cấp các gói linh hoạt từ 15.000.000đ đối với sản xuất nội dung thử nghiệm và từ 35.000.000đ trở lên cho chiến dịch truyền thông tổng thể tích hợp KOC và quảng cáo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Form Liên Hệ (/lien-he) -->
+      <div class="contact-box" id="contact">
+        
+        <div class="contact-info-col">
+          <span class="gold-badge-pill" data-i18n="contact_badge">GET IN TOUCH</span>
+          <h2 class="main-title"><span data-i18n="contact_title_1">Sẵn Sàng Kiến Tạo</span> <br><span class="liquid-gold-text" data-i18n="contact_title_2">Chiến Dịch Đột Phá?</span></h2>
+          <p class="section-desc" style="text-align: left; margin-bottom: 24px;" data-i18n="contact_desc">
+            Hãy chia sẻ mục tiêu của thương hiệu. Chuyên gia cố vấn chiến lược của LA Group sẽ phản hồi bản kế hoạch chi tiết trong vòng 24 giờ.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span class="c-lbl">Hotline Tư Vấn 24/7:</span>
+                <a href="tel:0988000000" class="c-val">0988.xxx.xxx</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="c-lbl">Email Hợp Tác:</span>
+                <a href="mailto:contact@lagroup.media" class="c-val">contact@lagroup.media</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span class="c-lbl">Trụ Sở Chính:</span>
+                <span class="c-val">Tầng 12, Tòa nhà Landmark, Hà Nội & TP. Hồ Chí Minh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-col">
+          <form class="clean-form" id="leadGenForm">
+            <h3 data-i18n="form_title">Đăng Ký Tư Vấn & Nhận Báo Giá</h3>
+            
+            <div class="form-row">
+              <div class="form-col">
+                <label for="fName" data-i18n="form_name">Họ và Tên *</label>
+                <input type="text" id="fName" required placeholder="Nguyễn Văn A">
+              </div>
+              <div class="form-col">
+                <label for="fPhone" data-i18n="form_phone">Số Điện Thoại / Zalo *</label>
+                <input type="tel" id="fPhone" required placeholder="0988 xxx xxx">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="fBrand" data-i18n="form_brand">Tên Thương Hiệu / Doanh Nghiệp</label>
+                <input type="text" id="fBrand" placeholder="Công ty / Brand của bạn">
+              </div>
+              <div class="form-col">
+                <label for="fService" data-i18n="form_service">Dịch Vụ Quan Tâm</label>
+                <select id="fService">
+                  <option value="all">Trọn gói Omnichannel Media & Growth</option>
+                  <option value="media">Sản xuất TVC / Video 4K Cinema</option>
+                  <option value="koc">Booking Mạng Lưới KOC & Creator</option>
+                  <option value="live">Vận hành Livestream Studio Bán Hàng</option>
+                  <option value="academy">Đào tạo In-house LA Academy</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-col">
+              <label for="fMsg" data-i18n="form_msg">Nhu Cầu Chi Tiết</label>
+              <textarea id="fMsg" rows="3" placeholder="Mô tả mục tiêu chiến dịch, thời gian dự kiến hoặc yêu cầu đặc biệt..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-liquid-gold w-full btn-large" id="submitFormBtn">
+              <i class="fa-solid fa-paper-plane"></i> <span data-i18n="form_submit">GỬI YÊU CẦU TƯ VẤN NGAY</span>
+            </button>
+
+            <div class="form-alert" id="formSuccessAlert">
+              <i class="fa-solid fa-circle-check text-emerald"></i>
+              <span data-i18n="form_success">Cảm ơn bạn! LA Group đã nhận được thông tin và sẽ liên hệ trong vòng 24 giờ.</span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER (WITH LEGAL POLICIES)
+       ======================================================== -->
+  <footer class="clean-footer">
+    <div class="container footer-row">
+      <div class="f-brand">
+        <div class="f-logo">
+          <img src="assets/la_logo.png" alt="LA Group Logo">
+          <span>LA GROUP</span>
+        </div>
+        <p>Hệ sinh thái truyền thông cao cấp, sản xuất media 4K và tăng trưởng doanh số đa kênh hàng đầu.</p>
+        <small>© 2026 LA GROUP MEDIA. All rights reserved. Haute Couture Art Direction.</small>
+      </div>
+
+      <div class="f-links-col">
+        <h5 data-i18n="ft_menu">ĐIỀU HƯỚNG CHÍNH</h5>
+        <a href="#hero" data-i18n="menu_home">Trang chủ</a>
+        <a href="#gioi-thieu" data-i18n="menu_about">Về LA Group</a>
+        <a href="#dich-vu" data-i18n="menu_services">Dịch vụ</a>
+        <a href="#doi-tac" data-i18n="menu_partners">Đối tác</a>
+        <a href="#du-an" data-i18n="menu_projects">Dự án & Blog</a>
+        <a href="#tuyen-dung" data-i18n="menu_careers">Tuyển dụng</a>
+        <a href="#lien-he" data-i18n="menu_contact">Liên hệ</a>
+      </div>
+
+      <div class="f-links-col">
+        <h5 data-i18n="ft_legal">CHÍNH SÁCH & ĐIỀU KHOẢN</h5>
+        <a href="#privacy" onclick="alert('Chính sách bảo mật dữ liệu khách hàng theo chuẩn an toàn quốc tế của LA Group.'); return false;">Chính Sách Bảo Mật</a>
+        <a href="#terms" onclick="alert('Điều khoản dịch vụ và thỏa thuận cam kết KPI của LA Group Media.'); return false;">Điều Khoản Sử Dụng</a>
+        <a href="sitemap.xml" target="_blank">Sitemap.xml (SEO)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       QUICK QUOTE CHATBOX (INTERACTIVE MODAL — NO REDIRECT)
+       ======================================================== -->
+  <div class="quote-chatbox-backdrop" id="quoteChatboxBackdrop" role="dialog" aria-modal="true">
+    <div class="quote-chatbox-container">
+      <div class="chatbox-header">
+        <div class="chatbox-bot-info">
+          <div class="bot-avatar"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <h4>Trợ Lý Báo Giá LA Group</h4>
+            <span class="bot-status"><span class="dot-online"></span> Đang trực tuyến (Phản hồi tức thì)</span>
+          </div>
+        </div>
+        <button class="chatbox-close" onclick="closeQuoteChatbox()" aria-label="Close Chat">&times;</button>
+      </div>
+
+      <div class="chatbox-body" id="chatboxBody">
+        <div class="chat-msg bot">
+          <p>Xin chào! Tôi là Trợ lý Cố vấn Chiến lược của LA Group. Bạn đang cần báo giá cho hạng mục nào?</p>
+        </div>
+        
+        <div class="chat-quick-options" id="chatOptions">
+          <button class="chat-chip" onclick="handleChatSelect('Sản xuất TVC / Video 4K')">🎬 Sản xuất TVC / Video 4K</button>
+          <button class="chat-chip" onclick="handleChatSelect('Booking Creator & KOC')">👑 Booking KOC / Creator</button>
+          <button class="chat-chip" onclick="handleChatSelect('Trường quay Mega Livestream')">🎙️ Mega Livestream Studio</button>
+          <button class="chat-chip" onclick="handleChatSelect('Trọn gói Omnichannel Media')">🚀 Trọn gói Omnichannel</button>
+        </div>
+      </div>
+
+      <div class="chatbox-footer">
+        <form id="chatboxForm" onsubmit="handleChatSend(event)">
+          <input type="text" id="chatInput" placeholder="Nhập yêu cầu hoặc số điện thoại..." required>
+          <button type="submit" class="btn-chat-send" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       YOUTUBE EMBED VIDEO MODAL
+       ======================================================== -->
+  <div class="youtube-modal-backdrop" id="youtubeModal" role="dialog" aria-modal="true">
+    <div class="youtube-modal-container">
+      <div class="modal-header">
+        <h4 id="youtubeModalTitle"><i class="fa-brands fa-youtube text-gold"></i> Đang tải video...</h4>
+        <button class="modal-close" onclick="closeYouTubeModal()" aria-label="Close Video">&times;</button>
+      </div>
+      <div class="youtube-iframe-wrapper">
+        <iframe id="youtubeIframe" src="" title="LA Group YouTube Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING QUICK ACTIONS -->
+  <div class="floating-actions">
+    <button onclick="openQuoteChatbox()" class="fab-btn fab-quote" title="Nhận Báo Giá Nhanh"><i class="fa-solid fa-comment-dollar"></i></button>
+    <a href="tel:0988000000" class="fab-btn fab-phone" title="Gọi Hotline"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://zalo.me" target="_blank" rel="noopener noreferrer" class="fab-btn fab-zalo" title="Chat Zalo"><i class="fa-solid fa-comment-dots"></i></a>
+    <button class="fab-btn fab-top" id="scrollToTop" title="Lên đầu trang" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <!-- Optimized 3D WebGL Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Main JavaScript Engine with Multi-language & Chatbox -->
+  <script src="landing.js"></script>
+</body>
+</html>
