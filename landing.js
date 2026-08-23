@@ -79,7 +79,7 @@ const i18nDictionary = {
     hero_desc: "LA Group hợp nhất năng lực Sản Xuất Điện Ảnh 4K, Mạng Lưới Creator Độc Quyền và Tối Ưu Doanh Số Livestream Đa Kênh — Kiến tạo dấu ấn độc bản và tăng trưởng vượt bậc cho thương hiệu cao cấp.",
     hero_btn_quote: "Nhận Báo Giá Nhanh",
     hero_btn_join: "Tham Gia LA Group",
-    hero_btn_join_sub: "Dành cho Idol & Creator Network",
+    hero_btn_join_sub: "Dành cho Idol & Creator",
     hero_proof_text: "Hơn 150+ Nhãn hàng & Tập đoàn hàng đầu bảo chứng",
     showreel_hint: "Nhấp để phát video độ phân giải cao 4K trên YouTube",
     stat_views: "Tổng Lượt View Đa Nền Tảng",

@@ -748,11 +748,22 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   margin-bottom: 26px;
 }
 
+.btn-large {
+  height: 52px;
+  padding: 0 24px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .btn-join-network-hero {
+  height: 52px;
   background: rgba(255, 255, 255, 0.04);
   border: var(--border-gold-hairline);
   border-radius: 100px;
-  padding: 8px 22px 8px 10px;
+  padding: 0 22px 0 7px;
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -766,7 +777,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   background: rgba(212, 175, 55, 0.16);
   border-color: var(--gold-bright);
   transform: translateY(-2px);
-  box-shadow: 0 0 22px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.35);
 }
 
 .join-gold-circle {
@@ -779,23 +790,28 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   align-items: center;
   justify-content: center;
   font-size: 0.95rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
 }
 
 .join-btn-text {
   display: flex;
   flex-direction: column;
   text-align: left;
+  line-height: 1.25;
 }
 
 .join-btn-text strong {
   font-family: var(--font-heading);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 800;
   color: #fff;
 }
 
 .join-btn-text small {
   font-size: 0.72rem;
   color: var(--gold-champagne);
+  opacity: 0.95;
 }
 
 .hero-proof-box {
