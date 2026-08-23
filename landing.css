@@ -748,25 +748,28 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   margin-bottom: 26px;
 }
 
-.btn-video-hero {
+.btn-join-network-hero {
   background: rgba(255, 255, 255, 0.04);
   border: var(--border-gold-hairline);
   border-radius: 100px;
-  padding: 8px 20px 8px 10px;
+  padding: 8px 22px 8px 10px;
   display: inline-flex;
   align-items: center;
   gap: 12px;
   color: #fff;
   transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.btn-video-hero:hover {
+.btn-join-network-hero:hover {
   background: rgba(212, 175, 55, 0.16);
   border-color: var(--gold-bright);
   transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(212, 175, 55, 0.3);
 }
 
-.play-gold-circle {
+.join-gold-circle {
   width: 38px;
   height: 38px;
   background: var(--grad-gold-btn);
@@ -775,23 +778,24 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
-.play-btn-text {
+.join-btn-text {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.play-btn-text strong {
+.join-btn-text strong {
   font-family: var(--font-heading);
   font-size: 0.9rem;
+  color: #fff;
 }
 
-.play-btn-text small {
+.join-btn-text small {
   font-size: 0.72rem;
-  color: var(--text-muted);
+  color: var(--gold-champagne);
 }
 
 .hero-proof-box {
