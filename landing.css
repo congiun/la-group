@@ -563,8 +563,9 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   position: relative;
   min-height: calc(100vh - 75px);
   display: flex;
-  align-items: center;
-  padding: 20px 0 16px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 8px 0 16px;
   overflow: hidden;
 }
 
@@ -595,7 +596,8 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   grid-template-columns: 1.15fr 0.85fr;
   gap: 32px;
   align-items: center;
-  margin-bottom: 18px;
+  margin-top: 4px;
+  margin-bottom: 20px;
 }
 
 .hero-haute-badge {
