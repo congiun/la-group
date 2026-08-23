@@ -654,7 +654,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   min-height: calc(100vh - 75px);
   display: flex;
   align-items: flex-start;
-  padding: 60px 0 24px;
+  padding: 75px 0 24px;
   overflow: hidden;
 }
 
