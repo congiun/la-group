@@ -682,8 +682,8 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 40px;
   align-items: center;
   margin-bottom: 36px;
 }
@@ -733,9 +733,9 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 .hero-lead-desc {
   font-size: 0.95rem;
   color: var(--text-muted);
-  line-height: 1.55;
-  margin-bottom: 20px;
-  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  max-width: 480px;
 }
 
 .hero-lead-desc strong { color: #fff; }
@@ -853,7 +853,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .showreel-cover-img {
   width: 100%;
-  height: 340px;
+  height: 380px;
   object-fit: cover;
   display: block;
 }
@@ -865,7 +865,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px;
+  padding: 26px;
 }
 
 .showreel-top-tag {
@@ -878,9 +878,9 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   background: rgba(212, 175, 55, 0.2);
   border: 1px solid rgba(212, 175, 55, 0.4);
   color: var(--gold-champagne);
-  padding: 5px 12px;
+  padding: 6px 14px;
   border-radius: 6px;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
@@ -902,24 +902,24 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 }
 
 .play-pulse-icon {
-  width: 62px;
-  height: 62px;
+  width: 68px;
+  height: 68px;
   background: var(--grad-gold-btn);
   color: #030303;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   align-self: center;
-  margin-top: 15px;
-  box-shadow: 0 0 35px rgba(212, 175, 55, 0.75);
+  margin-top: 20px;
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
 }
 
 .showreel-hero-card:hover .play-pulse-icon {
   transform: scale(1.15);
-  box-shadow: 0 0 50px rgba(212, 175, 55, 0.95);
+  box-shadow: 0 0 55px rgba(212, 175, 55, 1);
 }
 
 .p-brand-tag {
@@ -932,7 +932,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .showreel-card-info h3 {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 700;
   margin: 4px 0;
   color: #fff;
