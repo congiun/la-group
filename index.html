@@ -1,1325 +1,1095 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CÔNG TY TRUYỀN THÔNG LA GROUP - LA GROUP Review Giai Đoạn 1</title>
-  
-  <!-- Google Fonts Optimized for Vietnamese Diacritics (Be Vietnam Pro & Inter) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>LA GROUP — Haute Couture Media & Omnichannel Growth Hub</title>
+  <meta name="description" content="LA GROUP — Đơn vị tiên phong cung cấp giải pháp Media Production 4K, Mạng lưới KOC/Talent Độc Quyền, Digital Marketing & Học viện Đào tạo Livestream Thực chiến.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/la_logo.png">
+
+  <!-- Google Fonts with Full Vietnamese Support -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body class="dark-mode">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Top Navigation Bar -->
-  <header class="navbar">
-    <div class="brand">
-      <img src="assets/la_logo.png" alt="LA Group Logo" class="brand-logo-img">
-      <div class="brand-text">
-        <span class="company-name">LA GROUP</span>
+  <!-- Font Awesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js" defer></script>
+
+  <!-- Luxury Obsidian & Liquid Gold Styling -->
+  <link rel="stylesheet" href="landing.css">
+
+  <!-- Immediate F5 Top Reset Script -->
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+  </script>
+</head>
+<body class="luxury-obsidian-gold">
+
+  <!-- Top Announcement Bar (Rotating Multi-Message Ticker with Smooth Cinematic Transitions) -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="container announcement-slider-wrapper">
+      <div class="announcement-slider" id="announcementSlider">
+        
+        <!-- Slide 1 -->
+        <div class="announcement-slide active">
+          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_1">HAUTE COUTURE CAMPAIGNS Q3/Q4</span></span>
+          <span class="announcement-text" data-i18n="ann_text_1">Tặng gói tư vấn chiến lược Omnichannel trị giá 25.000.000đ cho 5 thương hiệu cao cấp đầu tiên trong tháng.</span>
+          <button onclick="openQuoteChatbox()" class="announcement-link"><span data-i18n="ann_cta_1">Nhận ưu đãi</span> <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="announcement-slide">
+          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_2">MEGA LIVE STUDIO 4K</span></span>
+          <span class="announcement-text" data-i18n="ann_text_2">Khai trương Phim trường Mega Livestream 4K chuẩn Quốc tế — Tối ưu tỷ lệ chuyển đổi doanh số vượt bậc.</span>
+          <button onclick="openQuoteChatbox()" class="announcement-link"><span data-i18n="ann_cta_2">Đặt lịch trải nghiệm</span> <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="announcement-slide">
+          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_3">TALENT ACQUISITION 2026</span></span>
+          <span class="announcement-text" data-i18n="ann_text_3">Mở cổng casting độc quyền Top 10 KOC & Creator tiềm năng đồng hành cùng các nhãn hàng quốc tế.</span>
+          <a href="#tuyen-dung" class="announcement-link"><span data-i18n="ann_cta_3">Ứng tuyển ngay</span> <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="announcement-slide">
+          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_4">PRIVATE MEDIA AUDIT</span></span>
+          <span class="announcement-text" data-i18n="ann_text_4">Tài trợ 100% chi phí Audit toàn diện hiệu suất Media & Cam kết ROAS đa kênh cho Doanh nghiệp.</span>
+          <button onclick="openQuoteChatbox()" class="announcement-link"><span data-i18n="ann_cta_4">Đăng ký Audit</span> <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
       </div>
     </div>
-    
-    <!-- Division Quick Navigation -->
-    <nav class="division-tabs">
-      <button class="nav-tab active" data-slide="0"><i class="fa-solid fa-house"></i> Tổng Quan</button>
-      <button class="nav-tab" data-slide="1"><i class="fa-solid fa-diagram-project"></i> Hệ Sinh Thái</button>
-      <button class="nav-tab media-tab" data-slide="2"><i class="fa-solid fa-clapperboard"></i> 1. Media</button>
-      <button class="nav-tab social-tab" data-slide="3"><i class="fa-solid fa-users-viewfinder"></i> 2. Social</button>
-      <button class="nav-tab digital-tab" data-slide="4"><i class="fa-solid fa-chart-line"></i> 3. Digital</button>
-      <button class="nav-tab academy-tab" data-slide="5"><i class="fa-solid fa-graduation-cap"></i> 4. Academy</button>
-      <button class="nav-tab" data-slide="6"><i class="fa-solid fa-coins"></i> Dòng Tiền</button>
-      <button class="nav-tab" data-slide="7"><i class="fa-solid fa-sitemap"></i> Nhân Sự</button>
-      <button class="nav-tab" data-slide="8"><i class="fa-solid fa-flag-checkered"></i> Tổng Kết</button>
-    </nav>
+  </div>
 
-    <!-- Right Controls -->
-    <div class="toolbar-actions">
-      <a href="landing.html" class="tool-btn" style="text-decoration: none; color: #fff; background: linear-gradient(135deg, #f43f5e, #8b5cf6); font-weight: 700; border: none;" title="Xem Giao Diện Landing Page Mới"><i class="fa-solid fa-rocket"></i> Landing Page</a>
-      <button class="tool-btn" id="themeToggleBtn" title="Đổi giao diện Sáng / Tối"><i class="fa-solid fa-moon"></i> Giao Diện</button>
-      <button class="tool-btn" id="fullscreenBtn" title="Toàn màn hình (Phím F)"><i class="fa-solid fa-expand"></i> Fullscreen</button>
+  <!-- ========================================================
+       FLOATING NAVBAR (EXACT 7 MAIN PILLARS + LANG & CTA)
+       ======================================================== -->
+  <header class="navbar-wrapper" id="mainNavbar">
+    <div class="container">
+      <div class="navbar-glass">
+        
+        <!-- Brand Identity -->
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="nav-brand">
+          <img src="assets/la_logo.png" alt="LA Group Logo" class="brand-logo-img">
+          <div class="brand-info">
+            <span class="brand-name">LA GROUP</span>
+            <span class="brand-tagline">MEDIA & GROWTH HUB</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation: Exactly 7 Main Items with Dropdowns -->
+        <nav class="nav-links">
+          
+          <!-- 1. Trang chủ -->
+          <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="nav-link active">
+            <span data-i18n="menu_home">Trang chủ</span>
+          </a>
+
+          <!-- 2. Về LA Group (Dropdown: Giới thiệu, Đội ngũ) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#gioi-thieu" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_about">Về LA Group</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="#gioi-thieu" class="dropdown-item">
+                <i class="fa-solid fa-gem"></i>
+                <div>
+                  <strong data-i18n="menu_about_intro">Giới thiệu</strong>
+                  <small data-i18n="menu_about_intro_sub">Tầm nhìn, sứ mệnh & triết lý</small>
+                </div>
+              </a>
+              <a href="#doi-ngu" class="dropdown-item">
+                <i class="fa-solid fa-user-tie"></i>
+                <div>
+                  <strong data-i18n="menu_about_team">Đội ngũ</strong>
+                  <small data-i18n="menu_about_team_sub">Ban lãnh đạo & chuyên gia sáng tạo</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Dịch vụ (Dropdown: 5 mục con) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#dich-vu" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_services">Dịch vụ</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu dropdown-wide">
+              <a href="#san-xuat-noi-dung" class="dropdown-item">
+                <i class="fa-solid fa-video"></i>
+                <div>
+                  <strong data-i18n="menu_srv_production">Production — Sản xuất nội dung</strong>
+                  <small data-i18n="menu_srv_production_sub">TVC 4K Cinema, Viral Video, Lookbook</small>
+                </div>
+              </a>
+              <a href="#van-hanh-va-quang-cao" class="dropdown-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>
+                  <strong data-i18n="menu_srv_ads">Service & Ads — Vận hành & Ads</strong>
+                  <small data-i18n="menu_srv_ads_sub">Tối ưu CPA & cam kết ROAS đa kênh</small>
+                </div>
+              </a>
+              <a href="#media-network" class="dropdown-item">
+                <i class="fa-solid fa-tower-broadcast"></i>
+                <div>
+                  <strong data-i18n="menu_srv_network">Media Network</strong>
+                  <small data-i18n="menu_srv_network_sub">Hệ thống kênh Social đa nền tảng</small>
+                </div>
+              </a>
+              <a href="#e-commerce" class="dropdown-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div>
+                  <strong data-i18n="menu_srv_ecom">E-Com — Social Commerce</strong>
+                  <small data-i18n="menu_srv_ecom_sub">Trường quay Mega Live & TikTok Shop</small>
+                </div>
+              </a>
+              <a href="#academy" class="dropdown-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong data-i18n="menu_srv_academy">Academy — Đào tạo</strong>
+                  <small data-i18n="menu_srv_academy_sub">Đào tạo Host Live & đội ngũ in-house</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Đối tác (Dropdown: Khách hàng & KOC Network) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#doi-tac" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_partners">Đối tác</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="#khach-hang" class="dropdown-item">
+                <i class="fa-solid fa-handshake"></i>
+                <div>
+                  <strong data-i18n="menu_part_clients">Khách hàng / Thương hiệu</strong>
+                  <small data-i18n="menu_part_clients_sub">150+ Nhãn hàng đồng hành</small>
+                </div>
+              </a>
+              <a href="#koc-creator" class="dropdown-item">
+                <i class="fa-solid fa-crown"></i>
+                <div>
+                  <strong data-i18n="menu_part_koc">KOC / Creator Network</strong>
+                  <small data-i18n="menu_part_koc_sub">Mạng lưới 50+ Creator độc quyền</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Dự án (Dropdown: Case Study & Blog) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#du-an" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_projects">Dự án</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="#du-an" class="dropdown-item">
+                <i class="fa-solid fa-trophy"></i>
+                <div>
+                  <strong data-i18n="menu_proj_cases">Case Study / Dự án tiêu biểu</strong>
+                  <small data-i18n="menu_proj_cases_sub">Thước phim & chiến dịch 4K thực chiến</small>
+                </div>
+              </a>
+              <a href="#blog" class="dropdown-item">
+                <i class="fa-solid fa-newspaper"></i>
+                <div>
+                  <strong data-i18n="menu_proj_blog">Blog / Tin tức & Kiến thức</strong>
+                  <small data-i18n="menu_proj_blog_sub">Xu hướng truyền thông & Social Commerce</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Tuyển dụng -->
+          <a href="#tuyen-dung" class="nav-link">
+            <span data-i18n="menu_careers">Tuyển dụng</span>
+          </a>
+
+          <!-- 7. Liên hệ (Dropdown: Form liên hệ & FAQ) -->
+          <div class="nav-dropdown-wrapper">
+            <a href="#lien-he" class="nav-link dropdown-toggle">
+              <span data-i18n="menu_contact">Liên hệ</span> <i class="fa-solid fa-chevron-down nav-caret"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="#contact" class="dropdown-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <strong data-i18n="menu_cont_form">Form liên hệ</strong>
+                  <small data-i18n="menu_cont_form_sub">Gửi yêu cầu hợp tác & tư vấn</small>
+                </div>
+              </a>
+              <a href="#faq" class="dropdown-item">
+                <i class="fa-solid fa-circle-question"></i>
+                <div>
+                  <strong data-i18n="menu_cont_faq">FAQ</strong>
+                  <small data-i18n="menu_cont_faq_sub">Giải đáp câu hỏi thường gặp</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </nav>
+
+        <!-- Extra Elements: Language Selector & CTA Chatbox Button -->
+        <div class="nav-actions">
+          
+          <!-- Element 1: Multi-language Selector (VI / EN / ZH) -->
+          <div class="lang-selector-wrapper">
+            <button class="lang-btn" id="langSelectorBtn" aria-label="Select Language">
+              <i class="fa-solid fa-globe"></i>
+              <span id="currentLangLabel">VI</span>
+              <i class="fa-solid fa-chevron-down caret-mini"></i>
+            </button>
+            <div class="lang-dropdown-menu" id="langMenu">
+              <button class="lang-option active" data-lang="vi">🇻🇳 Tiếng Việt</button>
+              <button class="lang-option" data-lang="en">🇬🇧 English</button>
+              <button class="lang-option" data-lang="zh">🇨🇳 中文 (Trung)</button>
+            </div>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button class="icon-btn" id="themeToggleBtn" title="Chuyển chế độ Sáng / Tối" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+
+          <!-- Element 2: "Nhận Báo Giá" CTA Button (Opens Quick Quote Chatbox) -->
+          <button onclick="openQuoteChatbox()" class="btn-liquid-gold" id="btnQuoteHeader">
+            <i class="fa-solid fa-comment-dollar"></i> <span data-i18n="btn_quote">Nhận Báo Giá</span>
+          </button>
+
+          <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Open Mobile Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu (7 Items + Submenus + Language + CTA) -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <div class="mob-lang-bar">
+        <span class="mob-lbl">Ngôn ngữ:</span>
+        <button class="mob-lang-opt active" data-lang="vi">VI</button>
+        <button class="mob-lang-opt" data-lang="en">EN</button>
+        <button class="mob-lang-opt" data-lang="zh">ZH</button>
+      </div>
+
+      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="mob-link"><i class="fa-solid fa-house"></i> <span data-i18n="menu_home">Trang chủ</span></a>
+      <a href="#gioi-thieu" class="mob-link"><i class="fa-solid fa-gem"></i> <span data-i18n="menu_about">Về LA Group</span> (Giới thiệu & Đội ngũ)</a>
+      <a href="#dich-vu" class="mob-link"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="menu_services">Dịch vụ</span> (Production, Ads, Social, Live)</a>
+      <a href="#doi-tac" class="mob-link"><i class="fa-solid fa-handshake"></i> <span data-i18n="menu_partners">Đối tác</span> (Khách hàng & KOC Network)</a>
+      <a href="#du-an" class="mob-link"><i class="fa-solid fa-trophy"></i> <span data-i18n="menu_projects">Dự án</span> (Case Study & Blog)</a>
+      <a href="#tuyen-dung" class="mob-link"><i class="fa-solid fa-briefcase"></i> <span data-i18n="menu_careers">Tuyển dụng</span></a>
+      <a href="#lien-he" class="mob-link"><i class="fa-solid fa-envelope"></i> <span data-i18n="menu_contact">Liên hệ</span> (Form & FAQ)</a>
+      
+      <div class="mob-actions">
+        <button onclick="openQuoteChatbox(); document.getElementById('mobileDrawer').classList.remove('open');" class="mob-btn-primary">
+          <i class="fa-solid fa-comment-dollar"></i> <span data-i18n="btn_quote">Nhận Báo Giá (Mở Chat)</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Presentation Deck Container -->
-  <main class="deck-container">
-    <div class="slides-wrapper" id="slidesWrapper">
+  <!-- ========================================================
+       1. HERO SECTION — 3D LIQUID GOLD & VALUE STATEMENT
+       ======================================================== -->
+  <section class="hero-3d-section" id="hero">
+    
+    <!-- 3D WebGL Canvas Layer -->
+    <div class="canvas-3d-container" id="canvas3dContainer">
+      <canvas id="webglCanvas"></canvas>
+    </div>
 
-      <!-- ==========================================
-           SLIDE 1: HERO / COVER
-           ========================================== -->
-      <section class="slide hero-slide active" data-index="0">
-        <div class="hero-bg-shapes">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="shape shape-3"></div>
-        </div>
+    <!-- Hero Content Overlay -->
+    <div class="container hero-content-overlay">
+      <div class="hero-grid">
         
-        <div class="hero-content">
-          <h1 class="hero-title animate-card" style="--delay: 2;">
-            TỔNG QUAN CẤU TRÚC <br><span class="text-gradient">LA GROUP</span>
+        <div class="hero-left-content">
+          <div class="hero-haute-badge">
+            <span class="gold-sparkle">✦</span> <span data-i18n="hero_badge">THE NEXT-GEN MEDIA & GROWTH ECOSYSTEM</span>
+          </div>
+
+          <h1 class="hero-main-title">
+            <span data-i18n="hero_title_1">ĐỊNH HÌNH</span> <br>
+            <span class="liquid-gold-text" data-i18n="hero_title_2">CHUẨN MỰC MEDIA</span><br>
+            <span class="text-gold-outline" data-i18n="hero_title_3">THẾ HỆ MỚI</span>
           </h1>
-          <p class="hero-subtitle animate-card" style="--delay: 3;">
-            <span class="highlight-pink">Media Production</span>, <span class="highlight-cyan">Social & Talent Management</span>, <span class="highlight-emerald">Digital Performance</span> và <span class="highlight-amber">Academy & Đào Tạo</span>.
+
+          <p class="hero-lead-desc" data-i18n="hero_desc">
+            LA Group hợp nhất năng lực <strong>Sản Xuất Điện Ảnh 4K</strong>, <strong>Mạng Lưới Creator Độc Quyền</strong> và <strong>Tối Ưu Doanh Số Livestream Đa Kênh</strong> — Kiến tạo dấu ấn độc bản và tăng trưởng vượt bậc cho thương hiệu cao cấp.
           </p>
 
-          <!-- 4 Pillars Cards Grid -->
-          <div class="hero-pillars-grid">
-            <div class="pillar-card card-media animate-card" style="--delay: 4;" onclick="goToSlide(2)">
-              <div class="pillar-top-row">
-                <div class="pillar-icon"><i class="fa-solid fa-video"></i></div>
-                <span class="pillar-num">01</span>
-              </div>
-              <h3>1. MEDIA</h3>
-              <p>Sản Xuất Hình Ảnh & Nội Dung Truyền Thông Chuyên Nghiệp</p>
-              <div class="pillar-meta-wrapper">
-                <span class="pillar-meta">Đội Ngũ Production & Hậu Kỳ</span>
-              </div>
-            </div>
+          <div class="hero-cta-group">
+            <button onclick="openQuoteChatbox()" class="btn-liquid-gold btn-large">
+              <span data-i18n="hero_btn_quote">Nhận Báo Giá Nhanh</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
 
-            <div class="pillar-card card-social animate-card" style="--delay: 5;" onclick="goToSlide(3)">
-              <div class="pillar-top-row">
-                <div class="pillar-icon"><i class="fa-solid fa-star"></i></div>
-                <span class="pillar-num">02</span>
-              </div>
-              <h3>2. SOCIAL</h3>
-              <p>Quản Lý Độc Quyền Talent/KOC & Vận Hành Thương Mại</p>
-              <div class="pillar-meta-wrapper">
-                <span class="pillar-meta">Phát Triển Kênh & Đối Tác</span>
-              </div>
-            </div>
+            <button class="btn-video-hero" data-youtube-id="79402X3bTyc" data-video-title="LA Group Master Showreel 4K Cinema">
+              <span class="play-gold-circle"><i class="fa-solid fa-play"></i></span>
+              <span class="play-btn-text">
+                <strong data-i18n="hero_btn_showreel">Xem Showreel 4K</strong>
+                <small>2 Phút 30 Giây • 4K HDR</small>
+              </span>
+            </button>
+          </div>
 
-            <div class="pillar-card card-digital animate-card" style="--delay: 6;" onclick="goToSlide(4)">
-              <div class="pillar-top-row">
-                <div class="pillar-icon"><i class="fa-solid fa-chart-line"></i></div>
-                <span class="pillar-num">03</span>
-              </div>
-              <h3>3. DIGITAL</h3>
-              <p>Performance Ads, Mạng Lưới Affiliate & Tối Ưu Chuyển Đổi</p>
-              <div class="pillar-meta-wrapper">
-                <span class="pillar-meta">Tối Ưu Ngân Sách & ROAS</span>
-              </div>
+          <!-- Social Proof -->
+          <div class="hero-proof-box">
+            <div class="proof-avatars">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Creator Linh">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80" alt="Creator Huong">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="Creator Hieu">
+              <span class="proof-count">+50</span>
             </div>
-
-            <div class="pillar-card card-academy animate-card" style="--delay: 7;" onclick="goToSlide(5)">
-              <div class="pillar-top-row">
-                <div class="pillar-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                <span class="pillar-num">04</span>
+            <div class="proof-info">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <strong>5.0 / 5.0</strong>
               </div>
-              <h3>4. ACADEMY</h3>
-              <p>Đào Tạo Kỹ Năng Chuyên Môn & Chuyển Giao Quy Trình</p>
-              <div class="pillar-meta-wrapper">
-                <span class="pillar-meta">Đóng Gói & Chuyển Giao Quy Trình</span>
+              <p data-i18n="hero_proof_text">Hơn 150+ Nhãn hàng & Tập đoàn hàng đầu bảo chứng</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Featured Media Card -->
+        <div class="hero-right-card">
+          <div class="showreel-hero-card" data-youtube-id="ysz5S6PUM-U" data-video-title="LA Group Showreel 4K Cinema">
+            <img src="assets/showreel_thumbnail.jpg" alt="LA Group Showreel 4K" class="showreel-cover-img">
+            <div class="showreel-overlay">
+              <div class="showreel-top-tag">
+                <span class="badge-tag">SHOWREEL 2026</span>
+                <span class="status-cinema"><span class="dot-gold"></span> CINEMATIC 4K</span>
+              </div>
+              <div class="play-pulse-icon">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="showreel-card-info">
+                <span class="p-brand-tag">HAUTE COUTURE PRODUCTION</span>
+                <h3>Visual Storytelling & Commercials</h3>
+                <p data-i18n="showreel_hint">Nhấp để phát video độ phân giải cao 4K trên YouTube</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- ==========================================
-           SLIDE 2: ECOSYSTEM FLOW MATRIX
-           ========================================== -->
-      <section class="slide" data-index="1">
-        <div class="slide-header">
+      </div>
+
+      <!-- Real-time Stats Ribbon -->
+      <div class="stats-ribbon">
+        <div class="stat-item">
+          <div class="stat-num counter" data-target="500">500M+</div>
+          <div class="stat-label" data-i18n="stat_views">Tổng Lượt View Đa Nền Tảng</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <div class="stat-num counter" data-target="150">150+</div>
+          <div class="stat-label" data-i18n="stat_brands">Nhãn Hàng Cao Cấp Đồng Hành</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <div class="stat-num counter" data-target="50">50+</div>
+          <div class="stat-label" data-i18n="stat_creators">KOC & Creator Độc Quyền</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <div class="stat-num counter" data-target="6.8">6.8x</div>
+          <div class="stat-label" data-i18n="stat_roas">ROAS Trung Bình Chiến Dịch</div>
+        </div>
+      </div>
+
+      <!-- Infinite Brand Partners Marquee Slider (Directly beneath 500M+ stats bar) -->
+      <div class="hero-brand-marquee" id="heroBrandMarquee">
+        <div class="marquee-track">
+          <div class="marquee-item"><span class="m-dot">✦</span> L'ORÉAL PARIS</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> DIOR BEAUTY</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> SAMSUNG ELECTRONICS</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> VINFAST AUTO</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> UNILEVER VIETNAM</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> MASTERISE HOMES</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> TIKTOK FOR BUSINESS</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> META AGENCY PARTNER</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> SHOPEE MALL</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> TECHCOMBANK PRIVATE</div>
+          <!-- Seamless Loop Duplicate -->
+          <div class="marquee-item"><span class="m-dot">✦</span> L'ORÉAL PARIS</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> DIOR BEAUTY</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> SAMSUNG ELECTRONICS</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> VINFAST AUTO</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> UNILEVER VIETNAM</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> MASTERISE HOMES</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> TIKTOK FOR BUSINESS</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> META AGENCY PARTNER</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> SHOPEE MALL</div>
+          <div class="marquee-item"><span class="m-dot">✦</span> TECHCOMBANK PRIVATE</div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================
+       2. VỀ LA GROUP (/gioi-thieu & /gioi-thieu/doi-ngu)
+       ======================================================== -->
+  <section class="section-wrapper" id="gioi-thieu">
+    <div class="container">
+      
+      <div class="section-title-box text-center">
+        <span class="gold-badge-pill" data-i18n="about_badge">VỀ LA GROUP</span>
+        <h2 class="main-title" data-i18n="about_title">Triết Lý Nghệ Thuật & <span class="liquid-gold-text">Tăng Trưởng Thực Chiến</span></h2>
+        <p class="section-desc" data-i18n="about_desc">Không chỉ là đơn vị sản xuất media thông thường, LA Group định vị là đối tác chiến lược toàn diện đưa thương hiệu bứt phá.</p>
+      </div>
+
+      <div class="statement-body-grid">
+        <div class="statement-lead">
+          <h3 data-i18n="about_lead">Kết hợp chuẩn xác giữa tính thẩm mỹ điện ảnh đỉnh cao và khoa học dữ liệu chuyển đổi.</h3>
+        </div>
+        <div class="statement-desc">
+          <p data-i18n="about_body">
+            Mỗi thước phim, mỗi phiên livestream và mỗi chiến dịch KOC do LA Group thực thi đều hướng tới mục tiêu tối thượng: <strong>Nâng tầm nhận diện thương hiệu</strong> và <strong>tối đa hóa tỷ lệ chuyển đổi doanh thu</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Đội ngũ (/gioi-thieu/doi-ngu) -->
+      <div class="team-leadership-block" id="doi-ngu" style="margin-top: 60px;">
+        <div class="section-header-row">
           <div>
-            <span class="section-tag"><i class="fa-solid fa-diagram-project"></i> Tổng Quan Mô Hình</span>
-            <h2>SƠ ĐỒ HỆ SINH THÁI LIÊN KẾT LA GROUP</h2>
+            <span class="gold-badge-pill" data-i18n="team_badge">BAN LÃNH ĐẠO & CHUYÊN GIA</span>
+            <h3 class="main-title" style="font-size: 1.8rem;" data-i18n="team_title">Đội Ngũ Sáng Tạo Tiên Phong</h3>
           </div>
         </div>
 
-        <div class="slide-content">
-          <div class="ecosystem-flow-container">
-            <!-- Center Core -->
-            <div class="eco-center-core animate-card" style="--delay: 1;">
-              <div class="core-pulse-wave"></div>
-              <div class="core-pulse-wave-2"></div>
-              <div class="core-inner">
-                <div class="core-logo">LA</div>
-                <div class="core-title">LA GROUP</div>
-                <div class="core-desc">Core Operations</div>
-              </div>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop&q=80" alt="Founder & CEO Alex Nguyễn">
             </div>
-
-            <!-- Top Left: Media -->
-            <div class="eco-node node-top-left animate-card" style="--delay: 2;" onclick="goToSlide(2)">
-              <div class="node-badge media-badge"><i class="fa-solid fa-video"></i> MEDIA PRODUCTION</div>
-              <h4>Sản Xuất Nội Dung Visual & Quảng Cáo</h4>
-              <ul>
-                <li><i class="fa-solid fa-check"></i> Sản xuất TVC, Video thương mại cùng ekip & nhân sự chuyên môn</li>
-                <li><i class="fa-solid fa-check"></i> Đảm bảo chuẩn mực chất lượng hình ảnh & thông điệp thương hiệu</li>
-              </ul>
-              <span class="node-arrow">Cung cấp tư liệu Media cho Social & Ads <i class="fa-solid fa-arrow-right"></i></span>
+            <div class="team-info">
+              <h4>Alex Nguyễn</h4>
+              <span class="team-role">Founder & Chief Executive Officer</span>
+              <p>10+ năm kinh nghiệm cố vấn chiến lược truyền thông & tăng trưởng thương hiệu đa kênh.</p>
             </div>
+          </div>
 
-            <!-- Top Right: Social -->
-            <div class="eco-node node-top-right animate-card" style="--delay: 3;" onclick="goToSlide(3)">
-              <div class="node-badge social-badge"><i class="fa-solid fa-star"></i> SOCIAL & TALENT</div>
-              <h4>Quản Lý Talent Độc Quyền & Booking</h4>
-              <ul>
-                <li><i class="fa-solid fa-check"></i> Ký kết hợp đồng độc quyền & định hướng thương hiệu cho Talent/KOC</li>
-                <li><i class="fa-solid fa-check"></i> Chuẩn hóa phòng Studio Livestream & Vận hành gian hàng e-Commerce</li>
-              </ul>
-              <span class="node-arrow">Cung cấp Talent cho chiến dịch Marketing <i class="fa-solid fa-arrow-right"></i></span>
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&auto=format&fit=crop&q=80" alt="Creative Director Elena Bùi">
             </div>
-
-            <!-- Bottom Right: Digital -->
-            <div class="eco-node node-bottom-right animate-card" style="--delay: 4;" onclick="goToSlide(4)">
-              <div class="node-badge digital-badge"><i class="fa-solid fa-chart-line"></i> DIGITAL MARKETING</div>
-              <h4>Marketing Hiệu Suất & Tối Ưu Chuyển Đổi</h4>
-              <ul>
-                <li><i class="fa-solid fa-check"></i> Triển khai chiến dịch Paid Ads đa kênh & Mạng lưới Affiliate</li>
-                <li><i class="fa-solid fa-check"></i> Đo lường chỉ số ROI & Báo cáo doanh số định kỳ</li>
-              </ul>
-              <span class="node-arrow">Cung cấp dữ liệu thực tế cho Academy <i class="fa-solid fa-arrow-right"></i></span>
+            <div class="team-info">
+              <h4>Elena Bùi</h4>
+              <span class="team-role">Head of Creative & 4K Production</span>
+              <p>Đạo diễn hình ảnh đứng sau hàng loạt TVC triệu view và chiến dịch thời trang Haute Couture.</p>
             </div>
+          </div>
 
-            <!-- Bottom Left: Academy -->
-            <div class="eco-node node-bottom-left animate-card" style="--delay: 5;" onclick="goToSlide(5)">
-              <div class="node-badge academy-badge"><i class="fa-solid fa-graduation-cap"></i> ACADEMY</div>
-              <h4>Đào Tạo Chuyên Môn & Chuyển Giao Quy Trình</h4>
-              <ul>
-                <li><i class="fa-solid fa-check"></i> Huấn luyện kỹ năng truyền thông & phong thái chuyên nghiệp trước ống kính</li>
-                <li><i class="fa-solid fa-check"></i> Chuyển giao bộ quy trình chuẩn hóa & kịch bản thương mại</li>
-              </ul>
-              <span class="node-arrow">Cung ứng nhân sự chất lượng cho hệ thống <i class="fa-solid fa-arrow-right"></i></span>
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&auto=format&fit=crop&q=80" alt="Director of Performance Minh Hiếu">
+            </div>
+            <div class="team-info">
+              <h4>Minh Hiếu</h4>
+              <span class="team-role">Head of Digital Ads & E-Commerce</span>
+              <p>Chuyên gia vận hành Media Spending 50B+ VNĐ với cam kết ROAS tối ưu hàng đầu.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- ==========================================
-           SLIDE 3: 1. MEDIA DIVISION
-           ========================================== -->
-      <section class="slide slide-media" data-index="2">
-        <div class="slide-header">
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. DỊCH VỤ (/dich-vu: 5 MỤC CON)
+       ======================================================== -->
+  <section class="section-wrapper bg-darker" id="dich-vu">
+    <div class="container">
+      
+      <div class="section-title-box text-center">
+        <span class="gold-badge-pill" data-i18n="srv_badge">DỊCH VỤ TOÀN DIỆN</span>
+        <h2 class="main-title"><span data-i18n="srv_title_1">Hệ Thống Giải Pháp</span> <span class="liquid-gold-text" data-i18n="srv_title_2">5 Trụ Cột Tăng Trưởng</span></h2>
+        <p class="section-desc" data-i18n="srv_desc">Chuỗi dịch vụ khép kín từ sản xuất nội dung, vận hành quảng cáo, media network, social commerce tới đào tạo in-house.</p>
+      </div>
+
+      <div class="clean-bento-grid">
+        
+        <!-- 1. Production — Sản xuất nội dung -->
+        <div class="bento-item bento-span-7" id="san-xuat-noi-dung">
+          <div class="bento-badge"><i class="fa-solid fa-video"></i> 01. PRODUCTION</div>
+          <h3>Sản Xuất Nội Dung 4K Cinema</h3>
+          <p>Sở hữu dàn máy quay RED/Sony Cinema, hệ thống gimbal, đèn studio ARRI và đội ngũ đạo diễn hình ảnh danh tiếng.</p>
+          <ul class="bento-checklist">
+            <li><i class="fa-solid fa-check"></i> TVC thương mại điện ảnh & Concept quảng cáo sang trọng</li>
+            <li><i class="fa-solid fa-check"></i> Sản xuất hàng loạt Short-form Video chuẩn thuật toán TikTok/Reels</li>
+            <li><i class="fa-solid fa-check"></i> Chụp ảnh Lookbook, Product 3D Render & Key Visual độc bản</li>
+          </ul>
+          <div class="bento-img-banner">
+            <img src="assets/media_production.png" alt="Media Production">
+          </div>
+        </div>
+
+        <!-- 2. Service & Ads — Vận hành & Quảng cáo -->
+        <div class="bento-item bento-span-5" id="van-hanh-va-quang-cao">
+          <div class="bento-badge"><i class="fa-solid fa-chart-line"></i> 02. SERVICE & ADS</div>
+          <h3>Vận Hành Nền Tảng & Quảng Cáo</h3>
+          <p>Đội ngũ chuyên gia Digital Ads với chứng chỉ chính thức từ TikTok for Business, Meta & Google Partner.</p>
+          <ul class="bento-checklist">
+            <li><i class="fa-solid fa-check"></i> Tối ưu chi phí CPA, cam kết ROAS tối thiểu 4.5x - 7.0x</li>
+            <li><i class="fa-solid fa-check"></i> Phân phối ngân sách đa kênh thông minh theo dữ liệu thời gian thực</li>
+            <li><i class="fa-solid fa-check"></i> Báo cáo minh bạch realtime qua Google Data Studio</li>
+          </ul>
+          <div class="bento-img-banner" style="height: 140px;">
+            <img src="assets/digital_marketing.png" alt="Digital Marketing & Ads">
+          </div>
+        </div>
+
+        <!-- 3. Media Network -->
+        <div class="bento-item bento-span-5" id="media-network">
+          <div class="bento-badge"><i class="fa-solid fa-tower-broadcast"></i> 03. MEDIA NETWORK</div>
+          <h3>Mạng Lưới Kênh Social Media Network</h3>
+          <p>Sở hữu hệ thống Fanpage, TikTok Channels và Group cộng đồng đạt hơn 15M+ người theo dõi tích lũy.</p>
+          <ul class="bento-checklist">
+            <li><i class="fa-solid fa-check"></i> Phủ sóng truyền thông diện rộng (Mass Coverage) trong 24h</li>
+            <li><i class="fa-solid fa-check"></i> Định hướng dư luận và tạo sóng thảo luận thương hiệu (Buzz Seeding)</li>
+            <li><i class="fa-solid fa-check"></i> Độc quyền vị trí ghim bài và booking tài trợ trên hệ sinh thái</li>
+          </ul>
+          <div class="bento-img-banner" style="height: 140px;">
+            <img src="assets/social_talent.png" alt="Social Talent & Media Network">
+          </div>
+        </div>
+
+        <!-- 4. E-Com — Social Commerce -->
+        <div class="bento-item bento-span-7" id="e-commerce">
+          <div class="bento-badge"><i class="fa-solid fa-cart-shopping"></i> 04. SOCIAL COMMERCE</div>
+          <h3>E-Commerce & Mega Livestream Studio</h3>
+          <p>Trường quay 4K đa góc máy, kịch bản chốt đơn tâm lý học và hệ thống điều khiển âm thanh ánh sáng trực tiếp.</p>
+          <ul class="bento-checklist">
+            <li><i class="fa-solid fa-check"></i> Vận hành gian hàng TikTok Shop & Shopee Mall trọn gói</li>
+            <li><i class="fa-solid fa-check"></i> Tổ chức các phiên Mega Live doanh số hàng tỷ đồng</li>
+            <li><i class="fa-solid fa-check"></i> Cung cấp Host livestream chuyên nghiệp, duy trì mắt xem kỷ lục</li>
+          </ul>
+          <div class="bento-img-banner">
+            <img src="assets/livestream_studio.jpg" alt="Livestream Studio">
+          </div>
+        </div>
+
+        <!-- 5. Academy — Đào tạo -->
+        <div class="bento-item bento-span-12" id="academy" style="grid-column: span 12;">
+          <div class="bento-badge"><i class="fa-solid fa-graduation-cap"></i> 05. LA ACADEMY</div>
+          <h3>Học Viện Đào Tạo Livestream & Truyền Thông In-House</h3>
+          <p>Chương trình huấn luyện thực chiến 80% thời lượng trên trường quay thực tế dành cho doanh nghiệp muốn tự chủ đội ngũ.</p>
+          <div class="bento-img-banner" style="height: 140px;">
+            <img src="assets/academy_training.png" alt="LA Academy Training">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. ĐỐI TÁC (/doi-tac: KHÁCH HÀNG & KOC NETWORK)
+       ======================================================== -->
+  <section class="section-wrapper" id="doi-tac">
+    <div class="container">
+      
+      <!-- Khách hàng / Thương hiệu -->
+      <div id="khach-hang" style="margin-bottom: 60px;">
+        <div class="section-title-box text-center">
+          <span class="gold-badge-pill" data-i18n="clients_badge">ĐỐI TÁC THƯƠNG HIỆU</span>
+          <h2 class="main-title" data-i18n="clients_title">150+ Nhãn Hàng & <span class="liquid-gold-text">Tập Đoàn Đồng Hành</span></h2>
+          <p class="section-desc" data-i18n="clients_desc">Tự hào là đối tác chiến lược của các thương hiệu hàng đầu trong ngành Dược mỹ phẩm, Thời trang cao cấp, Công nghệ và F&B.</p>
+        </div>
+      </div>
+
+      <!-- KOC / Creator Network (/doi-tac/koc-creator) -->
+      <div id="koc-creator">
+        <div class="section-header-row">
           <div>
-            <span class="section-tag media-tag"><i class="fa-solid fa-film"></i> 01</span>
-            <h2>1. MEDIA DIVISION <span class="sub-heading">(Sản Xuất Hình Ảnh & Nội Dung Truyền Thông)</span></h2>
+            <span class="gold-badge-pill" data-i18n="koc_badge">MẠNG LƯỚI ĐỘC QUYỀN</span>
+            <h3 class="main-title" style="font-size: 2rem;" data-i18n="koc_title">Mạng Lưới KOC & <span class="liquid-gold-text">Creator Độc Quyền</span></h3>
           </div>
-          <div class="headcount-chip"><i class="fa-solid fa-user-gear"></i> Nhân sự cố định: 2–3 người</div>
+          <div class="talent-filters">
+            <button class="filter-btn active" data-filter="all">Tất Cả</button>
+            <button class="filter-btn" data-filter="beauty">Làm Đẹp & Mỹ Phẩm</button>
+            <button class="filter-btn" data-filter="fashion">Thời Trang & Lifestyle</button>
+            <button class="filter-btn" data-filter="tech">Công Nghệ & Gia Dụng</button>
+          </div>
         </div>
 
-        <div class="slide-content">
-          <!-- Sub-tabs -->
-          <div class="detail-tabs">
-            <button class="dtab-btn active" onclick="switchSubTab(this, 'media-panel-a')"><i class="fa-solid fa-list-check"></i> A. Chi Tiết Công Việc</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'media-panel-b')"><i class="fa-solid fa-money-bill-transfer"></i> B. Dòng Tiền (Revenue)</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'media-panel-c')"><i class="fa-solid fa-tags"></i> C. Bảng Giá Dịch Vụ</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'media-panel-d')"><i class="fa-solid fa-users"></i> D. Định Biên Nhân Sự</button>
+        <div class="talent-grid">
+          
+          <div class="talent-card" data-category="beauty">
+            <div class="talent-thumb">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80" alt="KOC Linh Bùi">
+              <span class="t-badge">Top Beauty Creator</span>
+            </div>
+            <div class="talent-body">
+              <div class="talent-head">
+                <h4>Linh Bùi</h4>
+                <span class="t-tag">1.4M Follower</span>
+              </div>
+              <p class="t-desc">Chuyên gia review Skincare khoa học, phong cách chỉn chu, tệp fan trung thành 85% nữ.</p>
+              <div class="t-stats">
+                <div><strong>1.4M</strong><span>TikTok</span></div>
+                <div><strong>8.8%</strong><span>Engagement</span></div>
+                <div><strong>120M</strong><span>GMV Tháng</span></div>
+              </div>
+              <button onclick="openQuoteChatbox('Booking KOC Linh Bùi')" class="btn-book-talent">Booking Linh Bùi</button>
+            </div>
           </div>
 
-          <div class="tab-panels">
-            <!-- PANEL A: CHI TIẾT CÔNG VIỆC WITH SPLIT VISUAL BANNER -->
-            <div class="tab-panel active" id="media-panel-a">
-              <div class="split-visual-grid">
-                <div class="visual-card-banner animate-card" style="--delay: 1;">
-                  <img src="assets/media_production.png" alt="Sản Xuất Media Doanh Nghiệp">
-                  <div class="visual-banner-overlay">
-                    <span class="visual-badge media-badge"><i class="fa-solid fa-camera-retro"></i> Sản Xuất Truyền Thông</span>
-                    <h3>Sản Xuất Video & Hình Ảnh Doanh Nghiệp</h3>
-                    <p>Quy trình khép kín từ xây dựng concept chiến lược, biên soạn kịch bản thương mại, tổ chức sản xuất với ekip chuyên nghiệp đến hậu kỳ hoàn thiện.</p>
-                  </div>
-                </div>
-
-                <div class="cards-grid-4">
-                  <div class="feature-card animate-card" style="--delay: 2;">
-                    <div class="card-icon"><i class="fa-solid fa-camera"></i></div>
-                    <h4>Sản xuất TVC & Commercial</h4>
-                    <p>Quản trị quy trình quay phim, chụp ảnh sản phẩm và sản xuất TVC quảng cáo đáp ứng tiêu chuẩn hình ảnh doanh nghiệp.</p>
-                  </div>
-
-                  <div class="feature-card animate-card" style="--delay: 3;">
-                    <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                    <h4>Kịch bản & Sáng tạo Nội dung</h4>
-                    <p>Xây dựng concept độc đáo, viết kịch bản chiến dịch quảng cáo và chuỗi video bắt trend gia tăng nhận diện thương hiệu.</p>
-                    <span class="card-chip chip-ai">Creative Strategy</span>
-                  </div>
-
-                  <div class="feature-card animate-card" style="--delay: 4;">
-                    <div class="card-icon"><i class="fa-solid fa-clapperboard"></i></div>
-                    <h4>Tổ chức Sản xuất Chuẩn hóa</h4>
-                    <p>Lập kế hoạch phân cảnh, điều phối nhân sự chuyên môn, trang thiết bị kỹ thuật hiện đại và địa điểm ghi hình.</p>
-                  </div>
-
-                  <div class="feature-card animate-card" style="--delay: 5;">
-                    <div class="card-icon"><i class="fa-solid fa-sliders"></i></div>
-                    <h4>Hậu kỳ & Kỹ xảo Chuyên nghiệp</h4>
-                    <p>Biên tập video, hiệu chỉnh màu sắc chuẩn điện ảnh, xử lý đồ họa VFX và sản xuất âm thanh hoàn chỉnh.</p>
-                    <span class="card-chip chip-ai">Post-Production</span>
-                  </div>
-                </div>
-              </div>
+          <div class="talent-card" data-category="fashion">
+            <div class="talent-thumb">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80" alt="Creator Hương Nguyễn">
+              <span class="t-badge">Fashion Icon</span>
             </div>
-
-            <!-- PANEL B: DÒNG TIỀN -->
-            <div class="tab-panel" id="media-panel-b">
-              <div class="cashflow-grid">
-                <div class="cashflow-card animate-card" style="--delay: 1;">
-                  <div class="cf-icon"><i class="fa-solid fa-video"></i></div>
-                  <div class="cf-info">
-                    <h4>Phí sản xuất Media</h4>
-                    <p>Thu cố định từ hợp đồng quay dựng, chụp ảnh, sản xuất TVC cho doanh nghiệp.</p>
-                  </div>
-                  <span class="cf-type">Phí Cố Định</span>
-                </div>
-
-                <div class="cashflow-card animate-card" style="--delay: 2;">
-                  <div class="cf-icon"><i class="fa-solid fa-handshake"></i></div>
-                  <div class="cf-info">
-                    <h4>Phí tài trợ nội dung (Sponsorship)</h4>
-                    <p>Nhãn hàng trả phí lồng ghép sản phẩm vào series/video viral do công ty tự sản xuất.</p>
-                  </div>
-                  <span class="cf-type">Tài Trợ Nội Dung</span>
-                </div>
-
-                <div class="cashflow-card animate-card" style="--delay: 3;">
-                  <div class="cf-icon"><i class="fa-solid fa-boxes-packing"></i></div>
-                  <div class="cf-info">
-                    <h4>Dòng tiền Combo Cross-selling</h4>
-                    <p>Doanh thu gia tăng từ việc bán đóng gói kèm dịch vụ Chạy Ads / Vận hành kênh.</p>
-                  </div>
-                  <span class="cf-type">Cross-Selling</span>
-                </div>
-
-                <div class="cashflow-card animate-card" style="--delay: 4;">
-                  <div class="cf-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                  <div class="cf-info">
-                    <h4>Dịch vụ phát sinh liên quan <span style="font-size: 14px; font-weight: 500; opacity: 0.85;">(Báo giá linh hoạt theo job)</span></h4>
-                    <p>Thu phí nâng cấp chất lượng (Visual Effects/3D), cho thuê studio/thiết bị, mua bản quyền nhạc/diễn viên phụ, sửa đổi kịch bản ngoài phạm vi hợp đồng.</p>
-                  </div>
-                  <span class="cf-type">Linh Hoạt Theo Job</span>
-                </div>
+            <div class="talent-body">
+              <div class="talent-head">
+                <h4>Hương Nguyễn</h4>
+                <span class="t-tag">850K Follower</span>
               </div>
-
-              <div class="payment-rule-box animate-card" style="--delay: 5;">
-                <i class="fa-solid fa-shield-halved"></i>
-                <div><strong>Quy định thanh toán:</strong> Thu cọc <strong>50%</strong> trước khi bấm máy – <strong>50% còn lại</strong> sau khi nghiệm thu/bàn giao.</div>
+              <p class="t-desc">Phối đồ phong cách Haute Couture hiện đại, gu thẩm mỹ cao, phù hợp nhãn hàng cao cấp.</p>
+              <div class="t-stats">
+                <div><strong>850K</strong><span>TikTok</span></div>
+                <div><strong>7.4%</strong><span>Engagement</span></div>
+                <div><strong>95M</strong><span>GMV Tháng</span></div>
               </div>
+              <button onclick="openQuoteChatbox('Booking KOC Hương Nguyễn')" class="btn-book-talent">Booking Hương Nguyễn</button>
             </div>
+          </div>
 
-            <!-- PANEL C: BẢNG GIÁ DỊCH VỤ -->
-            <div class="tab-panel" id="media-panel-c">
-              <div class="pricing-cards-grid">
-                <div class="price-box animate-card" style="--delay: 1;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-video"></i>
-                    <h4>Video Thương Mại Ngắn (Short-form)</h4>
-                  </div>
-                  <div class="price-amount">1.5M – 3.5M <span class="currency">VNĐ / video</span></div>
-                  <p class="price-note">Bao gồm kịch bản thương mại, tổ chức quay chụp, dựng phim hoàn chỉnh & bản quyền âm nhạc.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 2;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-image"></i>
-                    <h4>Bộ Ảnh Thương Hiệu / Concept</h4>
-                  </div>
-                  <div class="price-amount">3M – 8M <span class="currency">VNĐ / bộ</span></div>
-                  <p class="price-note">Chụp ảnh sản phẩm studio, chụp model nhận diện, hậu kỳ chỉnh sửa hình ảnh (15–30 file chất lượng cao).</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 3;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-film"></i>
-                    <h4>TVC / Video Commercial Doanh Nghiệp</h4>
-                  </div>
-                  <div class="price-amount">15M – 60M+ <span class="currency">VNĐ / dự án</span></div>
-                  <p class="price-note">Kịch bản quảng cáo chiến lược, đạo diễn & ekip sản xuất chuyên nghiệp, hiệu chỉnh màu sắc điện ảnh.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 4;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-box-archive"></i>
-                    <h4>Gói Dịch Vụ Media Tháng (Retainer)</h4>
-                  </div>
-                  <div class="price-amount">20M – 50M <span class="currency">VNĐ / tháng</span></div>
-                  <p class="price-note">Cung cấp trọn gói 12–20 video thương mại + bộ nhận diện hình ảnh hàng tháng cho doanh nghiệp.</p>
-                </div>
-              </div>
+          <div class="talent-card" data-category="tech">
+            <div class="talent-thumb">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80" alt="Creator Hiếu Trần">
+              <span class="t-badge">Tech & Living</span>
             </div>
-
-            <!-- PANEL D: ĐỊNH BIÊN NHÂN SỰ -->
-            <div class="tab-panel" id="media-panel-d">
-              <div class="kpi-team-grid">
-                <div class="team-member-card animate-card" style="--delay: 1;">
-                  <div class="role-header">
-                    <div class="avatar-icon"><i class="fa-solid fa-user-ninja"></i></div>
-                    <div class="role-titles">
-                      <h3>1x Đạo Diễn Hình Ảnh & Sản Xuất (Director/Cameraman)</h3>
-                      <span class="count-badge">Quản lý chuyên môn</span>
-                    </div>
-                  </div>
-                  <p class="role-responsibilities">
-                    <strong>Trách nhiệm chính:</strong> Chủ trì concept sáng tạo, duyệt kịch bản, chỉ đạo sản xuất và kiểm soát tiêu chuẩn chất lượng đầu ra.
-                  </p>
-                  <div class="kpi-list">
-                    <h4><i class="fa-solid fa-bullseye"></i> KPI Đánh Giá Chuyên Môn:</h4>
-                    <ul>
-                      <li><span class="kpi-bullet"></span>Tỷ lệ hoàn thiện sản phẩm media đúng tiến độ cam kết</li>
-                      <li><span class="kpi-bullet"></span>Chất lượng hình ảnh, ánh sáng & tính thẩm mỹ thương hiệu</li>
-                      <li><span class="kpi-bullet"></span>Chỉ số giữ chân người xem (Watch-time) & mức độ hài lòng đối tác</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="team-member-card animate-card" style="--delay: 2;">
-                  <div class="role-header">
-                    <div class="avatar-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <div class="role-titles">
-                      <h3>1–2x Dựng Phim & Hậu Kỳ (Editor/VFX Specialist)</h3>
-                      <span class="count-badge">Nhân sự thực thi</span>
-                    </div>
-                  </div>
-                  <p class="role-responsibilities">
-                    <strong>Trách nhiệm chính:</strong> Biên tập video, hiệu chỉnh màu sắc, đồ họa VFX, hoàn thiện âm thanh và bàn giao sản phẩm đúng tiến độ.
-                  </p>
-                  <div class="kpi-list">
-                    <h4><i class="fa-solid fa-bullseye"></i> KPI Đánh Giá Chuyên Môn:</h4>
-                    <ul>
-                      <li><span class="kpi-bullet"></span>Thời gian phản hồi & trả sản phẩm hậu kỳ (Turnaround Time)</li>
-                      <li><span class="kpi-bullet"></span>Kiểm soát tỷ lệ chỉnh sửa (Revision Rate < 2 lần/dự án)</li>
-                      <li><span class="kpi-bullet"></span>Sáng tạo nhịp điệu biên tập, âm thanh & kỹ xảo hình ảnh</li>
-                    </ul>
-                  </div>
-                </div>
+            <div class="talent-body">
+              <div class="talent-head">
+                <h4>Hiếu Trần</h4>
+                <span class="t-tag">620K Follower</span>
               </div>
+              <p class="t-desc">Review thiết bị thông minh và đồ gia dụng công nghệ cao với góc nhìn chi tiết, chân thật.</p>
+              <div class="t-stats">
+                <div><strong>620K</strong><span>TikTok</span></div>
+                <div><strong>9.2%</strong><span>Engagement</span></div>
+                <div><strong>140M</strong><span>GMV Tháng</span></div>
+              </div>
+              <button onclick="openQuoteChatbox('Booking KOC Hiếu Trần')" class="btn-book-talent">Booking Hiếu Trần</button>
+            </div>
+          </div>
+
+          <div class="talent-card" data-category="beauty">
+            <div class="talent-thumb">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80" alt="Creator Mai Anh">
+              <span class="t-badge">Rising Live Star</span>
+            </div>
+            <div class="talent-body">
+              <div class="talent-head">
+                <h4>Mai Anh</h4>
+                <span class="t-tag">450K Follower</span>
+              </div>
+              <p class="t-desc">Nữ host livestream năng lượng đỉnh cao, giữ mắt xem kỷ lục và khả năng chốt đơn thần tốc.</p>
+              <div class="t-stats">
+                <div><strong>450K</strong><span>TikTok</span></div>
+                <div><strong>11.5%</strong><span>Engagement</span></div>
+                <div><strong>210M</strong><span>GMV Tháng</span></div>
+              </div>
+              <button onclick="openQuoteChatbox('Booking KOC Mai Anh')" class="btn-book-talent">Booking Mai Anh</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. DỰ ÁN (/du-an: CASE STUDY & BLOG)
+       ======================================================== -->
+  <section class="section-wrapper bg-darker" id="du-an">
+    <div class="container">
+      
+      <!-- Case Studies Tiêu Biểu -->
+      <div class="section-title-box text-center">
+        <span class="gold-badge-pill" data-i18n="proj_badge">DỰ ÁN TIÊU BIỂU</span>
+        <h2 class="main-title"><span data-i18n="proj_title_1">Case Studies &</span> <span class="liquid-gold-text" data-i18n="proj_title_2">Showreel Thực Tế</span></h2>
+        <p class="section-desc" data-i18n="proj_desc">Khám phá các tác phẩm media 4K và chiến dịch bùng nổ doanh số được thực thi bởi đội ngũ LA Group.</p>
+      </div>
+
+      <div class="parallax-grid">
+        
+        <div class="project-card" data-youtube-id="L_LUpnjgPso" data-video-title="TVC Dược Mỹ Phẩm Cao Cấp — 4K Commercial">
+          <div class="project-media-wrap">
+            <img src="assets/showreel_thumbnail.jpg" alt="TVC Dược Mỹ Phẩm" class="project-img">
+            <div class="project-overlay">
+              <span class="p-category">COMMERCIAL TVC</span>
+              <span class="p-duration">4K Cinema • 0:45</span>
+              <div class="p-play-btn"><i class="fa-solid fa-play"></i></div>
+            </div>
+          </div>
+          <div class="project-details">
+            <h4>TVC Quảng Cáo Dòng Dược Mỹ Phẩm Cao Cấp</h4>
+            <p>Sản xuất chuẩn điện ảnh 4K RAW, kỹ xảo VFX ánh sáng lỏng và đạt hơn 8.5M lượt xem viral.</p>
+            <div class="project-meta">
+              <span>Chiến dịch Q2/2026</span>
+              <span class="p-arrow"><i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- ==========================================
-           SLIDE 4: 2. SOCIAL & TALENT DIVISION
-           ========================================== -->
-      <section class="slide slide-social" data-index="3">
-        <div class="slide-header">
+        <div class="project-card" data-youtube-id="3JZ_D3ELwOQ" data-video-title="Mega Live Đại Tiệc Thương Hiệu 2.4 Tỷ">
+          <div class="project-media-wrap">
+            <img src="assets/livestream_studio.jpg" alt="Mega Live Show" class="project-img">
+            <div class="project-overlay">
+              <span class="p-category">LIVESTREAM MEGA EVENT</span>
+              <span class="p-duration">Multi-cam HD • 4 Giờ</span>
+              <div class="p-play-btn"><i class="fa-solid fa-play"></i></div>
+            </div>
+          </div>
+          <div class="project-details">
+            <h4>Mega Livestream Đại Tiệc Thương Hiệu Doanh Số 2.4 Tỷ</h4>
+            <p>Vận hành trường quay chuyên nghiệp 4 máy quay 4K, hệ thống điều khiển âm thanh ánh sáng trực tiếp.</p>
+            <div class="project-meta">
+              <span>Doanh số GMV 2.4B VNĐ</span>
+              <span class="p-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Blog / Tin tức & Kiến thức (/du-an/blog) -->
+      <div id="blog" style="margin-top: 70px;">
+        <div class="section-header-row">
           <div>
-            <span class="section-tag social-tag"><i class="fa-solid fa-users"></i> 02</span>
-            <h2>2. SOCIAL & TALENT DIVISION <span class="sub-heading">(Quản Lý Talent & Thương Mại Mạng Xã Hội)</span></h2>
+            <span class="gold-badge-pill" data-i18n="blog_badge">BLOG & KIẾN THỨC</span>
+            <h3 class="main-title" style="font-size: 1.8rem;" data-i18n="blog_title">Tin Tức & Xu Hướng Media 2026</h3>
           </div>
-          <div class="headcount-chip"><i class="fa-solid fa-user-gear"></i> Nhân sự cố định: 2 người</div>
         </div>
 
-        <div class="slide-content">
-          <!-- Sub-tabs -->
-          <div class="detail-tabs">
-            <button class="dtab-btn active" onclick="switchSubTab(this, 'social-panel-a')"><i class="fa-solid fa-list-check"></i> A. Chi Tiết Công Việc</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'social-panel-b')"><i class="fa-solid fa-money-bill-transfer"></i> B. Dòng Tiền (Revenue)</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'social-panel-c')"><i class="fa-solid fa-tags"></i> C. Bảng Giá Dịch Vụ</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'social-panel-d')"><i class="fa-solid fa-users"></i> D. Định Biên Nhân Sự</button>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-tag">XU HƯỚNG 2026</div>
+            <h4>Bí quyết đạt doanh số bạc tỷ từ Mega Live TikTok Shop cho thương hiệu</h4>
+            <p>Phân tích chiến thuật chọn Host, cấu trúc ưu đãi flash sale và kỹ thuật giữ mắt xem trực tiếp.</p>
+            <span class="blog-date"><i class="fa-solid fa-calendar"></i> 15/08/2026</span>
           </div>
 
-          <div class="tab-panels">
-            <!-- PANEL A: CHI TIẾT CÔNG VIỆC WITH SPLIT VISUAL BANNER -->
-            <div class="tab-panel active" id="social-panel-a">
-              <div class="split-visual-grid">
-                <div class="visual-card-banner animate-card" style="--delay: 1;">
-                  <img src="assets/social_talent.png" alt="Quản Lý Talent & Livestream Commercial">
-                  <div class="visual-banner-overlay">
-                    <span class="visual-badge social-badge"><i class="fa-solid fa-star"></i> Quản Lý Talent & Thương Mại</span>
-                    <h3>Quản Lý Talent Độc Quyền & Vận Hành Thương Mại</h3>
-                    <p>Tuyển chọn, ký kết hợp đồng độc quyền với Talent/KOC, định vị thương hiệu cá nhân và chuẩn hóa hạ tầng Studio Livestream bán hàng.</p>
-                  </div>
-                </div>
+          <div class="blog-card">
+            <div class="blog-tag">MEDIA PRODUCTION</div>
+            <h4>Vì sao video chuẩn 4K Cinema giúp tăng 300% tỷ lệ chuyển đổi đơn hàng?</h4>
+            <p>Tầm quan trọng của ánh sáng, góc máy nghệ thuật và âm thanh trong định hình vị thế thương hiệu cao cấp.</p>
+            <span class="blog-date"><i class="fa-solid fa-calendar"></i> 10/08/2026</span>
+          </div>
 
-                <div class="cards-grid-4">
-                  <div class="feature-card animate-card" style="--delay: 2;">
-                    <div class="card-icon"><i class="fa-solid fa-id-card"></i></div>
-                    <h4>Quản lý & Phát triển Talent</h4>
-                    <p>Tuyển chọn, đàm phán hợp đồng, định hình phong cách và xây dựng lộ trình phát triển dài hạn cho Talent/KOC độc quyền.</p>
-                  </div>
+          <div class="blog-card">
+            <div class="blog-tag">KOC STRATEGY</div>
+            <h4>Chiến lược phân bổ ngân sách KOC Booking đa tầng: Mega vs Micro Creators</h4>
+            <p>Công thức đo lường ROAS chính xác và giảm thiểu rủi ro lãng phí ngân sách quảng cáo.</p>
+            <span class="blog-date"><i class="fa-solid fa-calendar"></i> 05/08/2026</span>
+          </div>
+        </div>
+      </div>
 
-                  <div class="feature-card animate-card" style="--delay: 3;">
-                    <div class="card-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <h4>Booking & Hợp tác Thương hiệu</h4>
-                    <p>Đại diện đàm phán hợp đồng quảng cáo, tài trợ và livestream bán hàng với các thương hiệu đối tác.</p>
-                  </div>
+    </div>
+  </section>
 
-                  <div class="feature-card animate-card" style="--delay: 4;">
-                    <div class="card-icon"><i class="fa-solid fa-headset"></i></div>
-                    <h4>Hỗ trợ Kỹ thuật & Hạ tầng Kênh</h4>
-                    <p>Giải quyết các sự cố kỹ thuật tài khoản, hỗ trợ đăng ký bản quyền, xác minh tích xanh và tối ưu bảo mật.</p>
-                  </div>
+  <!-- ========================================================
+       6. TUYỂN DỤNG (/tuyen-dung)
+       ======================================================== -->
+  <section class="section-wrapper" id="tuyen-dung">
+    <div class="container">
+      
+      <div class="section-title-box text-center">
+        <span class="gold-badge-pill" data-i18n="careers_badge">CAREERS AT LA GROUP</span>
+        <h2 class="main-title"><span data-i18n="careers_title_1">Gia Nhập Đội Ngũ</span> <span class="liquid-gold-text" data-i18n="careers_title_2">Sáng Tạo Tiên Phong</span></h2>
+        <p class="section-desc" data-i18n="careers_desc">Môi trường làm việc năng động, sáng tạo không giới hạn với chế độ đãi ngộ vượt trội cho nhân tài media.</p>
+      </div>
 
-                  <div class="feature-card animate-card" style="--delay: 5;">
-                    <div class="card-icon"><i class="fa-solid fa-shop"></i></div>
-                    <h4>Vận hành Studio & e-Commerce</h4>
-                    <p>Tư vấn thiết kế hạ tầng phòng Live, tích hợp hệ thống chốt đơn và quản lý gian hàng TikTok Shop/Shopee.</p>
-                  </div>
-                </div>
+      <div class="careers-grid">
+        <div class="career-card">
+          <div class="career-head">
+            <h4>Senior Video Editor & Colorist 4K</h4>
+            <span class="career-type">Full-time • Hà Nội</span>
+          </div>
+          <p>Chịu trách nhiệm dựng TVC, Commercials và chỉnh màu DaVinci Resolve cho các dự án thương hiệu lớn.</p>
+          <button onclick="openQuoteChatbox('Ứng tuyển Senior Video Editor')" class="btn-apply-career">Ứng Tuyển Ngay <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="career-card">
+          <div class="career-head">
+            <h4>Account Executive / Talent Manager</h4>
+            <span class="career-type">Full-time • TP.HCM</span>
+          </div>
+          <p>Kết nối và quản lý lịch trình, chiến dịch booking cho mạng lưới hơn 50+ KOC độc quyền của công ty.</p>
+          <button onclick="openQuoteChatbox('Ứng tuyển Talent Manager')" class="btn-apply-career">Ứng Tuyển Ngay <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="career-card">
+          <div class="career-head">
+            <h4>Livestream Technical Specialist</h4>
+            <span class="career-type">Full-time • Hà Nội</span>
+          </div>
+          <p>Vận hành thiết bị trường quay, switcher Blackmagic, hệ thống âm thanh ánh sáng cho các phiên Mega Live.</p>
+          <button onclick="openQuoteChatbox('Ứng tuyển Livestream Technical')" class="btn-apply-career">Ứng Tuyển Ngay <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       7. LIÊN HỆ & FAQ (/lien-he & /lien-he/faq)
+       ======================================================== -->
+  <section class="section-wrapper bg-darker" id="lien-he">
+    <div class="container">
+      
+      <!-- FAQ (/lien-he/faq) -->
+      <div id="faq" style="margin-bottom: 70px;">
+        <div class="section-title-box text-center">
+          <span class="gold-badge-pill" data-i18n="faq_badge">HỎI ĐÁP THƯỜNG GẶP</span>
+          <h2 class="main-title" data-i18n="faq_title">Giải Đáp Thắc Mắc & <span class="liquid-gold-text">Chính Sách Hợp Tác</span></h2>
+        </div>
+
+        <div class="faq-accordion-box">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Quy trình sản xuất 1 video TVC 4K tại LA Group mất bao lâu?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Thời gian thông thường từ 7 - 14 ngày làm việc từ khi chốt kịch bản phân cảnh đến khi bàn giao bản Master 4K hoàn chỉnh. Đối với các gói khẩn cấp, chúng tôi có quy trình Fast-Track 72 giờ.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>LA Group có cam kết KPI doanh số hoặc lượt xem không?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Có. Mọi hợp đồng dịch vụ Digital Performance Ads và KOC Booking tại LA Group đều có điều khoản cam kết rõ ràng về lượt xem tối thiểu, tỷ lệ tương tác và mục tiêu ROAS theo từng ngành hàng.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Chi phí tối thiểu để bắt đầu một chiến dịch là bao nhiêu?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Chúng tôi cung cấp các gói linh hoạt từ 15.000.000đ đối với sản xuất nội dung thử nghiệm và từ 35.000.000đ trở lên cho chiến dịch truyền thông tổng thể tích hợp KOC và quảng cáo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Form Liên Hệ (/lien-he) -->
+      <div class="contact-box" id="contact">
+        
+        <div class="contact-info-col">
+          <span class="gold-badge-pill" data-i18n="contact_badge">GET IN TOUCH</span>
+          <h2 class="main-title"><span data-i18n="contact_title_1">Sẵn Sàng Kiến Tạo</span> <br><span class="liquid-gold-text" data-i18n="contact_title_2">Chiến Dịch Đột Phá?</span></h2>
+          <p class="section-desc" style="text-align: left; margin-bottom: 24px;" data-i18n="contact_desc">
+            Hãy chia sẻ mục tiêu của thương hiệu. Chuyên gia cố vấn chiến lược của LA Group sẽ phản hồi bản kế hoạch chi tiết trong vòng 24 giờ.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span class="c-lbl">Hotline Tư Vấn 24/7:</span>
+                <a href="tel:0988000000" class="c-val">0988.xxx.xxx</a>
               </div>
             </div>
 
-            <!-- PANEL B: DÒNG TIỀN -->
-            <div class="tab-panel" id="social-panel-b">
-              <div class="cashflow-grid">
-                <div class="cashflow-card animate-card" style="--delay: 1;">
-                  <div class="cf-icon"><i class="fa-solid fa-percent"></i></div>
-                  <div class="cf-info">
-                    <h4>% Hoa hồng Booking</h4>
-                    <p>Chiết khấu từ các hợp đồng quảng cáo mang về cho Talent.</p>
-                  </div>
-                  <span class="cf-type">% Hoa Hồng</span>
-                </div>
-
-                <div class="cashflow-card animate-card" style="--delay: 2;">
-                  <div class="cf-icon"><i class="fa-solid fa-play"></i></div>
-                  <div class="cf-info">
-                    <h4>% Doanh thu nền tảng (View)</h4>
-                    <p>Tiền chia sẻ lượt xem nhận trực tiếp từ YouTube, Facebook, TikTok.</p>
-                  </div>
-                  <span class="cf-type">Chia Sẻ Doanh Thu</span>
-                </div>
-
-                <div class="cashflow-card animate-card" style="--delay: 3;">
-                  <div class="cf-icon"><i class="fa-solid fa-user-shield"></i></div>
-                  <div class="cf-info">
-                    <h4>Phí dịch vụ Hỗ trợ Mạng xã hội</h4>
-                    <p>Thu phí xử lý sự cố kỹ thuật (mở khóa tài khoản, kháng gậy/khóa kênh, kéo tick xanh, bảo vệ bản quyền).</p>
-                  </div>
-                  <span class="cf-type">Hỗ Trợ Kỹ Thuật</span>
-                </div>
-
-                <div class="cashflow-card animate-card" style="--delay: 4;">
-                  <div class="cf-icon"><i class="fa-solid fa-shop"></i></div>
-                  <div class="cf-info">
-                    <h4>Phí dịch vụ bán hàng trọn gói</h4>
-                    <p>Phí cố định từ set-up TikTok Shop, phòng Livestream và vận hành kênh.</p>
-                  </div>
-                  <span class="cf-type">Phí Cố Định</span>
-                </div>
-
-                <div class="cashflow-card full-width-cf animate-card" style="--delay: 5;">
-                  <div class="cf-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                  <div class="cf-info">
-                    <h4>Dịch vụ phát sinh liên quan <span style="font-size: 14px; font-weight: 500; opacity: 0.85;">(Báo giá linh hoạt theo job)</span></h4>
-                    <p>Thu phí xử lý khủng hoảng truyền thông, thuê mẫu live theo giờ, phí mua quyền sử dụng hình ảnh KOC, phí cấp cứu kênh vi phạm đột xuất.</p>
-                  </div>
-                  <span class="cf-type">Linh Hoạt Theo Job</span>
-                </div>
-              </div>
-
-              <div class="payment-rule-box animate-card" style="--delay: 6;">
-                <i class="fa-solid fa-shield-halved"></i>
-                <div><strong>Quy định thanh toán:</strong> Thu cọc <strong>70% - 100%</strong> chi phí Booking trước khi Talent trả bài; <strong>50% - 100%</strong> trước khi thực hiện dịch vụ Hỗ trợ Kỹ thuật / Set-up.</div>
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="c-lbl">Email Hợp Tác:</span>
+                <a href="mailto:contact@lagroup.media" class="c-val">contact@lagroup.media</a>
               </div>
             </div>
 
-            <!-- PANEL C: BẢNG GIÁ DỊCH VỤ -->
-            <div class="tab-panel" id="social-panel-c">
-              <div class="pricing-cards-grid">
-                <div class="price-box animate-card" style="--delay: 1;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-star"></i>
-                    <h4>Hoa Hồng Booking Talent / KOC</h4>
-                  </div>
-                  <div class="price-amount">10% – 30% <span class="currency">/ hợp đồng thương mại</span></div>
-                  <p class="price-note">Trích phí quản lý & đại diện hợp tác giữa thương hiệu và Talent.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 2;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-key"></i>
-                    <h4>Dịch Vụ Hạ Tầng & Bảo Mật Kênh</h4>
-                  </div>
-                  <div class="price-amount">3M – 15M <span class="currency">VNĐ / hồ sơ xử lý</span></div>
-                  <p class="price-note">Xử lý vi phạm tài khoản, hỗ trợ duyệt shop và đăng ký xác minh tích xanh.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 3;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-video"></i>
-                    <h4>Chuẩn Hóa Hạ Tầng Studio Livestream</h4>
-                  </div>
-                  <div class="price-amount">10M – 35M <span class="currency">VNĐ / phòng Studio</span></div>
-                  <p class="price-note">Thiết lập hệ thống ánh sáng, âm thanh, thiết bị ghi hình & phần mềm chốt đơn.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 4;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-store"></i>
-                    <h4>Quản Trị Vận Hành TikTok Shop</h4>
-                  </div>
-                  <div class="price-amount">12M – 30M <span class="currency">VNĐ / tháng + % doanh số</span></div>
-                  <p class="price-note">Tối ưu gian hàng e-Commerce, kết nối mạng lưới Affiliate KOC & điều phối chiến dịch.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- PANEL D: ĐỊNH BIÊN NHÂN SỰ -->
-            <div class="tab-panel" id="social-panel-d">
-              <div class="kpi-team-grid">
-                <div class="team-member-card animate-card" style="--delay: 1;">
-                  <div class="role-header">
-                    <div class="avatar-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                    <div class="role-titles">
-                      <h3>1x Quản Lý Talent & Booking (Talent Manager)</h3>
-                      <span class="count-badge">Quản lý chuyên môn</span>
-                    </div>
-                  </div>
-                  <p class="role-responsibilities">
-                    <strong>Trách nhiệm chính:</strong> Phát triển mạng lưới Talent độc quyền, đàm phán hợp đồng thương mại và duy trì mối quan hệ đối tác.
-                  </p>
-                  <div class="kpi-list">
-                    <h4><i class="fa-solid fa-bullseye"></i> KPI Đánh Giá Chuyên Môn:</h4>
-                    <ul>
-                      <li><span class="kpi-bullet bullet-cyan"></span>Số lượng Talent/KOC phát triển thành công trong kỳ</li>
-                      <li><span class="kpi-bullet bullet-cyan"></span>Tổng giá trị hợp đồng Booking thu về cho doanh nghiệp</li>
-                      <li><span class="kpi-bullet bullet-cyan"></span>Chỉ số hài lòng & tỷ lệ duy trì hợp tác từ các thương hiệu đối tác</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="team-member-card animate-card" style="--delay: 2;">
-                  <div class="role-header">
-                    <div class="avatar-icon"><i class="fa-solid fa-gears"></i></div>
-                    <div class="role-titles">
-                      <h3>1x Kỹ Thuật Viên Vận Hành (Technical & Operations)</h3>
-                      <span class="count-badge">Nhân sự thực thi</span>
-                    </div>
-                  </div>
-                  <p class="role-responsibilities">
-                    <strong>Trách nhiệm chính:</strong> Đảm bảo hạ tầng kỹ thuật vận hành ổn định, xử lý sự cố kênh và chuẩn hóa phòng Live.
-                  </p>
-                  <div class="kpi-list">
-                    <h4><i class="fa-solid fa-bullseye"></i> KPI Đánh Giá Chuyên Môn:</h4>
-                    <ul>
-                      <li><span class="kpi-bullet bullet-cyan"></span>Tỷ lệ xử lý sự cố hạ tầng kênh thành công (> 85%)</li>
-                      <li><span class="kpi-bullet bullet-cyan"></span>Thời gian hoàn thành nghiệm thu bàn giao phòng Studio Live</li>
-                      <li><span class="kpi-bullet bullet-cyan"></span>Chỉ số vận hành ổn định của gian hàng thương mại điện tử</li>
-                    </ul>
-                  </div>
-                </div>
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span class="c-lbl">Trụ Sở Chính:</span>
+                <span class="c-val">Tầng 12, Tòa nhà Landmark, Hà Nội & TP. Hồ Chí Minh</span>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- ==========================================
-           SLIDE 5: 3. DIGITAL MARKETING DIVISION
-           ========================================== -->
-      <section class="slide slide-digital" data-index="4">
-        <div class="slide-header">
-          <div>
-            <span class="section-tag digital-tag"><i class="fa-solid fa-chart-line"></i> 03</span>
-            <h2>3. DIGITAL MARKETING DIVISION <span class="sub-heading">(Marketing Hiệu Suất & Tối Ưu Chuyển Đổi)</span></h2>
-          </div>
-          <div class="headcount-chip"><i class="fa-solid fa-user-gear"></i> Nhân sự cố định: 2 người</div>
-        </div>
-
-        <div class="slide-content">
-          <!-- Sub-tabs -->
-          <div class="detail-tabs">
-            <button class="dtab-btn active" onclick="switchSubTab(this, 'digital-panel-a')"><i class="fa-solid fa-list-check"></i> A. Chi Tiết Công Việc</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'digital-panel-b')"><i class="fa-solid fa-money-bill-transfer"></i> B. Dòng Tiền (Revenue)</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'digital-panel-c')"><i class="fa-solid fa-tags"></i> C. Bảng Giá Dịch Vụ</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'digital-panel-d')"><i class="fa-solid fa-users"></i> D. Định Biên Nhân Sự</button>
-          </div>
-
-          <div class="tab-panels">
-            <!-- PANEL A: CHI TIẾT CÔNG VIỆC WITH SPLIT VISUAL BANNER -->
-            <div class="tab-panel active" id="digital-panel-a">
-              <div class="split-visual-grid">
-                <div class="visual-card-banner animate-card" style="--delay: 1;">
-                  <img src="assets/digital_marketing.png" alt="Marketing Hiệu Suất & Quảng Cáo Doanh Số">
-                  <div class="visual-banner-overlay">
-                    <span class="visual-badge digital-badge"><i class="fa-solid fa-chart-pie"></i> Marketing Hiệu Suất</span>
-                    <h3>Triển Khai Paid Ads & Tối Ưu Chuyển Đổi Doanh Thu</h3>
-                    <p>Đội ngũ chuyên viên Performance theo dõi sát sao dữ liệu chiến dịch, kiểm soát chi phí Ads và tối ưu hóa chỉ số ROAS/CPA.</p>
-                  </div>
-                </div>
-
-                <div class="cards-grid-4">
-                  <div class="feature-card animate-card" style="--delay: 2;">
-                    <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
-                    <h4>Performance Marketing Đa Kênh</h4>
-                    <p>Hoạch định media plan, khởi tạo chiến dịch và tối ưu hóa ngân sách quảng cáo trên các nền tảng Facebook, TikTok, Google, Zalo.</p>
-                    <span class="card-chip chip-emerald">Paid Traffic</span>
-                  </div>
-
-                  <div class="feature-card animate-card" style="--delay: 3;">
-                    <div class="card-icon"><i class="fa-solid fa-sitemap"></i></div>
-                    <h4>Phát triển Mạng lưới Affiliate</h4>
-                    <p>Thiết lập và quản lý hệ thống Affiliate Marketing, kết nối mạng lưới KOC/Creator thúc đẩy doanh số thương mại điện tử.</p>
-                  </div>
-
-                  <div class="feature-card animate-card" style="--delay: 4;">
-                    <div class="card-icon"><i class="fa-solid fa-database"></i></div>
-                    <h4>Quản trị Dữ liệu & Re-marketing</h4>
-                    <p>Thu thập, chuẩn hóa dữ liệu khách hàng, phân tích hành vi tiêu dùng và triển khai các kịch bản re-marketing tự động.</p>
-                  </div>
-
-                  <div class="feature-card animate-card" style="--delay: 5;">
-                    <div class="card-icon"><i class="fa-solid fa-chart-column"></i></div>
-                    <h4>Báo cáo Financial & Kiểm soát Cost</h4>
-                    <p>Theo dõi hiệu quả ngân sách theo thời gian thực, lập báo cáo tài chính định kỳ và đề xuất phương án tối ưu lợi nhuận.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- PANEL B: DÒNG TIỀN -->
-            <div class="tab-panel" id="digital-panel-b">
-              <div class="cashflow-grid">
-                <div class="cashflow-card animate-card" style="--delay: 1;">
-                  <div class="cf-icon"><i class="fa-solid fa-chart-line"></i></div>
-                  <div class="cf-info">
-                    <h4>% Phí dịch vụ Ads & Performance Share</h4>
-                    <p>Phí cố định/quản lý Ads + % doanh thu chiết khấu trên số đơn hàng bán ra.</p>
-                  </div>
-                  <span class="cf-type">% Ads & Performance</span>
-                </div>
-
-                <div class="cashflow-card animate-card" style="--delay: 2;">
-                  <div class="cf-icon"><i class="fa-solid fa-link"></i></div>
-                  <div class="cf-info">
-                    <h4>% Hoa hồng Affiliate</h4>
-                    <p>Nguồn thu từ hoa hồng bán sản phẩm qua link tiếp thị liên kết của KOC/kênh.</p>
-                  </div>
-                  <span class="cf-type">Hoa Hồng Affiliate</span>
-                </div>
-
-                <div class="cashflow-card full-width-cf animate-card" style="--delay: 3;">
-                  <div class="cf-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                  <div class="cf-info">
-                    <h4>Dịch vụ phát sinh liên quan <span style="font-size: 14px; font-weight: 500; opacity: 0.85;">(Báo giá linh hoạt theo job)</span></h4>
-                    <p>Thu phí thuê/cho mượn Tài khoản quảng cáo (BM/Agency Account), phí thiết kế Landing Page bán hàng/phễu thu lead, phí cài đặt Pixel/Tracking nâng cao, phí bù đắp ngân sách Ads tăng vọt bất ngờ.</p>
-                  </div>
-                  <span class="cf-type">Linh Hoạt Theo Job</span>
-                </div>
-              </div>
-
-              <div class="payment-rule-box animate-card" style="--delay: 4;">
-                <i class="fa-solid fa-shield-halved"></i>
-                <div><strong>Quy định thanh toán:</strong> Thu <strong>100%</strong> phí quản lý Ads/ngân sách chạy Ads theo tuần hoặc cọc <strong>50%</strong> phí dịch vụ hàng tháng.</div>
-              </div>
-            </div>
-
-            <!-- PANEL C: BẢNG GIÁ DỊCH VỤ -->
-            <div class="tab-panel" id="digital-panel-c">
-              <div class="pricing-cards-grid">
-                <div class="price-box animate-card" style="--delay: 1;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-rectangle-ad"></i>
-                    <h4>Phí Quản Lý Chiến Dịch Paid Ads</h4>
-                  </div>
-                  <div class="price-amount">7% – 10% <span class="currency">ngân sách Ads chi tiêu</span></div>
-                  <p class="price-note">Áp dụng cho các chiến dịch có chi tiêu ngân sách từ 50M VNĐ/tháng trở lên.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 2;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-chart-line-up"></i>
-                    <h4>Gói Performance Tối Ưu Doanh Số</h4>
-                  </div>
-                  <div class="price-amount">15M VNĐ <span class="currency">gốc + 3%–8% doanh số</span></div>
-                  <p class="price-note">Cam kết KPI chuyển đổi đơn hàng, chi phí quản lý gắn liền với hiệu quả thực tế.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 3;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-network-wired"></i>
-                    <h4>Vận Hành Hệ Thống Affiliate KOC</h4>
-                  </div>
-                  <div class="price-amount">5% – 10% <span class="currency">hoa hồng doanh số</span></div>
-                  <p class="price-note">Điều phối sản phẩm mẫu, kết nối mạng lưới 50-200 KOC phủ truyền thông sản phẩm.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 4;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-bullseye"></i>
-                    <h4>Tối Ưu Dữ Liệu & CRM Re-marketing</h4>
-                  </div>
-                  <div class="price-amount">8M – 20M <span class="currency">VNĐ / tháng</span></div>
-                  <p class="price-note">Xây dựng hạ tầng CRM, phân loại tiệp khách hàng & tự động hóa kịch bản tương tác lại.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- PANEL D: ĐỊNH BIÊN NHÂN SỰ -->
-            <div class="tab-panel" id="digital-panel-d">
-              <div class="kpi-team-grid">
-                <div class="team-member-card animate-card" style="--delay: 1;">
-                  <div class="role-header">
-                    <div class="avatar-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                    <div class="role-titles">
-                      <h3>1x Senior Performance Ads Specialist</h3>
-                      <span class="count-badge">Quản lý chuyên môn</span>
-                    </div>
-                  </div>
-                  <p class="role-responsibilities">
-                    <strong>Trách nhiệm chính:</strong> Hoạch định media plan, trực tiếp thiết lập, theo dõi và tối ưu chỉ số quảng cáo FB/TikTok/Google.
-                  </p>
-                  <div class="kpi-list">
-                    <h4><i class="fa-solid fa-bullseye"></i> KPI Đánh Giá Chuyên Môn:</h4>
-                    <ul>
-                      <li><span class="kpi-bullet bullet-emerald"></span>Chỉ số ROAS (Return on Ad Spend) đạt định mức cam kết</li>
-                      <li><span class="kpi-bullet bullet-emerald"></span>Tối ưu chi phí trên mỗi đơn hàng (CPA / Cost Per Order)</li>
-                      <li><span class="kpi-bullet bullet-emerald"></span>Chỉ số chuyển đổi (Conversion Rate) trên các kênh bán hàng</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="team-member-card animate-card" style="--delay: 2;">
-                  <div class="role-header">
-                    <div class="avatar-icon"><i class="fa-solid fa-database"></i></div>
-                    <div class="role-titles">
-                      <h3>1x Digital Data & Affiliate Operations</h3>
-                      <span class="count-badge">Nhân sự thực thi</span>
-                    </div>
-                  </div>
-                  <p class="role-responsibilities">
-                    <strong>Trách nhiệm chính:</strong> Vận hành hệ thống Affiliate, kết nối Creator, quản trị tiệp dữ liệu & đối soát hoa hồng.
-                  </p>
-                  <div class="kpi-list">
-                    <h4><i class="fa-solid fa-bullseye"></i> KPI Đánh Giá Chuyên Môn:</h4>
-                    <ul>
-                      <li><span class="kpi-bullet bullet-emerald"></span>Số lượng Creator tham gia chiến dịch Affiliate trong kỳ</li>
-                      <li><span class="kpi-bullet bullet-emerald"></span>Tổng giá trị giao dịch (GMV) phát sinh từ kênh Affiliate</li>
-                      <li><span class="kpi-bullet bullet-emerald"></span>Độ chính xác trong báo cáo dữ liệu & đối soát tài chính</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-           SLIDE 6: 4. ACADEMY DIVISION
-           ========================================== -->
-      <section class="slide slide-academy" data-index="5">
-        <div class="slide-header">
-          <div>
-            <span class="section-tag academy-tag"><i class="fa-solid fa-graduation-cap"></i> 04</span>
-            <h2>4. ACADEMY DIVISION <span class="sub-heading">(Đào Tạo Chuyên Môn & Chuyển Giao Quy Trình)</span></h2>
-          </div>
-          <div class="headcount-chip"><i class="fa-solid fa-user-gear"></i> Nhân sự: Founder + 1 Vận Hành</div>
-        </div>
-
-        <div class="slide-content">
-          <!-- Sub-tabs -->
-          <div class="detail-tabs">
-            <button class="dtab-btn active" onclick="switchSubTab(this, 'academy-panel-a')"><i class="fa-solid fa-list-check"></i> A. Chi Tiết Công Việc</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'academy-panel-b')"><i class="fa-solid fa-money-bill-transfer"></i> B. Dòng Tiền (Revenue)</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'academy-panel-c')"><i class="fa-solid fa-tags"></i> C. Bảng Giá Dịch Vụ</button>
-            <button class="dtab-btn" onclick="switchSubTab(this, 'academy-panel-d')"><i class="fa-solid fa-users"></i> D. Định Biên Nhân Sự</button>
-          </div>
-
-          <div class="tab-panels">
-            <!-- PANEL A: CHI TIẾT CÔNG VIỆC WITH SPLIT VISUAL BANNER -->
-            <div class="tab-panel active" id="academy-panel-a">
-              <div class="split-visual-grid">
-                <div class="visual-card-banner animate-card" style="--delay: 1;">
-                  <img src="assets/academy_training.png" alt="Đào Tạo & Chuyển Giao Quy Trình">
-                  <div class="visual-banner-overlay">
-                    <span class="visual-badge academy-badge"><i class="fa-solid fa-chalkboard-user"></i> Đào Tạo & Chuyển Giao</span>
-                    <h3>Đào Tạo Kỹ Năng Chuyên Môn & Đóng Gói Quy Trình</h3>
-                    <p>Cung cấp các chương trình đào tạo kỹ năng truyền thông, chuẩn hóa kỹ thuật đứng trước ống kính và chuyển giao quy trình vận hành doanh nghiệp.</p>
-                  </div>
-                </div>
-
-                <div class="cards-grid-4">
-                  <div class="feature-card animate-card" style="--delay: 2;">
-                    <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-                    <h4>Đào tạo Kỹ năng Sản xuất Media</h4>
-                    <p>Huấn luyện kỹ thuật quay chụp, tư duy bố cục hình ảnh và sử dụng thiết bị ghi hình chuyên dụng.</p>
-                  </div>
-
-                  <div class="feature-card animate-card" style="--delay: 3;">
-                    <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                    <h4>Đào tạo Marketing & Vận hành Shop</h4>
-                    <p>Giảng dạy tư duy vận hành chiến dịch quảng cáo, thiết lập gian hàng thương mại điện tử và kiểm soát chi phí Ads.</p>
-                  </div>
-
-                  <div class="feature-card animate-card" style="--delay: 4;">
-                    <div class="card-icon"><i class="fa-solid fa-display"></i></div>
-                    <h4>Huấn luyện Kỹ năng Livestream</h4>
-                    <p>Tập huấn thần thái tương tác trước ống kính, nghệ thuật kiểm soát giọng nói và phương pháp bán hàng chuyên nghiệp.</p>
-                  </div>
-
-                  <div class="feature-card animate-card" style="--delay: 5;">
-                    <div class="card-icon"><i class="fa-solid fa-box-archive"></i></div>
-                    <h4>Chuyển giao Quy trình & Kịch bản Mẫu</h4>
-                    <p>Đóng gói bộ kịch bản thương mại, checklist vận hành và tài liệu đào tạo nội bộ cho doanh nghiệp đối tác.</p>
-                    <span class="card-chip chip-amber">Chuẩn Hóa Doanh Nghiệp</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- PANEL B: DÒNG TIỀN -->
-            <div class="tab-panel" id="academy-panel-b">
-              <div class="cashflow-grid">
-                <div class="cashflow-card animate-card" style="--delay: 1;">
-                  <div class="cf-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                  <div class="cf-info">
-                    <h4>Học Phí Chương Trình Đào Tạo</h4>
-                    <p>Thu học phí trực tiếp từ các khóa đào tạo kỹ năng truyền thông, quảng cáo và livestream tổ chức định kỳ theo lớp hoặc Workshop.</p>
-                  </div>
-                  <span class="cf-type">Doanh Thu Đào Tạo</span>
-                </div>
-
-                <div class="cashflow-card animate-card" style="--delay: 2;">
-                  <div class="cf-icon"><i class="fa-solid fa-file-code"></i></div>
-                  <div class="cf-info">
-                    <h4>Phí Bản Quyền Quy Trình & Tài Liệu Mẫu</h4>
-                    <p>Cung cấp bản quyền các bộ kịch bản thương mại, kịch bản truyền thông và checklist quy trình vận hành đóng gói sẵn.</p>
-                  </div>
-                  <span class="cf-type">Phí Chuyển Giao Bản Quyền</span>
-                </div>
-
-                <div class="cashflow-card full-width-cf animate-card" style="--delay: 3;">
-                  <div class="cf-icon"><i class="fa-solid fa-user-tie"></i></div>
-                  <div class="cf-info">
-                    <h4>Phí Tư Vấn & Đào Tạo In-House Doanh Nghiệp</h4>
-                    <p>Thu phí từ các hợp đồng tư vấn chuyên sâu 1:1, đào tạo in-house và tư vấn chuẩn hóa cấu trúc truyền thông cho doanh nghiệp.</p>
-                  </div>
-                  <span class="cf-type">Tư Vấn Doanh Nghiệp</span>
-                </div>
-              </div>
-
-              <div class="payment-rule-box animate-card" style="--delay: 4;">
-                <i class="fa-solid fa-shield-halved"></i>
-                <div><strong>Quy tắc thanh toán Academy:</strong> Thu trước <strong>100% học phí hoặc phí bản quyền chuyển giao quy trình</strong> trước khi bàn giao tài liệu hoặc khai giảng khóa học.</div>
-              </div>
-            </div>
-
-            <!-- PANEL C: BẢNG GIÁ DỊCH VỤ -->
-            <div class="tab-panel" id="academy-panel-c">
-              <div class="pricing-cards-grid">
-                <div class="price-box animate-card" style="--delay: 1;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-laptop"></i>
-                    <h4>Chương Trình Đào Tạo Trực Tuyến</h4>
-                  </div>
-                  <div class="price-amount">1.5M – 4.5M <span class="currency">VNĐ / học viên</span></div>
-                  <p class="price-note">Chương trình 6–8 buổi đào tạo kỹ năng biên soạn kịch bản & vận hành chiến dịch.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 2;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-users"></i>
-                    <h4>Workshop Đào Tạo Tập Trung</h4>
-                  </div>
-                  <div class="price-amount">5M – 15M <span class="currency">VNĐ / học viên</span></div>
-                  <p class="price-note">Khóa thực hành tập trung 2 ngày về kỹ thuật ghi hình studio & phương pháp livestream.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 3;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-box-open"></i>
-                    <h4>Chuyển Giao Quy Trình & Kịch Bản Mẫu</h4>
-                  </div>
-                  <div class="price-amount">299K – 1.99M <span class="currency">VNĐ / bộ tài liệu</span></div>
-                  <p class="price-note">Bộ kịch bản thương mại, mẫu kế hoạch truyền thông & checklist quy trình chuẩn hóa.</p>
-                </div>
-
-                <div class="price-box animate-card" style="--delay: 4;">
-                  <div class="price-header">
-                    <i class="fa-solid fa-user-ninja"></i>
-                    <h4>Tư Vấn & Đào Tạo In-House Doanh Nghiệp</h4>
-                  </div>
-                  <div class="price-amount">15M – 40M <span class="currency">VNĐ / gói tư vấn</span></div>
-                  <p class="price-note">Tư vấn chuyên sâu 1:1, khảo sát & xây dựng bộ quy trình truyền thông cho doanh nghiệp.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- PANEL D: ĐỊNH BIÊN NHÂN SỰ -->
-            <div class="tab-panel" id="academy-panel-d">
-              <div class="kpi-team-grid">
-                <div class="team-member-card animate-card" style="--delay: 1;">
-                  <div class="role-header">
-                    <div class="avatar-icon"><i class="fa-solid fa-user-graduate"></i></div>
-                    <div class="role-titles">
-                      <h3>Founder / Giảng Viên Chính (Master Mentor)</h3>
-                      <span class="count-badge">Chỉ đạo chuyên môn</span>
-                    </div>
-                  </div>
-                  <p class="role-responsibilities">
-                    <strong>Trách nhiệm chính:</strong> Giảng dạy chính & tư vấn chuyển giao quy trình, chủ trì các chương trình tư vấn in-house cho doanh nghiệp.
-                  </p>
-                  <div class="kpi-list">
-                    <h4><i class="fa-solid fa-bullseye"></i> KPI Đánh Giá Chuyên Môn:</h4>
-                    <ul>
-                      <li><span class="kpi-bullet bullet-amber"></span>Chỉ số đánh giá chất lượng chương trình từ đối tác (> 90%)</li>
-                      <li><span class="kpi-bullet bullet-amber"></span>Hiệu quả áp dụng quy trình chuẩn hóa vào thực tế doanh nghiệp</li>
-                      <li><span class="kpi-bullet bullet-amber"></span>Chất lượng bộ tài liệu kịch bản & quy trình đóng gói</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="team-member-card animate-card" style="--delay: 2;">
-                  <div class="role-header">
-                    <div class="avatar-icon"><i class="fa-solid fa-headset"></i></div>
-                    <div class="role-titles">
-                      <h3>1x Vận Hành & Hỗ Trợ Đào Tạo (Academy Operations)</h3>
-                      <span class="count-badge">Nhân sự thực thi</span>
-                    </div>
-                  </div>
-                  <p class="role-responsibilities">
-                    <strong>Trách nhiệm chính:</strong> Tuyển sinh, điều phối lớp học & chăm sóc đối tác, hỗ trợ bàn giao tài liệu bản quyền.
-                  </p>
-                  <div class="kpi-list">
-                    <h4><i class="fa-solid fa-bullseye"></i> KPI Đánh Giá Chuyên Môn:</h4>
-                    <ul>
-                      <li><span class="kpi-bullet bullet-amber"></span>Tỷ lệ tuyển sinh & đăng ký chương trình đào tạo</li>
-                      <li><span class="kpi-bullet bullet-amber"></span>Tốc độ phản hồi & mức độ hỗ trợ đối tác trong quá trình chuyển giao</li>
-                      <li><span class="kpi-bullet bullet-amber"></span>Doanh thu từ các sản phẩm tài liệu quy trình đóng gói</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-           SLIDE 7: CASHFLOW & CROSS-SELL MATRIX
-           ========================================== -->
-      <section class="slide" data-index="6">
-        <div class="slide-header">
-          <div>
-            <span class="section-tag finance-tag"><i class="fa-solid fa-coins"></i> Tài Chính & Bán Chéo</span>
-            <h2>DÒNG TIỀN & ĐIỂM CHẠM THU PHÍ LA GROUP</h2>
-          </div>
-        </div>
-
-        <div class="slide-content">
-          <div class="finance-matrix-grid">
-            <!-- Left: Table of Flow -->
-            <div class="matrix-card animate-card" style="--delay: 1;">
-              <h3><i class="fa-solid fa-table-list"></i> Bảng Tổng Hợp Thu Phí Theo Bộ Phận</h3>
-              <table class="custom-table">
-                <thead>
-                  <tr>
-                    <th>Phòng Ban</th>
-                    <th>Nguồn Thu Chính</th>
-                    <th>Cơ Cấu Thanh Toán & Quy Tắc Dòng Tiền</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="badge-mini media-bg">1. MEDIA</span></td>
-                    <td>Chi phí hợp đồng sản xuất TVC, Video, Hình ảnh</td>
-                    <td>Cố định theo dự án <span class="highlight-val">(Cọc 50% - Nghiệm thu 50%)</span></td>
-                  </tr>
-                  <tr>
-                    <td><span class="badge-mini social-bg">2. SOCIAL</span></td>
-                    <td>Phí Booking Talent, Dịch vụ kỹ thuật & Setup Studio</td>
-                    <td>Theo dự án <span class="highlight-val">(Đặt cọc 70%–100% trước triển khai)</span></td>
-                  </tr>
-                  <tr>
-                    <td><span class="badge-mini digital-bg">3. DIGITAL</span></td>
-                    <td>Phí quản lý ngân sách Ads, Performance RevShare & Affiliate</td>
-                    <td>Định kỳ theo tuần/tháng <span class="highlight-val">(Thu 100% ngân sách trước)</span></td>
-                  </tr>
-                  <tr>
-                    <td><span class="badge-mini academy-bg">4. ACADEMY</span></td>
-                    <td>Học phí đào tạo, Phí bản quyền quy trình & Coaching</td>
-                    <td>Trực tiếp <span class="highlight-val">(Thu 100% trước khóa học/bàn giao)</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Right: Cross-sell Synergies -->
-            <div class="matrix-card animate-card" style="--delay: 2;">
-              <h3><i class="fa-solid fa-arrows-spin"></i> Sơ Đồ Liên Kết Bán Chéo (Cross-Selling Synergies)</h3>
-              <div class="cross-sell-list">
-                <div class="cs-item">
-                  <div class="cs-badge">Media <i class="fa-solid fa-arrow-right"></i> Social</div>
-                  <div class="cs-text">Sản xuất nội dung chất lượng cao cho Talent độc quyền <i class="fa-solid fa-right-long"></i> Gia tăng giá trị hợp đồng Booking thương hiệu.</div>
-                </div>
-
-                <div class="cs-item">
-                  <div class="cs-badge">Social <i class="fa-solid fa-arrow-right"></i> Digital</div>
-                  <div class="cs-text">Talent xuất hiện trong các video thương mại <i class="fa-solid fa-right-long"></i> Đội Digital triển khai Paid Ads & thu hoa hồng Affiliate.</div>
-                </div>
-
-                <div class="cs-item">
-                  <div class="cs-badge">Digital <i class="fa-solid fa-arrow-right"></i> Academy</div>
-                  <div class="cs-text">Đo lường dữ liệu chiến dịch thành công <i class="fa-solid fa-right-long"></i> Chuẩn hóa thành case study & giáo trình đào tạo.</div>
-                </div>
-
-                <div class="cs-item">
-                  <div class="cs-badge">Academy <i class="fa-solid fa-arrow-right"></i> Social & Media</div>
-                  <div class="cs-text">Học viên xuất sắc <i class="fa-solid fa-right-long"></i> Tuyển chọn ký hợp đồng Talent độc quyền & bổ sung nhân sự Production.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-           SLIDE 8: ORG CHART & HEADCOUNT OVERVIEW
-           ========================================== -->
-      <section class="slide" data-index="7">
-        <div class="slide-header">
-          <div>
-            <span class="section-tag hr-tag"><i class="fa-solid fa-sitemap"></i> Hạ Tầng Nhân Sự</span>
-            <h2>SƠ ĐỒ BỘ MÁY NHÂN SỰ CỐ ĐỊNH (CORE TEAM)</h2>
-          </div>
-        </div>
-
-        <div class="slide-content">
-          <div class="org-overview-grid">
-            <div class="org-stat-box animate-card" style="--delay: 1;">
-              <div class="org-num">6 – 8</div>
-              <div class="org-label">Nhân sự nòng cốt chịu trách nhiệm quản trị và vận hành toàn bộ 4 bộ phận</div>
-            </div>
-
-            <!-- Card Media -->
-            <div class="org-card border-media animate-card" style="--delay: 2;">
-              <div class="org-card-head media-bg">1. MEDIA (2-3 Người)</div>
-              <ul class="org-people-list">
-                <li>
-                  <i class="fa-solid fa-user-tie"></i>
-                  <div>
-                    <strong>1x Đạo diễn / Cameraman</strong>
-                    <span>Chủ trì concept sáng tạo & chỉ đạo sản xuất</span>
-                  </div>
-                </li>
-                <li>
-                  <i class="fa-solid fa-user-gear"></i>
-                  <div>
-                    <strong>1-2x Editor / VFX Specialist</strong>
-                    <span>Biên tập video & hoàn thiện hậu kỳ</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Card Social -->
-            <div class="org-card border-social animate-card" style="--delay: 3;">
-              <div class="org-card-head social-bg">2. SOCIAL (2 Người)</div>
-              <ul class="org-people-list">
-                <li>
-                  <i class="fa-solid fa-user-astronaut"></i>
-                  <div>
-                    <strong>1x Talent Manager</strong>
-                    <span>Quản lý hợp đồng Talent & phát triển Booking</span>
-                  </div>
-                </li>
-                <li>
-                  <i class="fa-solid fa-screwdriver-wrench"></i>
-                  <div>
-                    <strong>1x Technical & Ops</strong>
-                    <span>Quản trị hạ tầng kỹ thuật & gian hàng e-Commerce</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Card Digital -->
-            <div class="org-card border-digital animate-card" style="--delay: 4;">
-              <div class="org-card-head digital-bg">3. DIGITAL (2 Người)</div>
-              <ul class="org-people-list">
-                <li>
-                  <i class="fa-solid fa-chart-pie"></i>
-                  <div>
-                    <strong>1x Senior Performance Ads</strong>
-                    <span>Hoạch định media plan & tối ưu chiến dịch Ads</span>
-                  </div>
-                </li>
-                <li>
-                  <i class="fa-solid fa-database"></i>
-                  <div>
-                    <strong>1x Data & Affiliate Ops</strong>
-                    <span>Vận hành hệ thống Affiliate & quản trị Dữ liệu</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Card Academy -->
-            <div class="org-card border-academy animate-card" style="--delay: 5;">
-              <div class="org-card-head academy-bg">4. ACADEMY (1-2 Người)</div>
-              <ul class="org-people-list">
-                <li>
-                  <i class="fa-solid fa-user-graduate"></i>
-                  <div>
-                    <strong>Founder / Master Mentor</strong>
-                    <span>Giảng dạy chính & tư vấn chuyển giao quy trình</span>
-                  </div>
-                </li>
-                <li>
-                  <i class="fa-solid fa-headset"></i>
-                  <div>
-                    <strong>1x Academy Operations</strong>
-                    <span>Tuyển sinh, điều phối lớp học & chăm sóc đối tác</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-           SLIDE 9: SUMMARY & PRE-LAUNCH ACTION PLAN
-           ========================================== -->
-      <section class="slide summary-slide" data-index="8">
-        <div class="slide-content">
-          <div class="summary-content">
-            <h2 class="animate-card" style="--delay: 2;">LA GROUP &mdash; TỔNG KẾT ĐẦU VIỆC & PHÂN BỔ QUẢN LÝ TRƯỚC VẬN HÀNH</h2>
-
-            <!-- Pre-Launch Timeline 4 Phases -->
-            <div class="prelaunch-section-title animate-card" style="--delay: 4;">
-              <h3><i class="fa-solid fa-list-check"></i> 1. Danh Mục Đầu Việc Cần Hoàn Thành Trước Ngày Mở Công Ty</h3>
-            </div>
+        <div class="contact-form-col">
+          <form class="clean-form" id="leadGenForm">
+            <h3 data-i18n="form_title">Đăng Ký Tư Vấn & Nhận Báo Giá</h3>
             
-            <div class="prelaunch-timeline-grid">
-              <div class="prelaunch-box animate-card" style="--delay: 5;">
-                <span class="pl-step-tag pl-step-1">1. HẠ TẦNG & PHÁP LÝ</span>
-                <h4>Studio & Thiết Bị Vận Hành</h4>
-                <ul>
-                  <li><i class="fa-solid fa-check"></i> Nghiệm thu Studio quay 4K & 03 phòng Livestream tiêu chuẩn.</li>
-                  <li><i class="fa-solid fa-check"></i> Sắm dàn máy quay, đèn Nanlite/Godox & micro thu âm.</li>
-                  <li><i class="fa-solid fa-check"></i> Đăng ký GPKD, bảo hộ nhãn hiệu & hợp đồng thuê trụ sở.</li>
-                </ul>
+            <div class="form-row">
+              <div class="form-col">
+                <label for="fName" data-i18n="form_name">Họ và Tên *</label>
+                <input type="text" id="fName" required placeholder="Nguyễn Văn A">
               </div>
-
-              <div class="prelaunch-box animate-card" style="--delay: 6;">
-                <span class="pl-step-tag pl-step-2">2. NHÂN SỰ & QUY TRÌNH</span>
-                <h4>Tuyển Dụng & Chuẩn Hóa SOP</h4>
-                <ul>
-                  <li><i class="fa-solid fa-check"></i> Tuyển dụng nhân viên các phòng ban liên quan.</li>
-                  <li><i class="fa-solid fa-check"></i> Ban hành bộ quy trình phối hợp SOP giữa 4 bộ phận chuyên môn.</li>
-                  <li><i class="fa-solid fa-check"></i> Chốt cơ chế KPI, hoa hồng Booking/Livestream & quy chế nội bộ.</li>
-                </ul>
-              </div>
-
-              <div class="prelaunch-box animate-card" style="--delay: 7;">
-                <span class="pl-step-tag pl-step-3">3. DỊCH VỤ & KHÁCH HÀNG</span>
-                <h4>Hợp Đồng Talent & Sản Phẩm</h4>
-                <ul>
-                  <li><i class="fa-solid fa-check"></i> Chốt hợp đồng độc quyền 05 KOC/Idol hạt nhân đợt 1.</li>
-                  <li><i class="fa-solid fa-check"></i> Đóng gói 03 gói sản xuất Media mẫu & chốt đơn hàng TVC 01.</li>
-                  <li><i class="fa-solid fa-check"></i> Mở cổng chiêu sinh khóa học Academy 01 & chốt giáo trình.</li>
-                </ul>
+              <div class="form-col">
+                <label for="fPhone" data-i18n="form_phone">Số Điện Thoại / Zalo *</label>
+                <input type="tel" id="fPhone" required placeholder="0988 xxx xxx">
               </div>
             </div>
 
-            <!-- Management Responsibility Matrix -->
-            <div class="prelaunch-section-title animate-card" style="--delay: 9;">
-              <h3><i class="fa-solid fa-sitemap"></i> 2. Phân Bổ Trách Nhiệm Quản Lý Trước Ngày Vận Hành</h3>
-            </div>
-
-            <div class="prelaunch-mgmt-grid">
-              <div class="mgmt-box animate-card" style="--delay: 10;">
-                <div class="mgmt-header mgmt-c-level">
-                  <i class="fa-solid fa-user-tie"></i>
-                  <div>
-                    <h4>Ban Điều Hành (C-Level & Founder)</h4>
-                    <span>Quản Trị Chiến Lược & Ngân Sách</span>
-                  </div>
-                </div>
-                <ul>
-                  <li><i class="fa-solid fa-arrow-right"></i> Phê duyệt P&L năm đầu, định giá gói dịch vụ & ngân sách MKT.</li>
-                  <li><i class="fa-solid fa-arrow-right"></i> Trực tiếp đàm phán chốt hợp đồng với Nhãn hàng lớn & Talent S-Class.</li>
-                  <li><i class="fa-solid fa-arrow-right"></i> Giám sát tiến độ hoàn thiện trụ sở, hạ tầng & kiểm soát rủi ro pháp lý.</li>
-                </ul>
+            <div class="form-row">
+              <div class="form-col">
+                <label for="fBrand" data-i18n="form_brand">Tên Thương Hiệu / Doanh Nghiệp</label>
+                <input type="text" id="fBrand" placeholder="Công ty / Brand của bạn">
               </div>
-
-              <div class="mgmt-box animate-card" style="--delay: 11;">
-                <div class="mgmt-header mgmt-mid-level">
-                  <i class="fa-solid fa-user-gear"></i>
-                  <div>
-                    <h4>Quản Lý Tầm Trung (Team Leads)</h4>
-                    <span>Điều Hành Vận Hành Chuyên Môn</span>
-                  </div>
-                </div>
-                <ul>
-                  <li><i class="fa-solid fa-arrow-right"></i> <strong>Media Lead:</strong> Nghiệm thu máy móc Studio & chất lượng hậu kỳ TVC.</li>
-                  <li><i class="fa-solid fa-arrow-right"></i> <strong>Talent Lead:</strong> Định hướng kênh cho KOC đợt 1 & chốt lịch Livestream.</li>
-                  <li><i class="fa-solid fa-arrow-right"></i> <strong>Digital & Academy Lead:</strong> Setup tài khoản BM Ads & chốt giáo trình.</li>
-                </ul>
-              </div>
-
-              <div class="mgmt-box animate-card" style="--delay: 12;">
-                <div class="mgmt-header mgmt-exec-level">
-                  <i class="fa-solid fa-users-gear"></i>
-                  <div>
-                    <h4>Đội Ngũ Thực Thi & Khác (Specialists & Other)</h4>
-                    <span>Triển Khai Chi Tiết Kỹ Thuật</span>
-                  </div>
-                </div>
-                <ul>
-                  <li><i class="fa-solid fa-arrow-right"></i> <strong>Production Team:</strong> Test máy quay/đèn, dựng Template Video & kỹ xảo.</li>
-                  <li><i class="fa-solid fa-arrow-right"></i> <strong>Talent Care:</strong> Setup phòng chờ, chuẩn bị trang phục & hỗ trợ Livestream.</li>
-                  <li><i class="fa-solid fa-arrow-right"></i> <strong>Ads & Support:</strong> Cấu hình đường truyền, test Ads & tư vấn học viên.</li>
-                </ul>
+              <div class="form-col">
+                <label for="fService" data-i18n="form_service">Dịch Vụ Quan Tâm</label>
+                <select id="fService">
+                  <option value="all">Trọn gói Omnichannel Media & Growth</option>
+                  <option value="media">Sản xuất TVC / Video 4K Cinema</option>
+                  <option value="koc">Booking Mạng Lưới KOC & Creator</option>
+                  <option value="live">Vận hành Livestream Studio Bán Hàng</option>
+                  <option value="academy">Đào tạo In-house LA Academy</option>
+                </select>
               </div>
             </div>
-          </div>
+
+            <div class="form-col">
+              <label for="fMsg" data-i18n="form_msg">Nhu Cầu Chi Tiết</label>
+              <textarea id="fMsg" rows="3" placeholder="Mô tả mục tiêu chiến dịch, thời gian dự kiến hoặc yêu cầu đặc biệt..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-liquid-gold w-full btn-large" id="submitFormBtn">
+              <i class="fa-solid fa-paper-plane"></i> <span data-i18n="form_submit">GỬI YÊU CẦU TƯ VẤN NGAY</span>
+            </button>
+
+            <div class="form-alert" id="formSuccessAlert">
+              <i class="fa-solid fa-circle-check text-emerald"></i>
+              <span data-i18n="form_success">Cảm ơn bạn! LA Group đã nhận được thông tin và sẽ liên hệ trong vòng 24 giờ.</span>
+            </div>
+          </form>
         </div>
-      </section>
+
+      </div>
 
     </div>
-  </main>
+  </section>
 
-  <!-- Bottom Navigation & Controls Bar -->
-  <footer class="controls-bar">
-    <div class="ctrl-left">
-      <button class="nav-arrow-btn" id="prevBtn" title="Slide trước (Phím Mũi tên Trái)"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="nav-arrow-btn" id="nextBtn" title="Slide tiếp theo (Phím Mũi tên Phải)"><i class="fa-solid fa-chevron-right"></i></button>
-      <span class="slide-counter" id="slideCounter">Slide 1 / 9</span>
-    </div>
+  <!-- ========================================================
+       FOOTER (WITH LEGAL POLICIES)
+       ======================================================== -->
+  <footer class="clean-footer">
+    <div class="container footer-row">
+      <div class="f-brand">
+        <div class="f-logo">
+          <img src="assets/la_logo.png" alt="LA Group Logo">
+          <span>LA GROUP</span>
+        </div>
+        <p>Hệ sinh thái truyền thông cao cấp, sản xuất media 4K và tăng trưởng doanh số đa kênh hàng đầu.</p>
+        <small>© 2026 LA GROUP MEDIA. All rights reserved. Haute Couture Art Direction.</small>
+      </div>
 
-    <div class="progress-bar-container">
-      <div class="progress-bar-fill" id="progressBar"></div>
-    </div>
+      <div class="f-links-col">
+        <h5 data-i18n="ft_menu">ĐIỀU HƯỚNG CHÍNH</h5>
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" data-i18n="menu_home">Trang chủ</a>
+        <a href="#gioi-thieu" data-i18n="menu_about">Về LA Group</a>
+        <a href="#dich-vu" data-i18n="menu_services">Dịch vụ</a>
+        <a href="#doi-tac" data-i18n="menu_partners">Đối tác</a>
+        <a href="#du-an" data-i18n="menu_projects">Dự án & Blog</a>
+        <a href="#tuyen-dung" data-i18n="menu_careers">Tuyển dụng</a>
+        <a href="#lien-he" data-i18n="menu_contact">Liên hệ</a>
+      </div>
 
-    <div class="ctrl-right">
-      <span>Điều hướng: Phím <code>&larr;</code> <code>&rarr;</code> | <code>F</code> Fullscreen</span>
+      <div class="f-links-col">
+        <h5 data-i18n="ft_legal">CHÍNH SÁCH & ĐIỀU KHOẢN</h5>
+        <a href="#privacy" onclick="alert('Chính sách bảo mật dữ liệu khách hàng theo chuẩn an toàn quốc tế của LA Group.'); return false;">Chính Sách Bảo Mật</a>
+        <a href="#terms" onclick="alert('Điều khoản dịch vụ và thỏa thuận cam kết KPI của LA Group Media.'); return false;">Điều Khoản Sử Dụng</a>
+        <a href="sitemap.xml" target="_blank">Sitemap.xml (SEO)</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Search Modal (Ctrl+K) -->
-  <div class="modal-overlay" id="searchModal">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm nội dung Slide</h3>
-        <button class="modal-close" id="closeSearchModal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <input type="text" id="searchInput" placeholder="Nhập từ khóa (ví dụ: Media, Talent, Booking, Performance, Dòng tiền)..." autofocus>
-        <div class="search-results" id="searchResults">
-          <!-- Dynamically populated search results -->
+  <!-- ========================================================
+       QUICK QUOTE CHATBOX (INTERACTIVE MODAL — NO REDIRECT)
+       ======================================================== -->
+  <div class="quote-chatbox-backdrop" id="quoteChatboxBackdrop" role="dialog" aria-modal="true">
+    <div class="quote-chatbox-container">
+      <div class="chatbox-header">
+        <div class="chatbox-bot-info">
+          <div class="bot-avatar"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <h4>Trợ Lý Báo Giá LA Group</h4>
+            <span class="bot-status"><span class="dot-online"></span> Đang trực tuyến (Phản hồi tức thì)</span>
+          </div>
         </div>
+        <button class="chatbox-close" onclick="closeQuoteChatbox()" aria-label="Close Chat">&times;</button>
+      </div>
+
+      <div class="chatbox-body" id="chatboxBody">
+        <div class="chat-msg bot">
+          <p>Xin chào! Tôi là Trợ lý Cố vấn Chiến lược của LA Group. Bạn đang cần báo giá cho hạng mục nào?</p>
+        </div>
+        
+        <div class="chat-quick-options" id="chatOptions">
+          <button class="chat-chip" onclick="handleChatSelect('Sản xuất TVC / Video 4K')">🎬 Sản xuất TVC / Video 4K</button>
+          <button class="chat-chip" onclick="handleChatSelect('Booking Creator & KOC')">👑 Booking KOC / Creator</button>
+          <button class="chat-chip" onclick="handleChatSelect('Trường quay Mega Livestream')">🎙️ Mega Livestream Studio</button>
+          <button class="chat-chip" onclick="handleChatSelect('Trọn gói Omnichannel Media')">🚀 Trọn gói Omnichannel</button>
+        </div>
+      </div>
+
+      <div class="chatbox-footer">
+        <form id="chatboxForm" onsubmit="handleChatSend(event)">
+          <input type="text" id="chatInput" placeholder="Nhập yêu cầu hoặc số điện thoại..." required>
+          <button type="submit" class="btn-chat-send" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
       </div>
     </div>
   </div>
 
-  <!-- Overview Grid Modal (Key 'O') -->
-  <div class="modal-overlay" id="overviewModal">
-    <div class="modal-card modal-large">
+  <!-- ========================================================
+       YOUTUBE EMBED VIDEO MODAL
+       ======================================================== -->
+  <div class="youtube-modal-backdrop" id="youtubeModal" role="dialog" aria-modal="true">
+    <div class="youtube-modal-container">
       <div class="modal-header">
-        <h3><i class="fa-solid fa-border-all"></i> Tổng quan danh sách Slide (Overview)</h3>
-        <button class="modal-close" id="closeOverviewModal">&times;</button>
+        <h4 id="youtubeModalTitle"><i class="fa-brands fa-youtube text-gold"></i> Đang tải video...</h4>
+        <button class="modal-close" onclick="closeYouTubeModal()" aria-label="Close Video">&times;</button>
       </div>
-      <div class="modal-body">
-        <div class="overview-grid" id="overviewGrid">
-          <!-- Dynamically generated slide thumbnails -->
-        </div>
+      <div class="youtube-iframe-wrapper">
+        <iframe id="youtubeIframe" src="" title="LA Group YouTube Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
-  <!-- Main JavaScript Engine -->
-  <script src="script.js"></script>
+  <!-- FLOATING QUICK ACTIONS -->
+  <div class="floating-actions">
+    <button onclick="openQuoteChatbox()" class="fab-btn fab-quote" title="Nhận Báo Giá Nhanh"><i class="fa-solid fa-comment-dollar"></i></button>
+    <a href="tel:0988000000" class="fab-btn fab-phone" title="Gọi Hotline"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://zalo.me" target="_blank" rel="noopener noreferrer" class="fab-btn fab-zalo" title="Chat Zalo"><i class="fa-solid fa-comment-dots"></i></a>
+    <button class="fab-btn fab-top" id="scrollToTop" title="Lên đầu trang" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <!-- Optimized 3D WebGL Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Main JavaScript Engine with Multi-language & Chatbox -->
+  <script src="landing.js"></script>
 </body>
 </html>
