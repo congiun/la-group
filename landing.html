@@ -22,6 +22,17 @@
 
   <!-- Luxury Obsidian & Liquid Gold Styling -->
   <link rel="stylesheet" href="landing.css">
+
+  <!-- Immediate F5 Top Reset Script -->
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+  </script>
 </head>
 <body class="luxury-obsidian-gold">
 

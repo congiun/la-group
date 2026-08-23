@@ -3,18 +3,22 @@
  * Multi-Language (VI / EN / ZH), Quick Quote Chatbox, 3D WebGL Auto-pause, FAQ & Video
  */
 
-// Force window scroll position to (0, 0) on load/reload to guarantee Top Announcement Bar is always visible
+// Force window scroll position to (0, 0) on load/reload to guarantee landing at top like clicking logo
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
-window.scrollTo(0, 0);
-
-if (window.location.hash === '#hero') {
+if (window.location.hash) {
   history.replaceState(null, '', window.location.pathname + window.location.search);
 }
+window.scrollTo(0, 0);
+
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
 
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
+  setTimeout(() => window.scrollTo(0, 0), 10);
 });
 
 // ==========================================================================
@@ -520,6 +524,27 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // 1. Initialize 3D
   initLightweight3D();
+
+  // 1.1 Smooth Anchor Navigation without hash mutation (F5 always lands on top)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#' || targetId === '#hero') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      try {
+        const targetElem = document.querySelector(targetId);
+        if (targetElem) {
+          e.preventDefault();
+          targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } catch (err) {
+        // Fallback
+      }
+    });
+  });
 
   // 2. Language Dropdown Toggle
   const langBtn = document.getElementById('langSelectorBtn');
