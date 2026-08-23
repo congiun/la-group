@@ -148,7 +148,8 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 .announcement-slider-wrapper {
   position: relative;
   width: 100%;
-  min-height: 26px;
+  height: 28px;
+  min-height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,57 +158,43 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 .announcement-slider {
   position: relative;
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .announcement-slide {
-  display: none;
+  position: absolute;
+  inset: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  flex-wrap: wrap;
   opacity: 0;
-  transform: translateY(8px);
+  visibility: hidden;
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(4px);
   text-align: center;
   width: 100%;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .announcement-slide.active {
-  display: flex;
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
-  animation: annSlideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: auto;
+  z-index: 2;
 }
 
 .announcement-slide.slide-out {
-  display: flex;
   opacity: 0;
-  transform: translateY(-8px);
-  animation: annSlideOut 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes annSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px) scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes annSlideOut {
-  0% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-10px) scale(0.98);
-  }
+  visibility: hidden;
+  transform: translateY(-4px);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .gold-badge-pill {

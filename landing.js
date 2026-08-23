@@ -593,7 +593,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         prev.classList.remove('slide-out');
-      }, 450);
+      }, 700);
     }
 
     function startAnnTicker() {
