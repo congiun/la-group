@@ -1002,7 +1002,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   -webkit-backdrop-filter: blur(14px);
   position: relative;
   z-index: 4;
-  margin-top: 12px;
+  margin-top: 20px;
 }
 
 .marquee-track {
