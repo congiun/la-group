@@ -561,11 +561,10 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
    ========================================================================== */
 .hero-3d-section {
   position: relative;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 75px);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 4px 0 0 0;
+  align-items: center;
+  padding: 20px 0 16px;
   overflow: hidden;
 }
 
@@ -589,34 +588,30 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   position: relative;
   z-index: 3;
   width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 24px;
+  gap: 32px;
   align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: 18px;
 }
 
 .hero-haute-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: rgba(212, 175, 55, 0.1);
   border: 1px solid rgba(212, 175, 55, 0.3);
   color: var(--gold-champagne);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.8px;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 100px;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
   white-space: nowrap;
 }
 
@@ -624,11 +619,11 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .hero-main-title {
   font-family: var(--font-display);
-  font-size: clamp(1.85rem, 2.7vw, 2.35rem);
+  font-size: clamp(2.1rem, 3.4vw, 2.9rem);
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.14;
   letter-spacing: -0.5px;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
   text-transform: uppercase;
 }
 
@@ -646,10 +641,10 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 }
 
 .hero-lead-desc {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
-  line-height: 1.45;
-  margin-bottom: 12px;
+  line-height: 1.55;
+  margin-bottom: 20px;
   max-width: 560px;
 }
 
@@ -658,19 +653,19 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 .hero-cta-group {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 14px;
+  margin-bottom: 26px;
 }
 
 .btn-video-hero {
   background: rgba(255, 255, 255, 0.04);
   border: var(--border-gold-hairline);
   border-radius: 100px;
-  padding: 6px 16px 6px 8px;
+  padding: 8px 20px 8px 10px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: #fff;
   transition: var(--transition);
 }
@@ -682,15 +677,15 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 }
 
 .play-gold-circle {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   background: var(--grad-gold-btn);
   color: #030303;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .play-btn-text {
@@ -701,51 +696,51 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .play-btn-text strong {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .play-btn-text small {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
 }
 
 .hero-proof-box {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .proof-avatars { display: flex; align-items: center; }
 
 .proof-avatars img {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 2px solid var(--bg-obsidian);
-  margin-left: -6px;
+  margin-left: -8px;
   object-fit: cover;
 }
 
 .proof-avatars img:first-child { margin-left: 0; }
 
 .proof-count {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #181c28;
   border: 2px solid var(--bg-obsidian);
   color: var(--gold-champagne);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -6px;
+  margin-left: -8px;
 }
 
-.proof-info .stars { color: var(--gold-bright); font-size: 0.75rem; }
+.proof-info .stars { color: var(--gold-bright); font-size: 0.8rem; }
 .proof-info .stars strong { color: var(--text-main); margin-left: 4px; }
-.proof-info p { font-size: 0.75rem; color: var(--text-muted); }
+.proof-info p { font-size: 0.8rem; color: var(--text-muted); }
 
 /* Showreel Card */
 .showreel-hero-card {
@@ -764,7 +759,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .showreel-cover-img {
   width: 100%;
-  height: 230px;
+  height: 290px;
   object-fit: cover;
   display: block;
 }
@@ -776,7 +771,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 14px;
+  padding: 18px;
 }
 
 .showreel-top-tag {
@@ -789,9 +784,9 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   background: rgba(212, 175, 55, 0.2);
   border: 1px solid rgba(212, 175, 55, 0.4);
   color: var(--gold-champagne);
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 4px;
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 700;
 }
 
@@ -800,31 +795,31 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   align-items: center;
   gap: 5px;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   color: var(--gold-bright);
   font-weight: 700;
 }
 
 .dot-gold {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   background: var(--gold-bright);
   border-radius: 50%;
 }
 
 .play-pulse-icon {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   background: var(--grad-gold-btn);
   color: #030303;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 1.15rem;
   align-self: center;
-  margin-top: 14px;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  margin-top: 24px;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
   transition: transform 0.2s ease;
 }
 
@@ -832,7 +827,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .p-brand-tag {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   color: var(--gold-bright);
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -840,14 +835,14 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .showreel-card-info h3 {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin: 2px 0;
+  margin: 3px 0;
   color: #fff;
 }
 
 .showreel-card-info p {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
 }
 
@@ -856,49 +851,50 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   background: var(--bg-card);
   border: var(--border-gold-hairline);
   border-radius: var(--radius-lg);
-  padding: 8px 20px;
+  padding: 14px 24px;
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   box-shadow: var(--shadow-card);
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
-.stat-sep { width: 1px; height: 26px; background: rgba(212, 175, 55, 0.2); }
+.stat-sep { width: 1px; height: 32px; background: rgba(212, 175, 55, 0.2); }
 .stat-item { text-align: center; }
 
 .stat-num {
   font-family: var(--font-mono);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 800;
   color: var(--gold-champagne);
   line-height: 1.1;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 
-.stat-label { font-size: 0.72rem; color: var(--text-muted); }
+.stat-label { font-size: 0.76rem; color: var(--text-muted); }
 
-/* Infinite Brand Partners Marquee Slider (Full Width Edge-to-Edge Across Screen 1) */
+/* Infinite Brand Partners Marquee Slider (Directly Underneath 500M+ Stats Bar) */
 .hero-brand-marquee {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   overflow: hidden;
   white-space: nowrap;
-  padding: 10px 0;
-  border-top: 1px solid rgba(212, 175, 55, 0.25);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-  background: rgba(3, 3, 3, 0.92);
+  padding: 12px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.22);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  background: rgba(3, 3, 3, 0.9);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   position: relative;
   z-index: 4;
-  margin-top: 4px;
+  margin-top: 12px;
 }
 
 .marquee-track {
   display: inline-flex;
-  gap: 48px;
+  gap: 52px;
   animation: marqueeSlide 40s linear infinite;
 }
 
@@ -911,9 +907,9 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   align-items: center;
   gap: 12px;
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 2.2px;
   color: var(--text-muted);
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -926,7 +922,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .m-dot {
   color: var(--gold-champagne);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   filter: drop-shadow(0 0 6px var(--gold-bright));
 }
 
