@@ -3,6 +3,20 @@
  * Multi-Language (VI / EN / ZH), Quick Quote Chatbox, 3D WebGL Auto-pause, FAQ & Video
  */
 
+// Force window scroll position to (0, 0) on load/reload to guarantee Top Announcement Bar is always visible
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
+if (window.location.hash === '#hero') {
+  history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
+
 // ==========================================================================
 // 1. MULTI-LANGUAGE TRANSLATION DICTIONARY (VI / EN / ZH)
 // ==========================================================================
