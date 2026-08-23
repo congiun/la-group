@@ -453,7 +453,7 @@ function closeYouTubeModal() {
 }
 
 // ==========================================================================
-// 4. THREE.JS LIGHTWEIGHT 3D MESH (AUTO-PAUSING 0% GPU DRAIN)
+// 4. THREE.JS LUXURY 3D LA LOGO EMBLEM (AUTO-PAUSING 0% GPU DRAIN)
 // ==========================================================================
 function initLightweight3D() {
   const canvas = document.getElementById('webglCanvas');
@@ -462,7 +462,7 @@ function initLightweight3D() {
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 50);
-  camera.position.z = 7;
+  camera.position.set(0, 0, 7.6);
 
   const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
@@ -473,48 +473,144 @@ function initLightweight3D() {
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
-  // Light Torus Knot Geometry (Optimized 64x18)
-  const geometry = new THREE.TorusKnotGeometry(1.6, 0.42, 64, 18);
-  const material = new THREE.MeshStandardMaterial({
-    color: 0xd4af37,
-    emissive: 0x332205,
-    metalness: 0.92,
-    roughness: 0.18,
-    wireframe: false
-  });
-  const torusKnot = new THREE.Mesh(geometry, material);
-  scene.add(torusKnot);
+  // 1. Logo Texture Loading
+  const textureLoader = new THREE.TextureLoader();
+  const logoTexture = textureLoader.load('assets/la_logo.png');
+  logoTexture.generateMipmaps = true;
+  logoTexture.minFilter = THREE.LinearMipmapLinearFilter;
+  logoTexture.magFilter = THREE.LinearFilter;
 
-  // Subtle Particles
-  const pCount = 80;
+  // 2. Central 3D Logo Group
+  const logoGroup = new THREE.Group();
+  scene.add(logoGroup);
+
+  // 2.1 Front & Back Logo Face
+  const logoGeo = new THREE.PlaneGeometry(2.9, 2.9);
+  const logoMatFront = new THREE.MeshStandardMaterial({
+    map: logoTexture,
+    transparent: true,
+    alphaTest: 0.05,
+    roughness: 0.12,
+    metalness: 0.94,
+    emissive: 0x3a2806,
+    side: THREE.FrontSide
+  });
+  const logoMeshFront = new THREE.Mesh(logoGeo, logoMatFront);
+  logoMeshFront.position.z = 0.06;
+  logoGroup.add(logoMeshFront);
+
+  const logoMatBack = new THREE.MeshStandardMaterial({
+    map: logoTexture,
+    transparent: true,
+    alphaTest: 0.05,
+    roughness: 0.12,
+    metalness: 0.94,
+    emissive: 0x3a2806,
+    side: THREE.BackSide
+  });
+  const logoMeshBack = new THREE.Mesh(logoGeo, logoMatBack);
+  logoMeshBack.position.z = -0.06;
+  logoMeshBack.rotation.y = Math.PI;
+  logoGroup.add(logoMeshBack);
+
+  // 2.2 Luxury Glass Medallion Backplate
+  const medalGeo = new THREE.CylinderGeometry(2.15, 2.15, 0.08, 64);
+  medalGeo.rotateX(Math.PI / 2);
+  const medalMat = new THREE.MeshStandardMaterial({
+    color: 0x050509,
+    metalness: 0.95,
+    roughness: 0.12,
+    transparent: true,
+    opacity: 0.6
+  });
+  const medalMesh = new THREE.Mesh(medalGeo, medalMat);
+  logoGroup.add(medalMesh);
+
+  // 2.3 Beveled Gold Outer Rim
+  const rimGeo = new THREE.TorusGeometry(2.18, 0.045, 16, 80);
+  const goldMat = new THREE.MeshStandardMaterial({
+    color: 0xffdf73,
+    emissive: 0x44300a,
+    metalness: 0.96,
+    roughness: 0.1
+  });
+  const rimMesh = new THREE.Mesh(rimGeo, goldMat);
+  logoGroup.add(rimMesh);
+
+  // 3. Orbital Kinetic Gyro Rings
+  const ring1Geo = new THREE.TorusGeometry(2.85, 0.03, 16, 90);
+  const ring1Mesh = new THREE.Mesh(ring1Geo, goldMat);
+  ring1Mesh.rotation.x = Math.PI / 3.2;
+  scene.add(ring1Mesh);
+
+  const ring2Geo = new THREE.TorusGeometry(3.45, 0.02, 16, 90);
+  const ring2Mesh = new THREE.Mesh(ring2Geo, new THREE.MeshStandardMaterial({
+    color: 0xd4af37,
+    emissive: 0x221804,
+    metalness: 0.92,
+    roughness: 0.18
+  }));
+  ring2Mesh.rotation.y = Math.PI / 3.8;
+  scene.add(ring2Mesh);
+
+  // 4. Subtle Golden Stardust Particles
+  const pCount = 90;
   const pGeo = new THREE.BufferGeometry();
   const pPos = new Float32Array(pCount * 3);
   for (let i = 0; i < pCount * 3; i += 3) {
-    pPos[i] = (Math.random() - 0.5) * 12;
-    pPos[i + 1] = (Math.random() - 0.5) * 12;
+    pPos[i] = (Math.random() - 0.5) * 14;
+    pPos[i + 1] = (Math.random() - 0.5) * 14;
     pPos[i + 2] = (Math.random() - 0.5) * 8;
   }
   pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
-  const pMat = new THREE.PointsMaterial({ color: 0xffdf73, size: 0.05, transparent: true, opacity: 0.6 });
+  const pMat = new THREE.PointsMaterial({ color: 0xffdf73, size: 0.055, transparent: true, opacity: 0.7 });
   const particles = new THREE.Points(pGeo, pMat);
   scene.add(particles);
 
-  // Studio Lights
-  const dirLight = new THREE.DirectionalLight(0xffdf73, 2.0);
-  dirLight.position.set(4, 5, 5);
-  scene.add(dirLight);
+  // 5. High-End Studio Lights
+  const keyLight = new THREE.DirectionalLight(0xfff0a8, 2.6);
+  keyLight.position.set(5, 6, 6);
+  scene.add(keyLight);
 
-  const ambientLight = new THREE.AmbientLight(0x222222, 1.2);
+  const rimLight = new THREE.DirectionalLight(0xd4af37, 1.9);
+  rimLight.position.set(-5, -4, -4);
+  scene.add(rimLight);
+
+  const ambientLight = new THREE.AmbientLight(0x282828, 1.4);
   scene.add(ambientLight);
 
+  // 6. Interactive Mouse Parallax
+  let mouseX = 0, mouseY = 0;
+  let targetX = 0, targetY = 0;
+  window.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth - 0.5) * 0.7;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 0.7;
+  }, { passive: true });
+
+  const clock = new THREE.Clock();
   let isRendering = true;
   function animate() {
     if (!isRendering) return;
     requestAnimationFrame(animate);
 
-    torusKnot.rotation.x += 0.005;
-    torusKnot.rotation.y += 0.008;
-    particles.rotation.y += 0.001;
+    const elapsedTime = clock.getElapsedTime();
+
+    // Smooth mouse easing
+    targetX += (mouseX - targetX) * 0.05;
+    targetY += (mouseY - targetY) * 0.05;
+
+    // Logo 3D Spin & Levitation
+    logoGroup.rotation.y = elapsedTime * 0.42 + targetX * 1.1;
+    logoGroup.rotation.x = Math.sin(elapsedTime * 0.6) * 0.12 - targetY * 0.7;
+    logoGroup.position.y = Math.sin(elapsedTime * 1.4) * 0.16;
+
+    // Orbital rings counter-rotation
+    ring1Mesh.rotation.z += 0.005;
+    ring1Mesh.rotation.x += 0.003;
+    ring2Mesh.rotation.y += 0.004;
+    ring2Mesh.rotation.z -= 0.003;
+
+    particles.rotation.y += 0.0008;
 
     renderer.render(scene, camera);
   }
