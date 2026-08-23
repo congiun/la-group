@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
 // ==========================================================================
 const i18nDictionary = {
   vi: {
-    ann_badge_1: "HAUTE COUTURE CAMPAIGNS Q3/Q4",
+    ann_badge_1: "PREMIER CAMPAIGNS Q3/Q4",
     ann_text_1: "Tặng gói tư vấn chiến lược Omnichannel trị giá 25.000.000đ cho 5 thương hiệu cao cấp đầu tiên trong tháng.",
     ann_cta_1: "Nhận ưu đãi",
     ann_badge_2: "MEGA LIVE STUDIO 4K",
@@ -129,7 +129,7 @@ const i18nDictionary = {
     ft_legal: "CHÍNH SÁCH & ĐIỀU KHOẢN"
   },
   en: {
-    ann_badge_1: "HAUTE COUTURE CAMPAIGNS Q3/Q4",
+    ann_badge_1: "PREMIER CAMPAIGNS Q3/Q4",
     ann_text_1: "Complimentary $1,000 Omnichannel Strategy Consultation for the first 5 luxury brands this month.",
     ann_cta_1: "Claim Offer",
     ann_badge_2: "MEGA LIVE STUDIO 4K",
@@ -191,7 +191,7 @@ const i18nDictionary = {
     about_badge: "ABOUT LA GROUP",
     about_title: "Cinematic Artistry & Empirical Performance",
     about_desc: "Far beyond traditional media production, LA Group serves as an end-to-end strategic growth partner for ambitious brands.",
-    about_lead: "Precision synthesis of haute couture aesthetics and conversion data science.",
+    about_lead: "Precision synthesis of premium cinematic aesthetics and conversion data science.",
     about_body: "Every visual frame, livestream broadcast, and creator activation executed by LA Group is engineered for twin outcomes: elevate brand equity and maximize revenue conversion.",
     team_badge: "LEADERSHIP & DIRECTORS",
     team_title: "Pioneering Creative Leaders",
@@ -201,7 +201,7 @@ const i18nDictionary = {
     srv_desc: "An integrated lifecycle encompassing cinema production, performance ads, media networks, social commerce, and in-house academy.",
     clients_badge: "BRAND PARTNERS",
     clients_title: "150+ Enterprise Clients & Conglomerates",
-    clients_desc: "Proud strategic growth partner to industry leaders across Derma-Cosmetics, Haute Fashion, Smart Living, and Luxury F&B.",
+    clients_desc: "Proud strategic growth partner to industry leaders across Derma-Cosmetics, High-end Fashion, Smart Living, and Luxury F&B.",
     koc_badge: "EXCLUSIVE ROSTER",
     koc_title: "Exclusive KOC & Creator Network",
     proj_badge: "FLAGSHIP WORK",

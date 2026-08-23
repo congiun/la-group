@@ -29,21 +29,35 @@
       history.scrollRestoration = 'manual';
     }
     if (window.location.hash) {
-      history.replaceState(null, '', window.location.pathname + window.location.search);
+      history.replaceState(null, null, window.location.pathname);
     }
     window.scrollTo(0, 0);
   </script>
-</head>
-<body class="luxury-obsidian-gold">
 
-  <!-- Top Announcement Bar (Rotating Multi-Message Ticker with Smooth Cinematic Transitions) -->
-  <div class="announcement-bar" id="announcementBar">
-    <div class="container announcement-slider-wrapper">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cabinet+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js" defer></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body class="obsidian-theme">
+
+  <!-- TOP ANNOUNCEMENT BAR (GOLD SHIMMER MULTI-SLIDE TICKER) -->
+  <aside class="announcement-bar" id="announcementBar" aria-label="Thông báo ưu đãi">
+    <div class="announcement-shimmer"></div>
+    <div class="announcement-slider-wrapper">
       <div class="announcement-slider" id="announcementSlider">
-        
         <!-- Slide 1 -->
         <div class="announcement-slide active">
-          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_1">HAUTE COUTURE CAMPAIGNS Q3/Q4</span></span>
+          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_1">PREMIER CAMPAIGNS Q3/Q4</span></span>
           <span class="announcement-text" data-i18n="ann_text_1">Tặng gói tư vấn chiến lược Omnichannel trị giá 25.000.000đ cho 5 thương hiệu cao cấp đầu tiên trong tháng.</span>
           <button onclick="openQuoteChatbox()" class="announcement-link"><span data-i18n="ann_cta_1">Nhận ưu đãi</span> <i class="fa-solid fa-arrow-right"></i></button>
         </div>
@@ -376,7 +390,7 @@
                 <i class="fa-solid fa-play"></i>
               </div>
               <div class="showreel-card-info">
-                <span class="p-brand-tag">HAUTE COUTURE PRODUCTION</span>
+                <span class="p-brand-tag">CINEMA 4K PRODUCTION</span>
                 <h3>Visual Storytelling & Commercials</h3>
                 <p data-i18n="showreel_hint">Nhấp để phát video độ phân giải cao 4K trên YouTube</p>
               </div>
@@ -491,7 +505,7 @@
             <div class="team-info">
               <h4>Elena Bùi</h4>
               <span class="team-role">Head of Creative & 4K Production</span>
-              <p>Đạo diễn hình ảnh đứng sau hàng loạt TVC triệu view và chiến dịch thời trang Haute Couture.</p>
+              <p>Đạo diễn hình ảnh đứng sau hàng loạt TVC triệu view và chiến dịch thời trang cao cấp.</p>
             </div>
           </div>
 
@@ -662,7 +676,7 @@
                 <h4>Hương Nguyễn</h4>
                 <span class="t-tag">850K Follower</span>
               </div>
-              <p class="t-desc">Phối đồ phong cách Haute Couture hiện đại, gu thẩm mỹ cao, phù hợp nhãn hàng cao cấp.</p>
+              <p class="t-desc">Phối đồ phong cách thời trang cao cấp hiện đại, gu thẩm mỹ cao, phù hợp nhãn hàng cao cấp.</p>
               <div class="t-stats">
                 <div><strong>850K</strong><span>TikTok</span></div>
                 <div><strong>7.4%</strong><span>Engagement</span></div>
@@ -1002,7 +1016,7 @@
           <span>LA GROUP</span>
         </div>
         <p>Hệ sinh thái truyền thông cao cấp, sản xuất media 4K và tăng trưởng doanh số đa kênh hàng đầu.</p>
-        <small>© 2026 LA GROUP MEDIA. All rights reserved. Haute Couture Art Direction.</small>
+        <small>© 2026 LA GROUP MEDIA. All rights reserved.</small>
       </div>
 
       <div class="f-links-col f-links-col-wide">
