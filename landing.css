@@ -2006,8 +2006,9 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .footer-row {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 28px;
+  grid-template-columns: 1.2fr 1.5fr 1fr;
+  gap: 36px;
+  align-items: start;
 }
 
 .f-logo {
@@ -2032,19 +2033,35 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   font-size: 0.92rem;
   font-weight: 700;
   color: var(--gold-champagne);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
+.f-links-col-wide {
+  width: 100%;
+}
+
+.f-nav-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.f-nav-subcol a,
 .f-links-col a {
   display: block;
   color: var(--text-muted);
   text-decoration: none;
   font-size: 0.82rem;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
-.f-links-col a:hover { color: var(--gold-bright); }
+.f-nav-subcol a:hover,
+.f-links-col a:hover { 
+  color: var(--gold-bright);
+  transform: translateX(3px);
+}
 
 /* RESPONSIVE */
 @media (max-width: 1200px) {
