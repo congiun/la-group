@@ -653,8 +653,8 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   position: relative;
   min-height: calc(100vh - 75px);
   display: flex;
-  align-items: center;
-  padding: 18px 0 16px;
+  align-items: flex-start;
+  padding: 50px 0 24px;
   overflow: hidden;
 }
 
