@@ -875,24 +875,27 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 .stat-label { font-size: 0.76rem; color: var(--text-muted); }
 
-/* Infinite Brand Partners Marquee Slider (Inside Screen 1) */
+/* Infinite Brand Partners Marquee Slider (Full Width Edge-to-Edge Across Screen 1) */
 .hero-brand-marquee {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   overflow: hidden;
   white-space: nowrap;
-  padding: 10px 0;
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-  background: rgba(3, 3, 3, 0.65);
-  backdrop-filter: blur(8px);
-  border-radius: var(--radius-sm);
-  margin-top: 4px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  background: rgba(3, 3, 3, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin-top: 14px;
+  position: relative;
+  z-index: 4;
 }
 
 .marquee-track {
   display: inline-flex;
-  gap: 42px;
-  animation: marqueeSlide 26s linear infinite;
+  gap: 56px;
+  animation: marqueeSlide 42s linear infinite;
 }
 
 .marquee-track:hover {
@@ -902,22 +905,25 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 .marquee-item {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1.8px;
+  gap: 14px;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 2.2px;
   color: var(--text-muted);
-  transition: color 0.25s ease;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
 }
 
 .marquee-item:hover {
   color: var(--gold-bright);
+  transform: scale(1.06);
 }
 
 .m-dot {
   color: var(--gold-champagne);
-  font-size: 0.75rem;
+  font-size: 0.95rem;
+  filter: drop-shadow(0 0 6px var(--gold-bright));
 }
 
 @keyframes marqueeSlide {
