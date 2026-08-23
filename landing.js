@@ -76,7 +76,7 @@ const i18nDictionary = {
     hero_title_1: "ĐỊNH HÌNH",
     hero_title_2: "CHUẨN MỰC MEDIA",
     hero_title_3: "THẾ HỆ MỚI",
-    hero_desc: "LA Group là tổ hợp truyền thông toàn diện — Tiên phong ươm mầm & phát triển mạng lưới Creator/Idol chuyên nghiệp, đồng thời cung cấp giải pháp media & livestream bứt phá doanh số cho Doanh nghiệp.",
+    hero_desc: "LA Group là công ty truyền thông toàn diện — Tiên phong ươm mầm & phát triển mạng lưới Creator/Idol chuyên nghiệp, đồng thời cung cấp giải pháp media & livestream bứt phá doanh số cho Doanh nghiệp.",
     hero_btn_quote: "Nhận Báo Giá Nhanh",
     hero_btn_join: "Tham Gia LA Group",
     hero_btn_join_sub: "Dành cho Idol & Creator",
