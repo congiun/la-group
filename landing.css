@@ -561,10 +561,11 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
    ========================================================================== */
 .hero-3d-section {
   position: relative;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 65px);
   display: flex;
-  align-items: center;
-  padding: 20px 0 16px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 0 0 0;
   overflow: hidden;
 }
 
@@ -588,6 +589,10 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   position: relative;
   z-index: 3;
   width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .hero-grid {
@@ -595,7 +600,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   grid-template-columns: 1.15fr 0.85fr;
   gap: 32px;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .hero-haute-badge {
@@ -877,19 +882,18 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 
 /* Infinite Brand Partners Marquee Slider (Full Width Edge-to-Edge Across Screen 1) */
 .hero-brand-marquee {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  padding: 16px 0;
+  padding: 14px 0;
   border-top: 1px solid rgba(212, 175, 55, 0.25);
   border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-  background: rgba(3, 3, 3, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  margin-top: 14px;
+  background: rgba(3, 3, 3, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   position: relative;
   z-index: 4;
+  margin-top: auto;
 }
 
 .marquee-track {
