@@ -26,9 +26,18 @@ window.addEventListener('load', () => {
 // ==========================================================================
 const i18nDictionary = {
   vi: {
-    ann_badge: "HAUTE COUTURE CAMPAIGNS Q3/Q4",
-    ann_text: "Tặng gói tư vấn chiến lược Omnichannel trị giá 25.000.000đ cho 5 thương hiệu cao cấp đầu tiên trong tháng.",
-    ann_cta: "Nhận ưu đãi",
+    ann_badge_1: "HAUTE COUTURE CAMPAIGNS Q3/Q4",
+    ann_text_1: "Tặng gói tư vấn chiến lược Omnichannel trị giá 25.000.000đ cho 5 thương hiệu cao cấp đầu tiên trong tháng.",
+    ann_cta_1: "Nhận ưu đãi",
+    ann_badge_2: "MEGA LIVE STUDIO 4K",
+    ann_text_2: "Khai trương Phim trường Mega Livestream 4K chuẩn Quốc tế — Tối ưu tỷ lệ chuyển đổi doanh số vượt bậc.",
+    ann_cta_2: "Đặt lịch trải nghiệm",
+    ann_badge_3: "TALENT ACQUISITION 2026",
+    ann_text_3: "Mở cổng casting độc quyền Top 10 KOC & Creator tiềm năng đồng hành cùng các nhãn hàng quốc tế.",
+    ann_cta_3: "Ứng tuyển ngay",
+    ann_badge_4: "PRIVATE MEDIA AUDIT",
+    ann_text_4: "Tài trợ 100% chi phí Audit toàn diện hiệu suất Media & Cam kết ROAS đa kênh cho Doanh nghiệp.",
+    ann_cta_4: "Đăng ký Audit",
     menu_home: "Trang chủ",
     menu_about: "Về LA Group",
     menu_about_intro: "Giới thiệu",
@@ -120,9 +129,18 @@ const i18nDictionary = {
     ft_legal: "CHÍNH SÁCH & ĐIỀU KHOẢN"
   },
   en: {
-    ann_badge: "HAUTE COUTURE CAMPAIGNS Q3/Q4",
-    ann_text: "Complimentary $1,000 Omnichannel Strategy Consultation for the first 5 luxury brands this month.",
-    ann_cta: "Claim Offer",
+    ann_badge_1: "HAUTE COUTURE CAMPAIGNS Q3/Q4",
+    ann_text_1: "Complimentary $1,000 Omnichannel Strategy Consultation for the first 5 luxury brands this month.",
+    ann_cta_1: "Claim Offer",
+    ann_badge_2: "MEGA LIVE STUDIO 4K",
+    ann_text_2: "Grand Opening of International Standard 4K Mega Livestream Studios — Maximize GMV conversions.",
+    ann_cta_2: "Book a Tour",
+    ann_badge_3: "TALENT ACQUISITION 2026",
+    ann_text_3: "Exclusive casting call for Top 10 high-potential KOCs & Creators to collaborate with global brands.",
+    ann_cta_3: "Apply Now",
+    ann_badge_4: "PRIVATE MEDIA AUDIT",
+    ann_text_4: "100% Sponsored Full Media Performance & Multi-channel ROAS Audit for Enterprise Brands.",
+    ann_cta_4: "Request Audit",
     menu_home: "Home",
     menu_about: "About LA Group",
     menu_about_intro: "Introduction",
@@ -214,9 +232,18 @@ const i18nDictionary = {
     ft_legal: "LEGAL & POLICIES"
   },
   zh: {
-    ann_badge: "2026 高端营销季 Q3/Q4",
-    ann_text: "本月前5家高端签约品牌尊享价值 1,000 美元的全渠道增长战略咨询。",
-    ann_cta: "立即领取",
+    ann_badge_1: "2026 高端营销季 Q3/Q4",
+    ann_text_1: "本月前5家高端签约品牌尊享价值 1,000 美元的全渠道增长战略咨询。",
+    ann_cta_1: "立即领取",
+    ann_badge_2: "4K 超级直播影棚",
+    ann_text_2: "国际标准 4K 超级直播影棚盛大启用 — 驱动全渠道电商转化率飞跃。",
+    ann_cta_2: "预约体验",
+    ann_badge_3: "2026 达人招募计划",
+    ann_text_3: "独家招募前 10 位潜力 KOC 与内容创作者，携手国际顶尖品牌共赢。",
+    ann_cta_3: "立即申请",
+    ann_badge_4: "企业级媒体诊断",
+    ann_text_4: "为品牌提供 100% 全额赞助的媒体全域投放与 ROAS 效果诊断方案。",
+    ann_cta_4: "预约诊断",
     menu_home: "首页",
     menu_about: "关于 LA 集团",
     menu_about_intro: "企业简介",
@@ -545,6 +572,47 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 1.2 Rotating Announcement Bar Ticker (Multi-Slide with Smooth Transitions)
+  const annSlider = document.getElementById('announcementSlider');
+  if (annSlider) {
+    const slides = annSlider.querySelectorAll('.announcement-slide');
+    let currentSlide = 0;
+    let tickerInterval = null;
+
+    function nextAnnSlide() {
+      if (slides.length <= 1) return;
+      const prev = slides[currentSlide];
+      prev.classList.remove('active');
+      prev.classList.add('slide-out');
+
+      currentSlide = (currentSlide + 1) % slides.length;
+      const next = slides[currentSlide];
+      next.classList.remove('slide-out');
+      next.classList.add('active');
+
+      setTimeout(() => {
+        prev.classList.remove('slide-out');
+      }, 450);
+    }
+
+    function startAnnTicker() {
+      if (tickerInterval) clearInterval(tickerInterval);
+      tickerInterval = setInterval(nextAnnSlide, 4500);
+    }
+
+    function stopAnnTicker() {
+      if (tickerInterval) clearInterval(tickerInterval);
+    }
+
+    startAnnTicker();
+
+    const annBar = document.getElementById('announcementBar');
+    if (annBar) {
+      annBar.addEventListener('mouseenter', stopAnnTicker);
+      annBar.addEventListener('mouseleave', startAnnTicker);
+    }
+  }
 
   // 2. Language Dropdown Toggle
   const langBtn = document.getElementById('langSelectorBtn');

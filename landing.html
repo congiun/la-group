@@ -36,12 +36,40 @@
 </head>
 <body class="luxury-obsidian-gold">
 
-  <!-- Top Announcement Bar -->
-  <div class="announcement-bar">
-    <div class="container announcement-content">
-      <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge">HAUTE COUTURE CAMPAIGNS Q3/Q4</span></span>
-      <span class="announcement-text" data-i18n="ann_text">Tặng gói tư vấn chiến lược Omnichannel trị giá 25.000.000đ cho 5 thương hiệu cao cấp đầu tiên trong tháng.</span>
-      <button onclick="openQuoteChatbox()" class="announcement-link"><span data-i18n="ann_cta">Nhận ưu đãi</span> <i class="fa-solid fa-arrow-right"></i></button>
+  <!-- Top Announcement Bar (Rotating Multi-Message Ticker with Smooth Cinematic Transitions) -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="container announcement-slider-wrapper">
+      <div class="announcement-slider" id="announcementSlider">
+        
+        <!-- Slide 1 -->
+        <div class="announcement-slide active">
+          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_1">HAUTE COUTURE CAMPAIGNS Q3/Q4</span></span>
+          <span class="announcement-text" data-i18n="ann_text_1">Tặng gói tư vấn chiến lược Omnichannel trị giá 25.000.000đ cho 5 thương hiệu cao cấp đầu tiên trong tháng.</span>
+          <button onclick="openQuoteChatbox()" class="announcement-link"><span data-i18n="ann_cta_1">Nhận ưu đãi</span> <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="announcement-slide">
+          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_2">MEGA LIVE STUDIO 4K</span></span>
+          <span class="announcement-text" data-i18n="ann_text_2">Khai trương Phim trường Mega Livestream 4K chuẩn Quốc tế — Tối ưu tỷ lệ chuyển đổi doanh số vượt bậc.</span>
+          <button onclick="openQuoteChatbox()" class="announcement-link"><span data-i18n="ann_cta_2">Đặt lịch trải nghiệm</span> <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="announcement-slide">
+          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_3">TALENT ACQUISITION 2026</span></span>
+          <span class="announcement-text" data-i18n="ann_text_3">Mở cổng casting độc quyền Top 10 KOC & Creator tiềm năng đồng hành cùng các nhãn hàng quốc tế.</span>
+          <a href="#tuyen-dung" class="announcement-link"><span data-i18n="ann_cta_3">Ứng tuyển ngay</span> <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="announcement-slide">
+          <span class="gold-badge-pill"><span class="pulse-sparkle"></span> <span data-i18n="ann_badge_4">PRIVATE MEDIA AUDIT</span></span>
+          <span class="announcement-text" data-i18n="ann_text_4">Tài trợ 100% chi phí Audit toàn diện hiệu suất Media & Cam kết ROAS đa kênh cho Doanh nghiệp.</span>
+          <button onclick="openQuoteChatbox()" class="announcement-link"><span data-i18n="ann_cta_4">Đăng ký Audit</span> <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+      </div>
     </div>
   </div>
 

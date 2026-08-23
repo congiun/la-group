@@ -114,59 +114,162 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
 .text-red { color: var(--accent-red); }
 .w-full { width: 100%; }
 
-/* ANNOUNCEMENT BAR */
+/* ANNOUNCEMENT BAR (Cinematic Multi-Message Ticker) */
 .announcement-bar {
-  background: rgba(212, 175, 55, 0.08);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-  padding: 8px 16px;
-  font-size: 0.85rem;
+  background: linear-gradient(90deg, #030303 0%, rgba(20, 16, 5, 0.96) 50%, #030303 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 6px 16px;
+  font-size: 0.84rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.announcement-content {
+.announcement-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.15), transparent);
+  animation: shineTopBar 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shineTopBar {
+  0% { left: -100%; }
+  45%, 100% { left: 200%; }
+}
+
+.announcement-slider-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 26px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.announcement-slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.announcement-slide {
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(8px);
+  text-align: center;
+  width: 100%;
+}
+
+.announcement-slide.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  animation: annSlideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.announcement-slide.slide-out {
+  display: flex;
+  opacity: 0;
+  transform: translateY(-8px);
+  animation: annSlideOut 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes annSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes annSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
 }
 
 .gold-badge-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(212, 175, 55, 0.15);
-  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: rgba(212, 175, 55, 0.16);
+  border: 1px solid rgba(212, 175, 55, 0.4);
   color: var(--gold-champagne);
   padding: 3px 12px;
   border-radius: 100px;
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.5px;
+  font-size: 0.74rem;
+  letter-spacing: 0.6px;
   white-space: nowrap;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.15);
 }
 
 .pulse-sparkle {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   background-color: var(--gold-bright);
   border-radius: 50%;
+  box-shadow: 0 0 8px var(--gold-bright);
+  animation: pulseDot 1.8s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.4); opacity: 1; box-shadow: 0 0 12px var(--gold-bright); }
+}
+
+.announcement-text {
+  font-size: 0.84rem;
+  color: #f0ede6;
+  font-weight: 500;
 }
 
 .announcement-link {
   background: transparent;
   border: none;
-  color: var(--gold-light);
+  color: var(--gold-bright);
   font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.84rem;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   white-space: nowrap;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  text-decoration: none;
 }
 
-.announcement-link:hover { color: #fff; text-decoration: underline; }
+.announcement-link:hover {
+  color: #fff;
+  background: rgba(212, 175, 55, 0.2);
+  transform: translateX(3px);
+}
 
 /* ==========================================================================
    NAVBAR (7 MAIN ITEMS + DROPDOWNS + LANG + CTA)
