@@ -701,7 +701,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   letter-spacing: 0.8px;
   padding: 5px 12px;
   border-radius: 100px;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
   white-space: nowrap;
 }
 
@@ -713,7 +713,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   font-weight: 800;
   line-height: 1.14;
   letter-spacing: -0.5px;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
   text-transform: uppercase;
 }
 
@@ -734,7 +734,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
   max-width: 480px;
 }
 
@@ -745,7 +745,7 @@ a, button, select, input[type="submit"], input[type="button"], input[type="range
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 26px;
+  margin-bottom: 34px;
 }
 
 .btn-large {
